@@ -1,0 +1,35 @@
+---
+layout: post
+title: How to make components in Flash CS4 appear again
+date: 2009-02-04 22:27:56.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+tags:
+- Adobe
+- CS4
+- Extension
+- Flash component
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p><img class="alignleft size-full wp-image-306" title="Adobe Extension Manager" src="{{ site.baseurl }}/assets/picture-8.png" alt="Adobe Extension Manager" width="127" height="120" />If you run English Flash CS4 on a non-English system you might have noticed that Flash components installed with Adobe Extension Manager don't turn up in Components panel anymore. It's another bug vs feature situation by Adobe.<!--more--></p>
+<p>The thing is <a title="Adobe Extension Manager CS4" rel="lightbox" href="http://tekkie.flashbit.net/wp-content/uploads/2009/02/adobe-extension-manager.png">Extension Manager</a> pushes all extensions to the language-specific folder given the system settings. Flash on the other hand seeks for the components by its own settings and there you have it.</p>
+<p>To fix this anomaly you've got to get Extensions hooked up to Flash:</p>
+<ol>
+<li>Shut down both, Flash and Extension Manager</li>
+<li>Start Flash</li>
+<li>In Flash go to the menu <strong>Help</strong> &gt; <strong>Manage Extensions...</strong></li>
+<li>Extension Manager starts up</li>
+<li>Tick the checkboxes of the Extensions you need to be there in Flash</li>
+<li>Quit Extension Manager and restart Flash</li>
+</ol>
+<p>This is tested to work on Mac OS and is reported to work on Windows as well.</p>

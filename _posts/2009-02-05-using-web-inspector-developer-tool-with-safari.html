@@ -1,0 +1,43 @@
+---
+layout: post
+title: Using Web Inspector developer tool with Safari
+date: 2009-02-05 23:11:34.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Browsers
+- Developer tools
+tags:
+- development
+- devtools
+- Safari
+- Web Inspector
+- webdev
+- WebKit
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>Even though Safari makes a perfect platform for web development due to the strict standard policies practiced by WebKit core developers, you still can't do without developer tools on it. While Mozilla Firefox has a superb <a href="http://getfirebug.com/">Firebug</a> extension, WebKit has <strong>Web Inspector</strong>.<!--more--></p>
+<p class="attention"><strong>UPDATE</strong>: now you can just go to <strong>Preferences</strong> &gt; <strong>Advanced</strong> and tick the <strong>Show Develop Menu in menu bar</strong> checkbox:<br />
+<img style="border: 0px none; margin: 5px 0px 5px 0px; padding: 2px;" title="Safari Show Develop menu in menu bar" src="{{ site.baseurl }}/assets/picture-1.png" alt="Safari Show Develop menu in menu bar" width="251" height="37" /><br />
+<sup>Many thanks for this to Mark Rowe from Apple!</sup></p>
+<p>For past <a href="http://nightly.webkit.org/">WebKit nightlies</a> Web Inspector was turned on by default. But from some point developers decided to turn it off for regular users so there's a bit of configuration you've got to get done now (it also concerns <a title="Download the latest Safari" href="http://www.apple.com/safari/">Safari 3</a> users):</p>
+<ol>
+<li>Open <strong>Terminal</strong> from <strong>Applications</strong> &gt; <strong>Utilities</strong></li>
+<li>Type in a command to activate Web Inspector:
+<pre lang="bash">defaults write com.apple.Safari WebKitDeveloperExtras -bool true</pre>
+</li>
+<li>Restart Safari/WebKit</li>
+<li>Right-click on a page somewhere and choose <strong>Inspect Element</strong></li>
+<li><strong>Web Inspector</strong> will start up. You can locate the scope of your clicked element within the code, CSS definitions on the right side and a Console button in the bottom-left corner of the Inspector (the one highlighted on the image below):
+<p><img class="size-full wp-image-327 alignnone" title="Console button of WebKit Web Inspector" src="{{ site.baseurl }}/assets/web-inspector-console-button.png" alt="Console button of WebKit Web Inspector" width="137" height="123" /></li>
+<li>If you've got it all right, Web Inspector should look like this (click to zoom):<br />
+<a title="Web Inspector" href="http://tekkie.flashbit.net/wp-content/uploads/2009/02/web-inspector.png"><img class="alignnone size-medium wp-image-328" title="Web Inspector" src="{{ site.baseurl }}/assets/web-inspector-300x157.png" alt="Web Inspector" width="300" height="157" /></a></li>
+</ol>

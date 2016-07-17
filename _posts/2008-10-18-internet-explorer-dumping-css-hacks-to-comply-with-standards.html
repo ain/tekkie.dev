@@ -1,0 +1,50 @@
+---
+layout: post
+title: Internet Explorer dumping CSS hacks to comply with standards
+date: 2008-10-18 03:20:49.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Browsers
+tags:
+- CSS
+- CSS 2.1
+- IE
+- Microsoft
+- web development
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>Years ago, for Internet Explorer 5, Microsoft took a shortcut to 'extended CSS support' that they called the <em>Dynamic Properties</em>. Despite the fancy name it had nothing to do with W3C Cascading Style Sheet standards nor was it available cross-platform. Now, as the software giant has realized the impact of open standards, they are giving up on these non-standard developments.<!--more--></p>
+<p>Dynamic Properties work in a way that make it possible to execute JavaScript from within the CSS definition, e.g.</p>
+<pre lang="css">#myDiv {
+    width:expression( (/* JavaScript here */) ? "100px" : "200px" );
+}</pre>
+<p>vs. the standard-compliant code:</p>
+<pre lang="css">#myDiv {
+    min-width:100px;
+    max-width:200px;
+}</pre>
+<p>Microsoft's goal with the above expression hack was to emulate CSS 2.1 support as the simplest properties of CSS were missing. For instance <code>max-width</code> and <code>min-width</code> properties are still not available for nearly 25%<sup>(<a href="#msie6-market-share">1</a>)</sup> of users, the percentage representing IE6 market share. Fortunately the situation is different for IE 7 and 8<sup>(<a href="#min-height-test-case">2</a>)</sup>:</p>
+<div id="CSS-2-1-minimum-and-maximum-height-and-width-test-case" style="float: left; margin-right: 10px;"><a title="min-width &amp; max-width in MSIE6" rel="lightbox[]" href="http://tekkie.flashbit.net/wp-content/uploads/2008/10/081017-163426-msie-60-windows-2000-0f64ddef580b9ed8fced77e0900cadbf.png"><img title="min-width in MSIE6" src="{{ site.baseurl }}/assets/081017-163426-msie-60-windows-2000-0f64ddef580b9ed8fced77e0900cadbf-150x150.png" alt="min-width &amp; max-width in MSIE6" width="150" height="150" /></a><br />
+<sup>max-width in MSIE6</sup></div>
+<div style="float: left; margin-right: 10px;"><a title="min-width in MSIE7" rel="lightbox[]" href="http://tekkie.flashbit.net/wp-content/uploads/2008/10/081017-163404-msie-70-windows-xp-0870a0427c100d2f103915c128b113e0.png"><img title="min-width in MSIE7" src="{{ site.baseurl }}/assets/081017-163404-msie-70-windows-xp-0870a0427c100d2f103915c128b113e0-150x150.png" alt="" width="150" height="150" /></a><br />
+<sup>max-width in MSIE7</sup></div>
+<div><a title="min-width &amp; max-width in MSIE8" rel="lightbox[]" href="http://tekkie.flashbit.net/wp-content/uploads/2008/10/081017-163456-msie-80-windows-xp-8d3f8e9a8a0d58e0d6078180f01e55eb.png"><img class="alignnone size-thumbnail wp-image-200" title="min-width in MSIE8" src="{{ site.baseurl }}/assets/081017-163456-msie-80-windows-xp-8d3f8e9a8a0d58e0d6078180f01e55eb-150x150.png" alt="" width="150" height="150" /></a><br />
+<sup>max-width in MSIE8</sup></div>
+<p style="clear: left; margin-top: 20px;">Any script execution at the Style Sheet stack of the browser is surely a performance issue and more importantly a security threat. No wonder it makes IE the most insecure browser on the market.</p>
+<p>Good news for the developers who have respected W3C standards and not used JavaScript expressions in CSS, is that IE8 will run in Standards mode by default. For those who haven't, Microsoft will provide backward compatibility with Quirks and IE7 Strict modes. Will it cause a whole load of sites to break with the release of IE8? Sure.</p>
+<p>IE team confirmed ending expressions on Thursday.<sup>(<a href="#ending-expressions">3</a>)</sup></p>
+<p>References:<br />
+<a name="msie6-market-share"></a>1 <sup>IE6 usage statistics from <a href="http://marketshare.hitslink.com/report.aspx?qprid=2">Market Share by Network Applications</a></sup><br />
+<a name="min-height-test-case"></a>2 <sup><a href="http://tekkie.flashbit.net/tmp/IE_min-height_CSS_test.html">CSS 2.1 minimum and maximum height and width test case</a></sup><br />
+<a name="ending-expressions"></a>3 <sup><a href="http://blogs.msdn.com/ie/archive/2008/10/16/ending-expressions.aspx">Ending Expressions</a> (IEBlog)</sup></p>
+<p>Related articles:<br />
+- <a href="http://tekkie.flashbit.net/browsers/internet-explorer-8-to-pass-acid2">Internet Explorer 8 to pass Acid2</a></p>

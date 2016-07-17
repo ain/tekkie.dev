@@ -1,0 +1,97 @@
+---
+layout: post
+title: 'AXDT: open-source cross-platform alternative for Flash development'
+date: 2010-06-24 21:59:58.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+tags:
+- AIR
+- AXDT
+- cross-platform
+- De MonsterDebugger
+- Eclipse
+- Flash
+- flash development
+- Flash Platform
+- Flex
+- How-to
+- OSS
+meta:
+  _edit_last: '1'
+  _thumbnail_id: '988'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p><img class="alignleft size-full wp-image-988" title="AXDT is a set of plug-ins for the Eclipse Platform that enable you to write ActionScript 3 code in an integrated environment." src="{{ site.baseurl }}/assets/axdt-banner.png" alt="AXDT is a set of plug-ins for the Eclipse Platform that enable you to write ActionScript 3 code in an integrated environment." width="240" height="73" />Most cross-platform Flash development tools are not available for free. The best ones, Flash Builder and FDT, will set you back €600.</p>
+<p>Fortunately a few open-source and free alternatives exist. AXDT is one such alternative - it's a set of plug-ins for the Eclipse Platform that enable you to write ActionScript 3 code in an integrated environment.<!--more--></p>
+<p>To get AXDT up and running:</p>
+<h3>Install Eclipse</h3>
+<ol>
+<li>Download<strong> Eclipse IDE for Java Developers</strong>. More precisely <a href="http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/galileor">Eclipse 3.5 Galileo</a>. Eclipse 3.6 (Helios) isn't supported yet.
+</li>
+<li>Unpack and copy the resulting Eclipse folder to the desired location</li>
+<li>Launch Eclipse from the unpacked folder. If Eclipse fails to launch and you happen to be on Mac OS, you may find help <a title="How to fix FDT (or any other Eclipse-based IDE) after Mac OS X 10.6.3 upgrade" href="http://tekkie.flashbit.net/flash/how-to-fix-fdt-or-any-other-eclipse-based-ide-after-mac-os-x-10-6-3-upgrade">here</a>.</li>
+</ol>
+<h3>Install IMP</h3>
+<ol>
+<li>Choose <strong>Help</strong> &gt; <strong>Install New Software...</strong></li>
+<li>Enter <code>http://download.eclipse.org/technology/imp/updates</code> to add IMP location to the update manager</li>
+<li>Click <strong>Add</strong> and give it a name, e.g. IMP</li>
+<li>Click <strong>OK</strong> to return to Available Software window and select <strong>IMP</strong> and <strong>IMP Prerequisites</strong></li>
+<li>Click <strong>Next</strong> and <strong>Finish</strong> to install</li>
+<li><strong>Restart Eclipse</strong> once installation is done</li>
+</ol>
+<h3>Install AXDT</h3>
+<ol>
+<li>Choose <strong>Help</strong> &gt; <strong>Install New Software...</strong></li>
+<li>Enter <code>http://update.axdt.org/</code> to add AXDT location to the update manager</li>
+<li>Click <strong>Add</strong> and give it a name, e.g. AXDT</li>
+<li>Click <strong>OK</strong> to return to Available Software window and select <strong>Axdt builds</strong></li>
+<li><strong> </strong>Click <strong>Next</strong><span style="font-weight: bold;">, check in to </span><span style="font-weight: bold;">accept the terms </span>and click <strong>Finish</strong> to install</li>
+<li><strong>Restart Eclipse</strong> once installation is done</li>
+</ol>
+<h3>Install a debugger</h3>
+<p>Since AXDT has no built-in debugger yet, external debugger should be used, e.g. the open-source De MonsterDebugger that also has the <abbr title="Frames per second">FPS</abbr> and memory monitor:</p>
+<p><a title="De MonsterDebugger working with AXDT" href="http://tekkie.flashbit.net/wp-content/uploads/2010/06/De-MonsterDebugger-working-with-AXDT.png" class="cln"><img class="size-medium wp-image-1145 alignnone" title="De MonsterDebugger working with AXDT" src="{{ site.baseurl }}/assets/De-MonsterDebugger-working-with-AXDT-300x201.png" alt="De MonsterDebugger working with AXDT" width="300" height="201" /></a></p>
+<p>To deploy it:</p>
+<ol>
+<li>Ensure that <strong>Adobe AIR</strong> is installed. If not, install from <a title="Download the latest version of Adobe AIR" href="http://get.adobe.com/air/">http://get.adobe.com/air/</a></li>
+<li>Install <strong>De MonsterDebugger</strong> from <a title="De MonsterDebugger is an open source debugger for Adobe Flash, Flex and AIR." href="http://demonsterdebugger.com/downloads">http://demonsterdebugger.com/downloads</a></li>
+<li>Launch it</li>
+<li>Choose <strong>File</strong> &gt; <strong>Export Client Class</strong></li>
+<li>Locate the <em>src</em> folder of your Flash project in your Eclipse workspace</li>
+<li>Click <strong>Select</strong> to output the necessary debugger classes to your Flash project</li>
+<li>Enable debugging in your code as following (in ActionScript 3):
+<pre lang="actionscript3">package {
+
+    import flash.display.Sprite;
+    import nl.demonsters.debugger.MonsterDebugger;
+
+    public class Main extends Sprite {
+
+        // Variable to hold the debugger
+        private var debugger:MonsterDebugger;
+
+        public function Main() {
+
+            // Init the debugger
+            debugger = new MonsterDebugger(this);
+
+            // Send a simple trace
+            MonsterDebugger.trace(this, "Hello World!");
+        }
+    }
+}</pre>
+</li>
+</ol>
+
+<p>For debugging inside Eclipse, see how to implement LogWatcher. It provides just a simple trace log display and has no means to indicate a memory leak unlike De MonsterDebugger.</private>
+
+<p>Above AXDT Flash development framework is not a competitor to Flash Builder or FDT that are way more comprehensive, but it makes a good setup for small things or for those just starting to develop for Flash Platform. Flash On!</p>

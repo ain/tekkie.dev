@@ -1,0 +1,50 @@
+---
+layout: post
+title: String.tease method
+date: 2007-12-13 13:26:15.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+- AS
+tags:
+- AS2
+- prototype
+meta:
+  _wp_old_slug: stringtease-method
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>Ever thought of creating a teaser text of some longer string in Flash? For programmers still coding in ActionScript 2, here's the piece of code to do it.<!--more--></p>
+<pre lang="actionscript">String.prototype.tease = function(strlen):String {
+	// split ln 1
+	var line1:String = this.split(String.fromCharCode(13),1).toString();
+	// see if we need to cut at all
+    if (line1.length > strlen) {
+		// split 1st line on spaces
+        var words:Array = line1.split(" ");
+        // split on word if the string's 1st word is too long
+        if (words[0].length > strlen) {
+            return this.substr(0, strlen) + "...";
+        } else {
+            var teaser:String = words[0];
+            for (wordNo=1; words[wordNo]; wordNo++) {
+                var curStrLength:Number = teaser.length + words[wordNo].length;
+                if (curStrLength > strlen) {
+                    return teaser + "...";
+                } else {
+                    teaser += " " + words[wordNo];
+                }
+            }
+        }
+    } else {
+        return line1;
+    }
+};
+ASSetPropFlags(String.prototype, "tease", 1);</pre>
+<p><a href="http://tekkie.flashbit.net/wp-content/uploads/2007/12/str_tease.zip" title="String tease prototype">Download</a> the above script and the test case.</p>

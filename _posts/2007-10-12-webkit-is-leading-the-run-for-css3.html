@@ -1,0 +1,40 @@
+---
+layout: post
+title: WebKit is leading the run for CSS3
+date: 2007-10-12 17:34:48.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Browsers
+tags:
+- CSS3
+- font-face
+- ttf
+- web font
+- WebKit
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>Despite Mozilla's enormous effort to Firefox, WebKit developers have proven their Acid2 compatible framework is flexible enough for the <a title="Safari has made it to 5%" href="/browsers/safari-has-made-it-to-5">Safari's latest success</a> to prevail. Newest CSS3 developments show off.<br />
+<!--more--><br />
+[ad#medium-rectangle] While a number of modules in CSS3 are still questionable and software providers are struggling with CSS2.1 implementations, CSS3 is surely one of the most awaited deployments across web designers. It is not merely about the looks, but an advantage on the tech side as well.</p>
+<p>For the first time WebKit has introduced the support for web fonts. What it basically does is that it renders the downloaded font instead of the ones you have got on your system. As Cascading Style Sheet's main purpose is to provide lightweight and accessible design for the web industry, it would make a whole lot of sense in CSS3. It would also significantly cut the traffic (some sites use Flash to display headlines with custom fonts) and put the whole web a leap forward in terms of SEO. Imagine how many sites could upgrade their headers that are currently using images mainly because the custom font outline? And even though some of the criticism focuses on the legal issues, such as copyrighted material getting exposed on the internet, it would still be a huge technical improvement.</p>
+<p>On the code level it's all very simple. Let's fire away with a piece of code:</p>
+<pre lang="css">@font-face {
+    font-family:"Aardvark Cafe"; src:url('http://tekkie.flashbit.net/tmp/AARDC___.TTF') format("truetype");
+}
+h1 {
+    font-family:"Aardvark Cafe", sans-serif;
+}</pre>
+<p>That kind of CSS would produce a page like this (in the right context of course):</p>
+<p><img src="{{ site.baseurl }}/assets/headline_w_downloaded_font.png" alt="Headline with downloaded font" /></p>
+<p>Please also see the respective <a title="Headline with downloaded font" href="http://tekkie.flashbit.net/tmp/css3_font_sample.html">HTML</a>. It is extremely straightforward and can be implemented in a few seconds.</p>
+<p>CSS3 Web Fonts module is currently in the status of <a href="http://www.w3.org/TR/2002/WD-css3-webfonts-20020802/">Working Draft 2</a> and even though it's a low priority development let's hope it gets finalized and implemented by the leading browser developers. WebKit's team has put up a very good initiative.</p>
+<p>To test out web fonts <a title="Feature Branch of WebKit" href="http://nightly.webkit.org/builds/overview/feature-branch">click here</a> to download WebKit.</p>

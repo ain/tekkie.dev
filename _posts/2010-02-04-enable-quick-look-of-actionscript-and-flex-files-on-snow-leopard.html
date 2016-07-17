@@ -1,0 +1,52 @@
+---
+layout: post
+title: Enable Quick Look of ActionScript and Flex files on Snow Leopard
+date: 2010-02-04 02:44:29.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+- AS
+tags:
+- ActionScript
+- Adobe
+- Adobe CS4
+- AS3
+- code
+- Finder
+- Flash
+- Flash CS4
+- highlight
+- LSItemContentTypes
+- Mac OS X
+- programming
+- QLCC
+- qlcolorcode
+- Quick Look
+- Snow Leopard
+- syntax
+- WebKit
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>Having Adobe CS4 and Mac OS X Snow Leopard both installed is very likely to mess up <a href="http://www.apple.com/macosx/what-is-macosx/quick-look.html">Quick Look</a> of Flash ActionScript (.as) and Flex (.mxml) files. Most inconvenient for those used to browsing through the files and looking into them by just hitting the Space key.<!--more--></p>
+<p>Fortunately, there's <strong>qlcoloecode</strong> – A Quick Look plugin for source code with syntax highlighting. With just a bit of tweaking you can have your AS/MXML Quick Look back:</p>
+<ol>
+<li>Download <a title="A Quick Look plugin for source code with syntax highlighting" href="http://code.google.com/p/qlcolorcode/">qlcoloecode</a></li>
+<li>Copy the downloaded <code>QLColorCode.qlgenerator</code> file to <code>/Library/QuickLook</code></li>
+<li>Right-click <code>QLColorCode.qlgenerator</code></li>
+<li>Choose <code>Show Package</code></li>
+<li>Locate the <code>Info.plist</code> file</li>
+<li>Find the <code>LSItemContentTypes</code> key and add the following string to the array:</li>
+</ol>
+<pre lang="html">com.apple.applesingle-archive</pre>
+<p>You should now be able to Quick Look your AS/MXML files.</p>
+<p>Despite the fact that AS3 syntax highlighting of qlcoloecode is a bit shoddy, it's still far better than just the AS file icon:</p>
+<p><a class="cln" title="Quick Look AS3 syntax highlighting" href="http://tekkie.flashbit.net/wp-content/uploads/2010/02/Quick-Look-AS3-syntax-highlighting.png"><img class="alignnone size-medium wp-image-836" title="Quick Look AS3 syntax highlighting" src="{{ site.baseurl }}/assets/Quick-Look-AS3-syntax-highlighting-300x222.png" alt="Quick Look AS3 syntax highlighting" width="300" height="222" /></a></p>

@@ -1,0 +1,50 @@
+---
+layout: post
+title: How to fix FDT (or any other Eclipse-based IDE) after Mac OS X 10.6.3 upgrade
+date: 2010-04-02 16:30:50.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+tags:
+- cache
+- Eclipse
+- fail
+- font
+- init
+- initialise
+- initialize
+- Java
+- Java VM
+- launch
+- Mac OS X
+- Snow Leopard
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p><img class="alignleft size-full wp-image-782" title="FDT - the most powerful Flash development environment for Actionscript 2, 3 and MXML" src="{{ site.baseurl }}/assets/FDT.png" alt="FDT" width="90" height="90" />The most recent Mac OS X update to version 10.6.3 may break your Eclipse Galileo installation and everything that's built upon it. It just fails to start and closes down right after it has reached the splash screen.</p>
+<p>The problem relies in the corrupt font cache of Snow Leopard and the fix is rather trivial - font cache needs to be cleared using the font registration system utility on command line. Following steps will make it happen:<!--more--></p>
+<ol>
+<li>Close all running applications</li>
+<li>Start Terminal from <strong>Applications</strong> &gt; <strong>Utilities</strong> &gt; <strong>Terminal</strong></li>
+<li>Run <code>sudo atsutil databases -remove</code> and enter your admin password</li>
+<li><code>atsutil server -shutdown</code> to shut down the font registration system</li>
+<li><code>atsutil server -ping</code> to restart</li>
+<li>Log out and back in</li>
+</ol>
+<p>FDT should now launch properly!</p>
+<p class="attention"><strong>UPDATE 21.06.2010</strong>: Eclipse (3.5.2) is also broken on Mac OS X 10.6.4! The above fix works nicely there as well.</p>
+<div>Related resources:</div>
+<ul>
+<li><a href="http://www.macworld.com/article/139383/2009/03/fontcacheclear.html">How to clear font caches in Leopard</a> on MacWorld</li>
+<li><a href="http://discussions.apple.com/thread.jspa?threadID=2382283&amp;tstart=135">Can't startup Eclipse after 10.6.3 update</a> on Apple Discussions</li>
+<li><a title="FDT is the most powerful Flash development environment for Actionscript 2, 3 and MXML" href="http://www.fdt.powerflasher.com/">FDT</a> Flash development environment</li>
+<li><a href="http://www.eclipse.org/galileo/">Eclipse Galileo</a></li>
+</ul>

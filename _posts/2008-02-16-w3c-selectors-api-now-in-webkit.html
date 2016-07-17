@@ -1,0 +1,53 @@
+---
+layout: post
+title: W3C Selectors API now in WebKit
+date: 2008-02-16 06:48:17.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Browsers
+tags:
+- api
+- CSS
+- JavaScript
+- jQuery
+- MooTools
+- prototype
+- slickspeed
+- w3c
+- WebKit
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>WebKit has introduced another development towards greater support of W3C initiatives – Selectors API, currently in the status of Working Draft.<!--more--> </p>
+<p>Until now, without a specific <attr title="JavaScript">JS</attr> framework (e.g. jQuery, Prototype or MooTools), one could just get to the HTML element in the old fashioned way:</p>
+<pre lang="javascript">var myDiv = document.getElementById('myDiv');</pre>
+<p>Now what W3C has worked out, is a splendid initiative just because the fact that you can dump those heavy JS frameworks if you only need the selectors. </p>
+<p>Here's the example of how Selectors API helps you:</p>
+<p><iframe src="http://tekkie.flashbit.net/wp-content/uploads/2008/02/index.html" style="width:500px; height:120px; border:0px none;"></iframe></p>
+<p>JavaScript of the above example:</p>
+<pre lang="javascript">function detectLangs() {
+    var divs = document.querySelectorAll(".reddiv, .greendiv, .bluediv");
+    var rd = document.querySelector("#resultContainer");
+    var langs = new Array();
+    var divCount = divs.length;
+    for (var i=0; i < divCount; i++) langs.push(divs[i].innerHTML);
+    rd.innerHTML = "Markup languages are: " + langs.toString();
+    rd.style.display = "block";
+}</pre>
+<p>Note the <code>querySelectorAll()</code> and <code>querySelector()</code> methods in the code making it way more convenient than with the <code>getElemenById()</code> method. </p>
+<p>Apart from the convenience it's also much speedier to use native support compared to common JavaScript libraries. Here's the modified <a href="http://webkit.org/perf/slickspeed/">slickspeed benchmark</a> in which the Native column represents the superiority of the Selectors API.</p>
+<p>More:
+<ul>
+<li><a href="http://www.w3.org/TR/selectors-api/">W3C Selectors API</a></li>
+<li><a href="http://nightly.webkit.org/">Download WebKit nightly</a></li>
+<li><a href="http://webkit.org/perf/slickspeed/">Slickspeed selectors test for WebKit</a></li>
+<li><a href="http://mootools.net/slickspeed/">Slickspeed selectors test for common JavaScript frameworks</a></li>
+</ul>

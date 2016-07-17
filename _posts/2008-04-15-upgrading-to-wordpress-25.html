@@ -1,0 +1,42 @@
+---
+layout: post
+title: Upgrading to Wordpress 2.5
+date: 2008-04-15 17:03:25.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Web 20
+tags:
+- blogging
+- GPL
+- MySQL
+- PHP
+- SQL
+- Wordpress
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>In the end of March Wordpress team introduced a new version of their popular blogging platform and advised all its users to upgrade. Even though any experienced user of Wordpress could probably do it in an ease, it may still get a bit tricky.<br />
+<!--more--></p>
+<h3>Why upgrade?</h3>
+<p>New Wordpress can be called a Web 2.0 application. User interface has been renewed and a whole set of tiny features make it highly usable. It looks much better than the previous version:</p>
+<p><a rel="lightbox" href="http://tekkie.flashbit.net/wp-content/uploads/2008/04/picture-4.png"><img class="alignnone size-thumbnail wp-image-140" title="Wordpress 2.5" src="{{ site.baseurl }}/assets/picture-4-150x150.png" alt="Wordpress 2.5 screenshot of the Manage tab" width="150" height="150" /></a></p>
+<h3>Upgrading from MySQL 3</h3>
+<p>Wordpress 2.5 requires MySQL 4 and this is where you might get stuck.</p>
+<p>For <a href="http://shafiur.i-edit.net/">imperfect | world | 2008</a> the database dump was above 50 MB yet that much of text is hardly believable for a regular blog. Brief investigation of database records indicated that most of the data was undeleted spam. As it was impossible to import 50 MB database to a new one (MySQL 4), something was to be done about it.</p>
+<p>Fortunately the blog had all comments edited and spam comments were marked as spam so it was rather trivial to get rid of them manually with a short SQL command:</p>
+<pre lang="mysql">DELETE FROM wp_comments WHERE comment_type = 'spam';</pre>
+<p>That single SQL query made it to 5 MB (from 50MB!) which was usable for importing. If it would have been any bigger it would have been easy to dump those MySQL 3 tables separately and then import one by one to MySQL 4. Given that there are upload restrictions, e.g. 5 MB, by phpMyAdmin or a custom Control Panel by <abbr title="Internet Service Provider">ISP</abbr>, of course.</p>
+<h3>Upgrading from 2.3</h3>
+<p>Flash tekkie blog was running on 2.3 from the beginning and was already on MySQL 5 but there was a bit different trouble in upgrading it to 2.5. On upgrade it simply threw back <code>500 Internal Server Error</code> and failed. Investigation of Apache logs revealed a bit more:</p>
+<p><code>[Fri Apr 11 13:35:56 2008] [error] [client 217.159.160.100] Premature end of script headers: upgrade.php</code></p>
+<p>As PHP was running in PHP 4 compatibility mode, the catch was there. Turning it off helped. To do that the line of code was added to wp_config.php of a blog:</p>
+<pre lang="php">ini_set("zend.ze1_compatibility_mode",0);</pre>
+<p>Given that ISP allows PHP INI settings to be changed on the fly, that should work in all such cases.</p>

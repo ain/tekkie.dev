@@ -1,0 +1,81 @@
+---
+layout: post
+title: WebKit adds getElementsByClassName
+date: 2007-12-22 13:32:05.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Browsers
+tags:
+- HTML
+- JavaScript
+- WebKit
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>WebKit now natively supports getElementsByClassName, one of the most requested functions by JavaScript programmers.<!--more--></p>
+<p>Function <strong>getElementsByClassName</strong></p>
+<p><strong>Parameters</strong><br />
+String - String name of the Stylesheet class</p>
+<p><strong>Returns</strong><br />
+Array of objects matched</p>
+<p>Here's a simple test:</p>
+<script type="text/javascript">// < ![CDATA[
+function changeColour() {
+    if (!document.getElementsByClassName) {
+        if (confirm("You need a compatible browser to run this test!")) {
+            document.location.href = "http://nightly.webkit.org/";
+        }
+    } else {
+        var elems = document.getElementsByClassName("testdiv");
+        elems[0].style.backgroundColor = "#CCCCCC";
+        elems[0].style.color = "#000000";
+    }
+}
+function resetColour() {
+    if (!document.getElementsByClassName) {
+        if (confirm("You need a compatible browser to run this test!")) {
+            document.location.href = "http://nightly.webkit.org/";
+        }
+    } else {
+        var elems = document.getElementsByClassName("testdiv");
+        elems[0].style.backgroundColor = "#FF0000";
+        elems[0].style.color = "#ffffff";
+    }
+}
+// ]]></script>
+<div class="testdiv" style="background-color: #ff0000; color: #ffffff; padding: 5px; margin-bottom: 20px;">This is a test div with class 'testdiv' without ID.</div>
+<div style="margin-bottom: 20px;"><button onclick="changeColour()">Change colour</button> <button onclick="resetColour()">Reset</button></div>
+<p>JavaScript for the above sample is following:</p>
+<pre>
+function changeColour() {
+    if (!document.getElementsByClassName) {
+        if (confirm("You need a compatible browser to run this test!")) {
+            document.location.href = "http://nightly.webkit.org/";
+        }
+    } else {
+        var elems = document.getElementsByClassName("testdiv");
+        elems[0].style.backgroundColor = "#CCCCCC";
+        elems[0].style.color = "#000000";
+    }
+}
+function resetColour() {
+    if (!document.getElementsByClassName) {
+        if (confirm("You need a compatible browser to run this test!")) {
+            document.location.href = "http://nightly.webkit.org/";
+        }
+    } else {
+        var elems = document.getElementsByClassName("testdiv");
+        elems[0].style.backgroundColor = "#FF0000";
+        elems[0].style.color = "#ffffff";
+    }
+}</pre>
+<p>For those interested WebKit developers have also put up a benchmark to illustrate how superior native support is over any other possible solution.</p>
+<p>NB! To test this functionality you need to download recent nightly of WebKit.</p>

@@ -1,0 +1,71 @@
+---
+layout: post
+title: How to run a site with gzip compression and why it matters
+date: 2010-04-23 11:06:37.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Research
+tags:
+- Apache
+- case study
+- compression
+- deflate
+- GNU
+- GNU zip
+- Google Webmaster Tools
+- gzip
+- How-to
+- howto
+- load speed
+- mod_deflate
+- optimisation
+- PageRank
+- performance
+- SEO
+- site
+- speed
+- webdev
+- webmaster
+- website
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p><img class="alignleft size-full wp-image-857" title="www gzip" src="{{ site.baseurl }}/assets/www-gzip.png" alt="www gzip" width="106" height="132" />Since Google is now considering site speed for PageRank, it has made developers and SEO crowd thinking about it. Those familiar with Google Webmaster Tools probably know that site speed graph and related suggestions have been there for quite some time already.</p>
+<p>First and probably the simplest thing is to turn on GNU zip compression, as also advised by Google Webmaster Tools (under Labs &gt; Site performance). Doing so requires <strong>mod_deflate</strong><em> </em>module on the Apache web server.<!--more--></p>
+<h3>Turning on gzip</h3>
+<p>Given the above, enabling the compression couldn't be easier with <strong>only 1 line in the .htaccess</strong> of the site:</p>
+<pre lang="apache">AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript</pre>
+<p><span style="font-weight: normal;">All it does is to turn on Gzip compression for each listed mime type. </span>All browsers in use today can handle it.</p>
+<p>For better readability a block of directives could be used instead:</p>
+<pre lang="apache">
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+</pre>
+<p>If there's uncertainty about whether or not Apache has <strong>mod_deflate</strong>, it's be smart to make it fail-safe by wrapping the directive(s) inside the <strong>IfModule</strong> section as Cezary pointed out <a href="#comment-969">in the comment below</a>.</p>
+<h3>Case study</h3>
+<p>To illustrate the benefits, the directive was introduced on <a href="http://7kohvipoissi.ee">7Kohvipoissi.ee</a>. Here's the chart with page load speeds over 10 tests:</p>
+<p><img class="alignnone size-full wp-image-841" title="Page load speed chart of CarrotCars.co.uk with and without Gzip compression" src="{{ site.baseurl }}/assets/Site-load-speed-case-study-carrotcars.co.uk.png" alt="Page load speed chart of CarrotCars.co.uk with and without Gzip compression" width="406" height="367" /></p>
+<p><a title="Load speed difference of Gzipped and regular, uncompressed website" href="http://tekkie.flashbit.net/wp-content/uploads/2010/04/Gzipped-vs-regular-site-benchmark.pdf">Data sheet</a> (PDF, 45 KB)</p>
+<p>Related resources:</p>
+<ul>
+<li><a title="A simple online web page compression / deflate / gzip test tool" href="http://www.gidnetwork.com/tools/gzip-test.php">Online Gzip test</a> to test the compression</li>
+<li><a title="Directory-level configuration file" href="http://en.wikipedia.org/wiki/Htaccess">.htaccess</a> (Wikipedia)</li>
+<li><a href="http://en.wikipedia.org/wiki/Gzip">GNU Gzip</a> (Wikipedia)</li>
+<li><a href="http://httpd.apache.org/docs/2.0/mod/mod_deflate.html">mod_deflate Apache Module</a></li>
+<li><a href="https://www.google.com/webmasters/tools">Google Webmaster Tools</a></li>
+</ul>

@@ -1,21 +1,20 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+title: tekkie
+email: ain@flashbit.net
+description: >
+  Tech blog of Ain Tohvri, Sr. Software Engineer at @i_pioneers Hamburg, partner at OÜ Flashbit. Supporter of open standards, Free Software. Involved in various FOSS projects. Core Team member of @assemblejs.
+baseurl: ""
+url: "http://tekkie.flashbit.net"
+twitter_username: tekkie
+github_username:  ain
 
 # Build settings
 markdown: kramdown
+permalink: /:categories/:title
+gems: [jekyll-paginate]
+paginate: 10
+exclude:
+  - node_modules/
+  - Gemfile*
+  - package.json
+  - npm-debug.log

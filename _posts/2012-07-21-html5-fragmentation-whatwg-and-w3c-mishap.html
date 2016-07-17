@@ -1,0 +1,42 @@
+---
+layout: post
+title: 'HTML5 fragmentation: WHATWG and W3C mishap'
+date: 2012-07-21 16:27:08.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- HTML5
+- Open Standards
+tags:
+- HTML5
+- open source
+- open technologies
+- opensource
+- w3c
+- whatwg
+meta:
+  _edit_last: '1'
+  _thumbnail_id: '1515'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p><img src="{{ site.baseurl }}/assets/512px-HTML5-logo-150x150.png" alt="" title="HTML5" width="150" height="150" class="alignleft size-thumbnail wp-image-1515" style="padding-top:20px;" />In the past days the fragmentation of web technologies was mainly caused by the corporate interests and while it has gone nowhere, it has shown some considerable improvement over the past years (see <a title="Internet Explorer dumping CSS hacks to comply with standards" href="http://tekkie.flashbit.net/browsers/internet-explorer-dumping-css-hacks-to-comply-with-standards">IE dumping CSS hacks</a> or <a title="Internet Explorer 8 to pass Acid2" href="http://tekkie.flashbit.net/browsers/internet-explorer-8-to-pass-acid2">IE8 to pass Acid2</a> from 2008). Nevertheless, what we're witnessing today, is of a different kind. Two main open standards bodies involved in HTML5 development, <acronym title="Web Hypertext Application Technology Working Group">WHATWG</acronym> and <acronym title="World Wide Web Consortium">W3C</acronym>, are struggling to find the common ground.<br />
+<!--more--></p>
+<p>2 days ago (July 19th 2012) a <a href="http://lists.w3.org/Archives/Public/public-whatwg-archive/2012Jul/0119.html" title="Update on the relationship between the WHATWG HTML living standard and the W3C HTML5 specification">post in the WHATWG mailing list</a> claimed WHATWG separating their <em>HTML Living Standard</em> specs from W3C's <em>HTML5</em>:</p>
+<p><cite>Ian Hickson</cite></p>
+<blockquote><p>A few years ago (around 2007), we started working with the W3C on what we were then unofficially calling "HTML5", and officially calling "Web Applications 1.0". We renamed the specification "HTML5", and the W3C began publishing a copy of it as well. Not long after, the W3C side of this effort decided to split their version of the spec into subspecs (e.g. splitting out the 2D canvas API, server-sent events, postMessage, etc), and for a while we tried to match that on the WHATWG side. The result was an increasing confusion of versions of the spec, so we eventually went back to just having a single spec on the WHATWG side which contains everything I work on, which we now call the "HTML Living Standard". Over the years, this document and the various documents on the W3C side have slowly slightly forked, as documented at the top of the WHATWG spec.</p>
+<p>More recently, the goals of the W3C and the WHATWG on the HTML front have diverged a bit as well. The WHATWG effort is focused on developing the canonical description of HTML and related technologies, meaning fixing bugs as we find them [1], adding new features as they become necessary and viable, and generally tracking implementations. The W3C effort, meanwhile, is now focused on creating a snapshot developed according to the venerable W3C process. This led to the chairs of the W3C HTML working group and myself deciding to split the work into two, with a different person responsible for editing the W3C HTML5, canvas, and microdata specifications than is editing the WHATWG specification (me).</p></blockquote>
+<p>Whilst it's surely of the organisational nature, it possesses a threat of creating a viable double standard and further fragmentation. As for a developer, there's a clear correlation between fragmentation and deployment effort.</p>
+<p>A realistic illustration for the story is this:</p>
+<pre lang="css">
+-webkit-render:fast; /* Apple, Google, RIM, KDE WHATWG */
+-moz-render:medium; /* Mozilla WHATWG */
+-opera-render:medium; /* Opera WHATWG */
+-ms-we-render-over-directx:slow; /* Not in WHATWG */
+-w3c-render:discussion; /* Lonely blokes on their own */
+</pre>

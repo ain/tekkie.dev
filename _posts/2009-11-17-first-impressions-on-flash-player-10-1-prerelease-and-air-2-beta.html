@@ -1,0 +1,42 @@
+---
+layout: post
+title: First impressions on Flash Player 10.1 prerelease and AIR 2 beta
+date: 2009-11-17 11:48:54.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+tags:
+- Adobe Labs
+- AIR
+- AIR2
+- beta
+- bug
+- Flash Player
+- FP10.1
+- issue
+- Open Screen Project
+- OSP
+- prerelease
+- troubleshooting
+- TweetDeck
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p><img class="alignleft size-full wp-image-91" title="Adobe - Flash on" src="{{ site.baseurl }}/assets/flashon_logo.gif" alt="Adobe - Flash on" width="203" height="54" />Adobe announced 2 great releases today: <a href="http://labs.adobe.com/technologies/air2/">Adobe AIR 2 beta</a> and <a href="http://labs.adobe.com/technologies/flashplayer10/">Flash Player 10.1 prerelease</a>, both aiming high with Flash Player 10.1 being the first runtime release of the Open Screen Project and AIR 2 offering a significant performance boost with compelling features.</p>
+<p><!--more--></p>
+<h3>AIR 2</h3>
+<p>As with any prerelease and beta, things tend to tackle going smoothly. With AIR 2 installation, after choosing to update from 1.5, the process stalled at 0% and hung. Fortunately a restarted process had no trouble finishing and AIR was up. Probably one of the most popular AIR apps out there, TweetDeck, showed a significant improvement right away launching much faster. As TweetDeck has always been a true memory hog, this has also improved - it's basically 40% off the memory consumption of what it was.</p>
+<p><a href="http://labs.adobe.com/wiki/index.php/AIR_2:Release_Notes">AIR 2 release notes at Adobe Labs</a>.</p>
+<h3>Flash Player 10.1</h3>
+<p>Flash Player 10.1 looked to be working fine at first but then the trouble surfaced: somehow a single keystroke in a TextField resulted in double chars, e.g. entering "e" became "ee". Strangely enough it only happened on Safari (Version 4.0.4, Mac OS 10.6.2). Reinstalling the plugin, removing it by hand and deleting preferences for it (plist entries) did not help. Firefox 3.5 on the other hand was safe and even faster than before.</p>
+<p>Not sure what's behind the bug on Safari, but it's surely a show-stopper grade issue.</p>
+<p><a href="http://labs.adobe.com/technologies/flashplayer10/#features">Key new features of Flash Player 10.1</a></p>
+<div class="attention"><strong>ATTENTION</strong>: you're welcome to vote for the above-mentioned bug (FP-3186) to be fixed at <a title="Keystroke triggers double entry in input TextField" href="http://bugs.adobe.com/jira/browse/FP-3186">Adobe Flash Player Bug and Issue Management System</a>.</div>

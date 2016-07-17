@@ -1,0 +1,50 @@
+---
+layout: post
+title: Embedding fonts in Flash CS3
+date: 2007-09-20 00:09:52.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+tags:
+- Adobe
+- CS3
+- dfont
+- embedding
+- Flash
+- Flex
+- Flex SDK
+- font
+- fonts
+- system
+- ttf
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>Font management in Flash has never been worth a wow but in CS3 Adobe has forgotten proper font embedding at all.<!--more--><br />
+[ad#medium-rectangle]<br />
+In previous versions (e.g. CS2) it was possible to create a Font instance in the library. The same procedure is there in CS3:</p>
+<p><a title="Font Symbol Properties" rel="lightbox" href="http://tekkie.flashbit.net/wp-content/uploads/2007/10/font_symbol_properties.png"><img src="{{ site.baseurl }}/assets/font_symbol_properties.thumbnail.png" alt="Font Symbol Properties" /></a></p>
+<p>But even though it's there only Basic Latin characters make it through the compilation process and there's no unicode range for the font instance in the resulting SWF file. Yet the trouble goes deeper than that. If you've previously used Font Symbol Name for your TextFormat definitions in ActionScript that is no more the case.</p>
+<p>If the Font instance was exported for ActionScript as Bitmap text, Flash will change the instance name to the font's actual name postfixed with <strong>_8pt_st</strong> if the font size in the Font Symbol Properties dialog was 8pt. If the font was not exported as Bitmap text, font name remains and the instance name given in Font Symbol Properties dialog is actually ignored.</p>
+<p>There's no real workaround for proper font embedding in Flash CS3 IDE so far. The only recommendation would be to use common character embedding to an on-Stage TextField and use it as a shared resource application-wide:</p>
+<p><a title="Character embedding" rel="lightbox" href="http://tekkie.flashbit.net/wp-content/uploads/2007/10/common_embedding_scheme.png"><img src="{{ site.baseurl }}/assets/common_embedding_scheme.thumbnail.png" alt="Character embedding" /></a></p>
+<p>It has been reported that some of the characters embedded may appear erroneously and look garbled. It is unknown why it happens yet it has been proven that embedding Data Fork Fonts (dfont) instead of TrueType Fonts (ttf) gives a better result on a Mac.</p>
+<p>To make changes to a font outline or format you might want to check out <a title="An outline font editor" href="http://fontforge.sourceforge.net/">FontForge</a>.</p>
+<p>For those of you willing to play around there are 2 different Flash sources:</p>
+<ol>
+<li><a title="Font embedding using AS3" href="http://tekkie.flashbit.net/wp-content/uploads/2007/10/font_embedding_in_cs3.zip">Font embedding using AS3</a></li>
+<li><a title="Font embedding using AS2" href="http://tekkie.flashbit.net/wp-content/uploads/2007/10/font_embedding_using_as2.zip">Font embedding using AS2</a></li>
+</ol>
+<p>Your comments and discoveries are most welcome.</p>
+<p>Related resources:</p>
+<ul>
+<li><a href="http://tekkie.flashbit.net/flash/as/embed-system-fonts-with-flex-sdk">Embed system fonts with Flex SDK</a></li>
+</ul>

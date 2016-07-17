@@ -1,0 +1,40 @@
+---
+layout: post
+title: free -m alternative for Mac OS X
+date: 2012-12-23 00:01:13.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Mac OS
+tags:
+- bash
+- Mac OS X
+- memory
+- nix
+- Ruby
+- snippet
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>On Linux console it's easy to get free memory with <code>free -m</code>. On Mac the utility is not directly available. The alternative is to fetch it from <code>vm_stat</code>.</p>
+<p>There's a great small Ruby script to do the job and display free memory in a simplistic form with a command <code>free</code> in a following few steps:</p>
+<ol>
+<li>Download the <a href="https://gist.github.com/4360607" title="Ruby script to display free memory in Terminal">free-memory.rb</a> script (<a href="https://gist.github.com/4360607/download" title="free-memory.rb download">direct download link</a>)</li>
+<li>Copy it to a folder on your Mac, e.g. to <em>/Applications/Utilities</em></li>
+<li>Create an alias for a free command by editing the bash profile in Terminal:
+<ol>
+<li><code>nano ~/.bash_login</code></li>
+<li>At the end of the file, add <br />
+<code>alias free='ruby /Applications/Utilities/free-memory.rb'</code></li>
+<li><code>source ~/.bash_login</code></li>
+</ol>
+</li>
+</ol>
+<p>You're done. Type <code>free</code> and you'll see something like <code>3.98G of 8.19G free</code>.</p>

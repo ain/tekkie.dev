@@ -1,0 +1,60 @@
+---
+layout: post
+title: Installing Drush on Mac OS X the developer way
+date: 2012-04-10 20:12:15.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Drupal
+tags:
+- devtools
+- Drupal
+- drupal6
+- Drush
+- Mac
+- Mac OS X
+- MacPorts
+- open source
+- OSS
+- PHP
+meta:
+  _thumbnail_id: '417'
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>This is a quick walkthrough of how to somewhat painlessly install the Drupal Shell – Drush.</p>
+<p><!--more--></p>
+<ol>
+<li>If you don't yet have MacPorts and you're a Mac-based developer, install it. It'll come handy on more than once scenario. <a title="Installing MacPorts" href="http://www.macports.org/install.php">See the installation instructions</a></li>
+<li>On the console, type and enter <code>sudo port install drush</code></li>
+<li>You're likely to get a following error: <br />
+<code>execute port: Can't install php52 because conflicting ports are installed: php5</code><br />
+To fix the error disable php5, install drush and re-enable php5:</p>
+<ol>
+<li><code>sudo port deactivate php5</code></li>
+<li><code>sudo port install drush</code></li>
+<li><code>sudo port -f deactivate php52</code></li>
+<li><code>sudo port activate php5</code></li>
+</ol>
+</li>
+<li>If you try to run Drush after MacPorts has finished installing it, you'll get a following error: <br />
+<code>Drush needs a copy of the PEAR Console_Table library in order to function...</code>
+</li>
+<li>To fix above, download <a title="Class that makes it easy to build console style tables" href="http://pear.php.net/package/Console_Table/download/">Console_Table</a> of PEAR and unpack it.</li>
+<li>Copy the Table.php of the package into the Drush location, e.g. with <code>sudo cp /Users/[your username]/Downloads/Console_Table-1.1.5/Console_Table-1.1.5/Table.php /opt/local/libexec/drush/includes/table.inc</code></li>
+<li>Set the appropriate rights for the copied file with <code>sudo chmod 0644 /opt/local/libexec/drush/includes/table.inc</code></li>
+</ol>
+<p>Now as you fire away with <code>drush</code> on the command line, you'll get all the possible options and commands of it. It works.</p>
+<p><strong>Tip</strong>: to use Drush, navigate to the Drupal modules' folder, e.g. <code>cd /Users/[your username]/www/drupal.yoursite.com/sites/all/modules</code> and use any of the Drush commands, e.g. <code>drush dl views</code>.</p>
+<h3>Related resources</h3>
+<ul>
+<li><a title="A command line shell and scripting interface for Drupal" href="http://drush.ws/">Drush.org</a> – A command line shell and scripting interface for Drupal</li>
+<li><a title="Open source content management platform powering millions of websites and applications." href="http://drupal.org/">Drupal</a> – Open source content management platform</li>
+<li><a title="PHP Extension and Application Repository, a framework and distribution system for reusable PHP components." href="http://pear.php.net/">PEAR</a> – PHP Extension and Application Repository</li>
+</ul>

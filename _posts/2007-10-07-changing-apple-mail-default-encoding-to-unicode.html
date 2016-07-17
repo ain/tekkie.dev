@@ -1,0 +1,32 @@
+---
+layout: post
+title: Changing Apple Mail default encoding to unicode
+date: 2007-10-07 18:08:51.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Mac OS
+tags:
+- Apple Mail
+- encoding
+- unicode
+meta:
+  _wp_old_slug: changing-apple-mail-encoding-to-unicode
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>If you've ever used Apple Mail for sending an email that has special characters in it, e.g. umlauts or any other characters that are not part of the basic Latin alphabet, you might have noticed that replies on those particular emails include weird and unreadable characters despite the fact that you didn't enter any of those. This is the case with all the replies from MS Outlook or Outlook Express users.<br />
+<!--more--><br />
+[ad#medium-rectangle]To prevent that you've got to change Apple Mail's encoding to unicode so it would leave no space for mixed results.</p>
+<ol>
+<li>First option to go with is to choose Message -&gt; Text encoding -&gt; Unicode (UTF-8) from the menu for each and every message you create. But that's awkward.</li>
+<li>Second option is to set all further messages to use UTF-8 encoding by default. To do so go to Applications -&gt; Utilities and open Terminal. Copy the line below and hit Enter to execute:
+</li>
+</ol>
+<pre lang="bash">defaults write com.apple.mail NSPreferredMailCharset "UTF-8"</pre>

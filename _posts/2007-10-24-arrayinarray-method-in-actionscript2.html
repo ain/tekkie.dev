@@ -1,0 +1,47 @@
+---
+layout: post
+title: Array.inArray() method in ActionScript2
+date: 2007-10-24 12:34:49.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+- AS
+tags:
+- ActionScript
+- Array
+- AS2
+- Flash
+- inArray
+- in_array
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>For those of you who are still developing in Flash ActionScript2, an Array method similar to the PHP's in_array() might come in handy.<br />
+<!--more--><br />
+The following code creates the prototype and finds a match recursively type-wise:</p>
+<pre lang="actionscript">Array.prototype.inArray = function(element) {
+	for (i in this) {
+		if (this[i] === element) {
+			return true;
+		} else if (this[i] instanceof Array) {
+			return this[i].inArray(element);
+		}
+	}
+	return false;
+};
+ASSetPropFlags(Array.prototype, "inArray", 1);</pre>
+<p>Sample:</p>
+<pre lang="actionscript">var myArr:Array = new Array("flashbit", "tekkie", "flash", "article", 6, 80, new Array(100, 4, 5, new Array(8, "another article")));
+var isInThere:Boolean = myArr.inArray('tekkie');
+trace(isInThere ? "it's there!" : "it's not there!");</pre>
+<p>The above sample would trace <strong>it's there!</strong>.<br />
+<code>myArr.inArray('6')</code> would return false and trace <strong>it's not there!</strong> while <code>myArr.inArray(6)</code> would return true.</p>
+<p><a href="http://tekkie.flashbit.net/wp-content/uploads/2007/10/inarray.as" title="AS2 inArray method for Array">Click here</a> for the attached ActionScript.</p>

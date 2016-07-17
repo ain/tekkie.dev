@@ -1,0 +1,126 @@
+---
+layout: post
+title: Making sense of Flash compile-time and run-time errors
+date: 2010-01-29 12:02:47.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+tags:
+- ActionScript 3
+- AS3
+- AVM1
+- AVM2
+- backtrace
+- bytecode
+- compile-time
+- compiler
+- debug
+- error handling
+- Flash CS4
+- Flash IDE
+- method
+- MonsterDebugger
+- OOP
+- property
+- ReferenceError
+- run time
+- runtime
+- TypeError
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p><img class="alignleft size-full wp-image-656" title="ActionScript" src="{{ site.baseurl }}/assets/64px-ActionScript_icon.png" alt="ActionScript" width="64" height="64" />Every new version of ActionScript has had its impact on the compiler and error handling. Since ActionScript 1, that had loose typing and was suited well for small-scale scripting projects, things have changed considerably.<!--more--></p>
+<p>With ActionScript 2 Flash community first saw the compile-time type checking and class-based syntax which basically allowed Object-oriented programming approaches. Despite the class-based inheritance that took AS2 closer to Java for instance, compiling still took it to AS1 bytecode over legacy matters. So basically the class-based inheritance that allowed the <abbr title="Object-oriented programming">OOP</abbr> approach was a layer on top of the existing prototype-centric AS1.</p>
+<p>With Flex 2 and ActionScript 3 the scripting language changed a lot. The whole thing was restructured and new AS3-specific virtual machine (<abbr title="ActionScript Virtual Machine 2">AVM2</abbr>) was introduced. For those working in Flash IDE prior this era, it changed a lot. With a "habit" of procedural programming they had to rethink it. On the new platform, even if compile-time errors made sense referring to the line error occurred at, run-time errors didn't really help them out much, e.g.:</p>
+<pre lang="latex">TypeError: Error #1009: Cannot access a property or method of a null object reference.</pre>
+<p>or slightly better</p>
+<pre lang="latex">ReferenceError: Error #1069: Property property0 not found on Doc and there is no default value.</pre>
+<p>but also without a line number. Something that can be understood at run-time, we're dealing with bytecode.</p>
+<p>Nevertheless the situation is a bit similar to Java and you can actually quickly scope the above error using the call stack backtrace:</p>
+<pre lang="latex">ReferenceError: Error #1069: Property property0 not found on Doc and there is no default value.
+	at Doc/handleTimerResult()
+	at flash.events::EventDispatcher/dispatchEventFunction()
+	at flash.events::EventDispatcher/dispatchEvent()
+	at flash.utils::Timer/tick()</pre>
+<p>so it runs up to handleTimerResult and then gets stuck. A quick dive into the (illustrative) code reveals that the trace is trying to access property0 during the while iteration at line 51.</p>
+<pre lang="actionscript" line="1">package {
+	import flash.display.MovieClip;
+	import flash.utils.Timer;
+	import flash.events.TimerEvent;
+
+	public class Doc extends MovieClip {
+
+		public var property1:uint;
+		public var property2:uint;
+		private var timer:Timer;
+
+		public function Doc() {
+			init();
+		}
+
+		private function init():void {
+			trace("Doc Class initilized!");
+			setProperties();
+			initTimer();
+		}
+
+		private function setProperties():void {
+			setProperty1();
+			setProperty2();
+		}
+
+		public function setProperty2():void {
+			property2 = randomOf100();
+			trace("2nd property set to "+property2);
+		}
+
+		public function setProperty1():void {
+			property1 = randomOf100();
+			trace("1st property set to "+property1);
+		}
+
+		private function randomOf100():uint {
+			return Math.random() * 100;
+		}
+
+		private function initTimer():void {
+			timer = new Timer(1000, 5);
+			timer.addEventListener(TimerEvent.TIMER, handleTimer);
+			timer.addEventListener(TimerEvent.TIMER_COMPLETE, handleTimerResult);
+			timer.start();
+		}
+
+		private function handleTimerResult(event:TimerEvent):void {
+			var i:int = 3;
+			while (i--) {
+				trace("Property "+i+": "+this['property'+i]); // run-time error
+			}
+		}
+
+		private function handleTimer(event:TimerEvent):void {
+			setProperty1();
+			setProperty2();
+			trace("Properties reset!");
+		}
+	}
+}</pre>
+<p>In most cases, if a class is structured reasonably, the above logic should deliver nicely. If this is not the case, in Flash IDE, instead of the regular Cmd/Ctrl + Enter "Test Movie" functionality, you also have "Debug Movie". It will launch standalone Flash Player and provide you with the line number in the backtrace:</p>
+<pre lang="bash">ReferenceError: Error #1069: Property property0 not found on Doc and there is no default value.
+	at Doc/handleTimerResult()[/Users/[...]/Doc.as:51]
+	at flash.events::EventDispatcher/dispatchEventFunction()
+	at flash.events::EventDispatcher/dispatchEvent()
+	at flash.utils::Timer/tick()</pre>
+<p>In addition to the above there are loads of tools out there, e.g. <a title="De MonsterDebugger is an open source debugger for Adobe Flash, Flex and AIR." href="http://www.monsterdebugger.com/">MonsterDebugger</a>. Check out Lee Brimelow's <a title="Learn how to debug your Flash movies at runtime with this great debugging tool." href="http://www.gotoandlearn.com/play?id=109">Debugging with MonsterDebugger</a> video tutorial for more.</p>
+<p>Related references:</p>
+<ul>
+<li>Flash 10 <a href="http://help.adobe.com/en_US/AS3LCR/Flash_10.0/compilerErrors.html">compiler errors</a>, <a href="http://help.adobe.com/en_US/AS3LCR/Flash_10.0/runtimeErrors.html">run-time errors</a> and <a href="http://help.adobe.com/en_US/AS3LCR/Flash_10.0/compilerErrors.html">compiler warnings</a></li>
+<li><a title="The Flex compiler, which is often referred to as mxmlc, is a collection of subcompilers, used to create a SWF." href="http://opensource.adobe.com/wiki/display/flexsdk/Flex+3+Compiler+Design">Flex 3 Compiler Design</a></li>
+</ul>

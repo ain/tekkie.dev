@@ -1,0 +1,64 @@
+---
+layout: post
+title: ActionScript 3 lacks functionality for visible bounds of DisplayObject
+date: 2010-05-03 00:29:38.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+- AS
+tags:
+- 3D
+- ActionScript
+- ActionScript 3
+- Adobe
+- AS3
+- development
+- DisplayObject
+- feature request
+- Flash
+- Flash Player
+- FP10
+- FP10.1
+- issue
+- kludge
+- perspective
+- perspective projection
+- PerspectiveProjection
+- projection
+- snippet
+- workaround
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>The following has already been listed as a feature request at Adobe Bug System and is only to illustrate the situation which is basically the lack of badly needed functionality in ActionScript 3.</p>
+<p>The problem relates to <code>flash.geom.PerspectiveProjection</code> introduced with the load of native 3D in Flash 10.<!--more--></p>
+<h3>The situation</h3>
+<ol>
+<li>The object is added to the stage with the defined x, y, z, rotationX, rotationY and rotationZ properties.</li>
+<li>For a better 3D impression, perspective projection is applied.</li>
+<li>After all transformations on-screen size of the object is required.</li>
+</ol>
+<h3>The code</h3>
+<p><script src="https://gist.github.com/1894840.js?file=PPPlane.as"></script></p>
+<p>The code is illustrative and self-explanatory: <code>addPerspective()</code> method adds perspective projection and <code>visibleBitmapBounds()</code> returns a Rectangle with visible bounds of the object.</p>
+<h3>The result and the problem</h3>
+<p>Depending on the stage size, the result is the blue 3D-rotated plane in the perspective alongside the traceback:</p>
+<pre lang="none">Plane size: 274x365
+Plane bounds: (x=256, y=209, w=274, h=365)
+Visible, on-screen bounds of the Plane: (x=258, y=215, w=171, h=287)</pre>
+<p>Plane size and bounds are correct to what it is without perspective transformations, but they don't help with the size of an object on screen.</p>
+<p>So what is currently missing from ActionScript 3 entirely, is the means to get visible bounds of the DisplayObject that has perspective projection. It is especially painful if the object can't be output to stage for measuring (<code>visibleBitmapBounds()</code>).</p>
+<p><strong>If any math geniuses have a better way to get visible bounds of the object with perspective projection, you're most welcome to share it!</strong></p>
+<p>Related resources:</p>
+<ul>
+<li><a href="http://help.adobe.com/en_US/FlashPlatform/beta/reference/actionscript/3/flash/geom/PerspectiveProjection.html">flash.geom.PerspectiveProjection</a> at the ActionScript 3.0 Reference for the Adobe Flash Platform</li>
+<li><a href="http://tekkie.flashbit.net/flash/flash-platform-is-at-a-crossroads">Flash Platform is at a crossroads</a></li>
+</ul>

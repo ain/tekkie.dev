@@ -1,0 +1,69 @@
+---
+layout: post
+title: FileReference.postData property for file uploads
+date: 2007-12-06 12:26:07.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+- AS
+tags:
+- AS2
+- FileReference
+- postData
+- session
+meta:
+  _wp_old_slug: filereferencepostdata-property-for-file-uploads
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>On Flash file uploads, instead of populating your session ID in URL, you might use a specific property of the FileReference class.<!--more--></p>
+<p>What most people do is this:</p>
+<pre lang="actionscript">import flash.net.FileReference;
+
+var allTypes:Array = new Array();
+var imageTypes:Object = new Object();
+imageTypes.description = "Images (*.jpg, *.jpeg, *.gif, *.png)";
+imageTypes.extension = "*.jpg; *.jpeg; *.gif; *.png";
+allTypes.push(imageTypes);
+
+var listener:Object = new Object();
+
+listener.onSelect = function(file:FileReference):Void {
+    trace("onSelect: " + file.name);
+    if(!file.upload("http://tekkie.flashbit.net/upload.php?sessionid="+_root.sessionid)) {
+        trace("Upload failed!");
+    }
+}
+
+var fileRef:FileReference = new FileReference();
+fileRef.addListener(listener);
+fileRef.browse(allTypes);</pre>
+<p>Note the above file upload URL. In theory it makes the upload handler script vulnerable as session ID is exposed and is being read from URL. So instead of GET one should be using POST:</p>
+<pre lang="actionscript">import flash.net.FileReference;
+
+var allTypes:Array = new Array();
+var imageTypes:Object = new Object();
+imageTypes.description = "Images (*.jpg, *.jpeg, *.gif, *.png)";
+imageTypes.extension = "*.jpg; *.jpeg; *.gif; *.png";
+allTypes.push(imageTypes);
+
+var listener:Object = new Object();
+
+listener.onSelect = function(file:FileReference):Void {
+    trace("onSelect: " + file.name);
+    file.postData = "sessionid="+_root.sessionid;
+    if(!file.upload("http://tekkie.flashbit.net/upload.php")) {
+        trace("Upload failed!");
+    }
+}
+
+var fileRef:FileReference = new FileReference();
+fileRef.addListener(listener);
+fileRef.browse(allTypes);</pre>

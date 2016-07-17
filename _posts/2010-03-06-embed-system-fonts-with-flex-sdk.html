@@ -1,0 +1,58 @@
+---
+layout: post
+title: Embed system fonts with Flex SDK
+date: 2010-03-06 00:15:45.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+- AS
+tags:
+- ActionScript 3
+- Adobe
+- AS3
+- AXDT
+- Eclipse
+- embed
+- Flex
+- Flex SDK
+- font
+- open source
+- OSS
+- snippet
+- SWF
+- system
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>This little ActionScript 3 snippet will convert the system font to a SWF font instance that you can use in your <abbr title="ActionScript 3">AS3</abbr> project. <!--more--></p>
+<p>Compared to the bugloaded madness of <a href="http://tekkie.flashbit.net/flash/embedding-fonts-in-flash-cs3">embedding a font in Flash CS3</a>, Flex SDK (in combination with Eclipse Platform and AXDT for instance) really makes it easy with a following ActionScript snippet:</p>
+<pre lang="actionscript">
+package {
+
+	import flash.display.Sprite;
+
+	public class Impact extends Sprite {
+
+		[Embed(systemFont='Impact', fontName='Impact', mimeType='application/x-font')]
+		public static var Impact:Class;
+
+	}
+}
+</pre>
+<p>As can be told from the above ActionScript code, it will embed a font called Impact.</p>
+<p><a href="http://tekkie.flashbit.net/wp-content/uploads/2010/03/Impact.as">Download Impact.as</a></p>
+<p>Related resources:</p>
+<ul>
+<li><a href="http://www.eclipse.org">Eclipse Platform</a></li>
+<li><a href="http://axdt.org/">AXDT</a> - set of Open Source plugins for <abbr title="ActionScript 3">AS3</abbr>/<abbr title="Magic eXtensible Markup Language">MXML</abbr> support on Eclipse</li>
+<li><a href="http://opensource.adobe.com/wiki/display/flexsdk/Flex+SDK">Flex SDK</a> open source framework for building and maintaining expressive web applications</li>
+<li><a href="http://tekkie.flashbit.net/mac-os/enhance-the-ugly-eclipse-icon-on-your-dock">Enhance the ugly Eclipse icon on your Dock</a></li>
+</ul>

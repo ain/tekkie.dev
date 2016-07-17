@@ -1,0 +1,53 @@
+---
+layout: post
+title: CSS transitions
+date: 2007-11-07 22:36:55.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- CSS
+tags:
+- animation
+- CSS3
+- WebKit
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>WebKit has introduced another great feature – CSS animation. It is simply amazing what you can do with CSS transitions combined with <a title="CSS3 transforms in WebKit" href="/css/css3-transforms-in-webkit">CSS transforms</a>.<br />
+<!--more--></p>
+<p>Transitions can be specified using following properties:</p>
+<pre>
+transition-property
+transition-duration
+transition-timing-function
+transition
+</pre>
+<p>For example</p>
+<pre lang="css">img#testimg1 {
+    opacity: 1;
+    -webkit-transition: opacity 1s linear;
+}
+
+img#testimg1:hover {
+    opacity: 0;
+}</pre>
+<p>would fade out the image if rolled over:</p>
+<p>
+<style>
+  img#testimg1 {opacity: 1; -webkit-transition: opacity 1s linear;} img#testimg1:hover {opacity: 0;}
+</style>
+<img id="testimg1" title="flash tekkie" src="{{ site.baseurl }}/assets/flash_tekkie.png" alt="flash tekkie" /></p>
+<p>Combining transitions with transforms in HTML like this</p>
+<pre lang="html4strict">
+  &lt;img style="-webkit-transition: -webkit-transform 5s ease-in;" onclick="this.style.webkitTransform='rotate(360deg)'" src="{{ site.baseurl }}/assets/image.png" alt=""&gt;
+</pre>
+<p>would flip the image 360 degrees in 5 seconds time on first click:</p>
+<p><img style="-webkit-transition: -webkit-transform 5s ease-in;" title="flash tekkie" onclick="this.style.webkitTransform='rotate(360deg)'" src="{{ site.baseurl }}/assets/flash_tekkie.png" alt="flash tekkie" /></p>
+<p>Please note that you would need <a title="Download latest nightly of WebKit" href="http://webkit.org/">WebKit</a> for the above samples to function properly.</p>

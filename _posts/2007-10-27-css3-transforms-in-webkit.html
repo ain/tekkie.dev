@@ -1,0 +1,34 @@
+---
+layout: post
+title: CSS3 transforms in WebKit
+date: 2007-10-27 16:40:05.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- CSS
+tags:
+- CSS3
+- transform
+- w3c
+- WebKit
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>In addition to <a title="WebKit is leading the run for CSS3" href="/browsers/webkit-is-leading-the-run-for-css3">Web Fonts</a> recently introduced in WebKit, there's now a rudimentary support for CSS transforms as well. As of now you can scale, rotate, skew and translate the boxes in the latest nightly of WebKit.<br />
+<!--more--><br />
+Even though this is a WebKit-specific development at this point, the similar functionality will definitely be there in forthcoming CSS specifications presumably under the rotation and rotation-point property for instance.</p>
+<p>Such a functionality would save developers a lot of time on image processing or scripting and provide a lightweight solution for a number of situations.</p>
+<p>To illustrate the point, please find the image below and click it for the live test case:</p>
+<p><a title="CSS3 transforms in WebKit" href="http://tekkie.flashbit.net/tmp/css3_transform_sample.html"><img src="{{ site.baseurl }}/assets/css3_transforms_in_webkit1.png" alt="CSS3 transforms in WebKit" /></a></p>
+<p>Transform is available through <strong>-webkit-transform</strong> property. For example to scale an image to 145% and rotate it by 45 degrees you could use the following code:</p>
+<p><code>img {-webkit-transform:rotate(45deg) scale(1.45);}</code></p>
+<p>Alternatively you may also add skew primitive and flip the image by 300 degrees as well:</p>
+<p><code>img {-webkit-transform:rotate(45deg) scale(1.45) skew(-300deg);}</code></p>
+<p><a title="Download the nightly build of WebKit" href="http://nightly.webkit.org/">Click here</a> to download WebKit.</p>

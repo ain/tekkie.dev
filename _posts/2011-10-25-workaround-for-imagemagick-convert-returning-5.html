@@ -1,0 +1,71 @@
+---
+layout: post
+title: Workaround for ImageMagick convert returning 5
+date: 2011-10-25 23:16:13.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Developer tools
+tags:
+- convert
+- crash
+- ImageMagick
+- issue
+- Mac OS X
+- MacPorts
+- MAMP
+- PHP
+- workaround
+- XAMPP
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>If you've installed ImageMagick from MacPorts, e.g. for a 32-bit Mac for which there are no prebuilt binaries, you could have seen ImageMagick not working with PHP exec() on localhost even though it works from  the command line.<!--more--></p>
+<p>A successful <code>exec("convert...")</code> call  should always return 0. If not, there's an error. Whenever the result is unexpected, it's a good idea to add a flag of <code>-debug 'All'</code> to the ImageMagick command, e.g. 
+<pre lang="bash">/opt/local/bin/convert 
+/Users/flash_tekkie/developer_tools/ImageMagick_test.png 
+-debug 'All' -units PixelsPerInch -density 320 
+/Users/flash_tekkie/developer_tools/ImageMagick_test_320.png</pre>
+<p>In the circumstances ImageMagick returned 5, which produced a following log entry:</p>
+<pre lang="bash">21.10.11 16:57:41 com.apple.ReportCrash.Root[9037] 
+2011-10-21 16:57:41.603 ReportCrash[9037:2617] 
+Saved crash report for convert[9043] version ??? (???) to 
+/Library/Logs/DiagnosticReports/convert_2011-10-21-165741-5_localhost.crash</pre>
+<p>and within the crash file:</p>
+<pre lang="bash">Process:         convert [9152]
+Path:            /opt/local/bin/convert
+Identifier:      convert
+Version:         ??? (???)
+Code Type:       X86 (Native)
+Parent Process:  httpd [2655]
+
+Date/Time:       2011-10-21 17:00:53.674 +0200
+OS Version:      Mac OS X 10.6.8 (10K549)
+Report Version:  6
+
+Exception Type:  EXC_BREAKPOINT (SIGTRAP)
+Exception Codes: 0x0000000000000002, 0x0000000000000000
+Crashed Thread:  0
+
+Dyld Error Message:
+  Library not loaded: /opt/local/lib/libfreetype.6.dylib
+  Referenced from: /opt/local/bin/convert
+  Reason: Incompatible library version: convert requires version 14.0.0 or later, but libfreetype.6.dylib provides version 13.0.0
+
+Binary Images:
+0x8fe00000 - 0x8fe4162b  dyld 132.1 (???) &lt;A4F6ADCC-6448-37B4-ED6C-ABB2CD06F448&gt; /usr/lib/dyld</pre>
+<p>To resolve the above conflict of libraries, recompiling with MacPorts didn't help. The conflict lied in the library of the server instance, in the circumstances MAMP which had to be replaced. XAMPP worked out perfectly.</p>
+<p>References:</p>
+<ul>
+<li><a title="XAMPP is an easy to install Apache distribution containing MySQL, PHP and Perl." href="http://www.apachefriends.org/en/xampp.html">XAMPP</a></li>
+<li><a title="ImageMagick debug command line option" href="http://www.imagemagick.org/script/command-line-options.php#debug">ImageMagick -debug</a></li>
+<li><a title="PHP documentation for exec()" href="http://php.net/manual/en/function.exec.php">PHP exec</a></li>
+<li><a href="http://www.macports.org/" title="Open-source community initiative to design an easy-to-use system for compiling, installing, and upgrading software on the Mac OS X">MacPorts</a></li>
+</ul>

@@ -1,0 +1,224 @@
+---
+layout: post
+title: Protect your ActionScript code with SWF Protector
+date: 2010-07-22 03:43:32.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+- AS
+tags:
+- ActionScript
+- ActionScript 3
+- AS3
+- code
+- decompile
+- Flash
+- obfuscate
+- obfuscation
+- obfuscator
+- Papervision3D
+- protect
+- PV3D
+- SWF
+- SWF Protector
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+  _thumbnail_id: '540'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p><img class="alignleft size-full wp-image-540" title="Encrypted" src="{{ site.baseurl }}/assets/encrypted.png" alt="" width="115" height="115" />Even though the point of code obfuscation will always remain arguable, it may sometimes be a good idea to mess around a bit and make your ActionScript code harder to steal. The following review will highlight the features of <a href="http://www.dcomsoft.com/">SWF Protector</a>, analyse the code and impact on SWF file size as well as performance.<!--more--></p>
+<h3>Interface</h3>
+<p>The interface of SWF Protector is pretty straightforward and easy to follow:</p>
+<p><a class="cln" title="SWF Protector Simple mode" href="http://tekkie.flashbit.net/wp-content/uploads/2010/07/SWF-Protector-Simple-mode.png"><img class="alignnone size-thumbnail wp-image-1196" title="SWF Protector Simple mode" src="{{ site.baseurl }}/assets/SWF-Protector-Simple-mode-150x143.png" alt="SWF Protector Simple mode" width="150" height="143" /></a><a class="cln" title="Advanced mode of SWF Protector" href="http://tekkie.flashbit.net/wp-content/uploads/2010/07/Advanced-mode-of-SWF-Protector.png"><img class="alignnone size-thumbnail wp-image-1197" title="Advanced mode of SWF Protector" src="{{ site.baseurl }}/assets/Advanced-mode-of-SWF-Protector-139x150.png" alt="Advanced mode of SWF Protector" width="139" height="150" /></a><a class="cln" title="SWF Protector protection complete" href="http://tekkie.flashbit.net/wp-content/uploads/2010/07/SWF-Protector-protection-complete.png"><img class="size-thumbnail wp-image-1198 alignnone" title="SWF Protector protection complete" src="{{ site.baseurl }}/assets/SWF-Protector-protection-complete-150x73.png" alt="SWF Protector protection complete" width="150" height="73" /></a></p>
+<p>It was a 1-second process for a 50 KB ActionScript 3 SWF. It also preserves your original SWF file renaming it to <em>[yourSWFFilename]_original.swf</em>.</p>
+<h3>Decompiling the protected SWF</h3>
+<p>To test the protection, 2 programs were used:</p>
+<ol>
+<li>Flash Decompiler Trillix</li>
+<li>Sothink SWF Decompiler</li>
+</ol>
+<p>Allegedly, protectors have some built in functionality to crash the decompilers and that is exactly what happened in both scenarios:</p>
+<p><a class="cln" title="SWF Protector withstands Flash Decompiler Trillix just fine" href="http://tekkie.flashbit.net/wp-content/uploads/2010/07/SWF-Protector-withstands-Flash-Decompiler-Trillix-just-fine.png"><img class="alignleft size-thumbnail wp-image-1231" title="SWF Protector withstands Flash Decompiler Trillix just fine" src="{{ site.baseurl }}/assets/SWF-Protector-withstands-Flash-Decompiler-Trillix-just-fine-150x68.png" alt="SWF Protector withstands Flash Decompiler Trillix just fine" width="150" height="68" /></a> <a class="cln" title="SWFDecompiler quit unexpectedly" href="http://tekkie.flashbit.net/wp-content/uploads/2010/07/SWFDecompiler-quit-unexpectedly.png"><img class="size-thumbnail wp-image-1229 alignnone" title="SWFDecompiler quit unexpectedly" src="{{ site.baseurl }}/assets/SWFDecompiler-quit-unexpectedly-150x67.png" alt="SWFDecompiler quit unexpectedly" width="150" height="67" /></a></p>
+<p>Whilst Trillix's decompiler crashed consistently, Sothink's counterpart finally worked and made it possible to get some ActionScript out of the SWF.</p>
+<h3>Resulting ActionScript</h3>
+<p>Here's the original ActionScript 3 file <strong>before protection</strong>:</p>
+<pre lang="actionscript3">package {
+    
+    import flash.display.StageQuality;
+    import flash.events.Event;
+    import nl.demonsters.debugger.MonsterDebugger;
+    import org.papervision3d.view.BasicView;
+    import org.papervision3d.objects.DisplayObject3D;
+    import org.papervision3d.objects.primitives.Sphere;
+    import org.papervision3d.view.stats.StatsView;
+        
+    public class SWFProtectorTest extends BasicView {
+        
+        private var debugger:MonsterDebugger;
+        private var pivotDO3D:DisplayObject3D;
+        private var sphere:Sphere;
+        private var stats:StatsView;
+            
+        public function SWFProtectorTest() {
+            stage.frameRate = 40;
+            stage.quality = StageQuality.BEST;
+            init();
+            startRendering();
+        }
+        
+        private function init():void {
+            debugger = new MonsterDebugger(this);
+            pivotDO3D = new DisplayObject3D();
+            addSpheres(5);
+            scene.addChild(pivotDO3D);
+            stats = new StatsView(renderer);
+            addChild(stats);
+            MonsterDebugger.trace(this, "SWFProtectorTest initialised!");
+        }
+        
+        private function addSpheres(amount:int):void {
+            while(amount--) {
+                var radius:Number = 200 + 30 * amount;
+                sphere = new Sphere(null, radius, 24, 24);
+                pivotDO3D.addChild(sphere);
+            }
+        }
+        
+        override protected function onRenderTick(event:Event = null):void {
+            pivotDO3D.localRotationY--;
+            super.onRenderTick();
+        }
+    }
+
+}</pre>
+<p>and here's the very same code <strong>after being protected</strong> and then decompiled by Sothink SWF Decompiler:</p>
+<pre lang="actionscript3">    import SWFProtectorTest.*;
+    import flash.display.*;
+    import flash.events.*;
+    import nl.demonsters.debugger.*;
+    import org.papervision3d.objects.*;
+    import org.papervision3d.objects.primitives.*;
+    import org.papervision3d.view.*;
+    import org.papervision3d.view.stats.*;
+
+package 
+{
+    import SWFProtectorTest.*;
+    import flash.display.*;
+    import flash.events.*;
+    import nl.demonsters.debugger.*;
+    import org.papervision3d.objects.*;
+    import org.papervision3d.objects.primitives.*;
+    import org.papervision3d.view.*;
+    import org.papervision3d.view.stats.*;
+
+    public class SWFProtectorTest extends BasicView {
+        private var debugger:MonsterDebugger;
+        private var pivotDO3D:DisplayObject3D;
+        private var sphere:Sphere;
+        private var stats:StatsView;
+
+        public function SWFProtectorTest() {
+            if (true){
+                // label
+            }
+            // label
+            // Jump to 26;
+            // label
+            // Jump to 37;
+            // label
+            switch(-92) branch count is:&lt;0>[-3] default offset is:< -8>;
+            fewymrzygqh.ztg(this);
+            stage.frameRate = 40;
+            stage.quality = StageQuality.BEST;
+            this.init();
+            startRendering();
+            return;
+        }
+        private function init() : void {
+            // label
+            if (true){
+                // label
+                // Jump to 17;
+            }
+            else{
+                // Jump to 26;
+                // label
+                // Jump to 37;
+                // label
+                switch(-1) branch count is:&lt;0>[-28] default offset is:< -8>;
+                this.debugger = new MonsterDebugger(this);
+                this.pivotDO3D = new DisplayObject3D();
+                this.addSpheres(5);
+                scene.addChild(this.pivotDO3D);
+                this.stats = new StatsView(renderer);
+                addChild(this.stats);
+                MonsterDebugger.trace(this, "SWFProtectorTest initialised!");
+                return;
+            }
+        }
+        private function addSpheres(:int) : void {
+            if (true){
+                // label
+                // Jump to 16;
+            }
+            else{
+                // label
+                // Jump to 26;
+                // label
+                // Jump to 40;
+                // label
+                switch(0) branch count is:&lt;1>[-8, -13] default offset is:< -3>;
+                var _loc_2:Number;
+                while (--){
+                    // label
+                    _loc_2 = 200 + 30 * ;
+                    this.sphere = new Sphere(null, _loc_2, 24, 24);
+                    this.pivotDO3D.addChild(this.sphere);
+                }
+                return;
+            }
+        }
+        override protected function onRenderTick(:Event = null) : void {
+            if (!true){
+                // label
+                // label
+                // label
+            }
+            // label
+            // Jump to 27;
+            // label
+            // Jump to 38;
+            // label
+            switch(0) branch count is:&lt;0>[-8] default offset is:< -3>;
+            var _loc_2:* = this.pivotDO3D;
+            _loc_2.localRotationY = this.pivotDO3D.localRotationY--;
+            super.onRenderTick();
+            return;
+        }
+    }
+}
+</pre>
+<p>So the 2nd codepiece is in a pretty bad shape. Anyone trying to make sense here should wonder if it's worth it - a strong argument for using such obfuscation tools.</p>
+<h3>SWF file size</h3>
+<p>Obviously any such protection algorithm will have its impact on file size. The above ActionScript made a <strong>78 KB</strong> SWF that went up to<strong> 115 KB </strong>with both protection and obfuscation applied to all classes incl. those of Papervision3D. That's <strong>+47%</strong>.</p>
+<p>Without Papervision3D protection it went up to 98 KB, <strong>+25%</strong>. Also, the fact that you may want to uncheck a library of a size of Papervision3D will set you unchecking each and every class in a library one by one. A serious usability setback that the makers of SWF Protector have missed entirely.</p>
+<h3>Performance</h3>
+<p>Measuring FPS and memory usage on a busy Papervision3D loop (as per above ActionScript) didn't reveal any setbacks, <em>StatsView</em> was identical.</p>
+<p>Even so, it's always hard to cope with anything that is going to mess with your code. In fact, it's the very reason to avoid obfuscation tools or any other tools in that matter.</p>
+<p><a title="Protect Flash from decompilation" href="http://www.dcomsoft.com/">SWF Protector</a> business licence for one user is $59.95. Personal licence is $39.95.</p>
+<p>Related resources and articles:</p>
+<ul>
+<li><a href="http://www.dcomsoft.com/">SWF Protector</a></li>
+<li><a title="Flash Decompiler Trillix is the only application capable of converting SWF to FLA with high speed, high quality and hundreds of additional features." href="http://www.flash-decompiler.com/">Flash Decompiler Trillix</a></li>
+<li><a title="Flash decompiler, decompile SWF to FLA with ease" href="http://www.sothink.com/product/flashdecompiler/index.htm">Sothink SWF Decompiler</a></li>
+<li><a title="obuscatr is email address obfuscator that you can use online or on your Mac OS X Dashboard." href="http://tekkie.flashbit.net/mac-os/obfuscatr-120-released">obfuscatr 1.2.0 released</a></li>
+</ul>

@@ -1,0 +1,60 @@
+---
+layout: post
+title: Date formatting prototypes for ActionScript 2
+date: 2008-01-03 16:25:03.000000000 +01:00
+type: post
+published: true
+status: publish
+categories:
+- Flash
+- AS
+tags:
+- AS2
+- prototype
+- remoting
+- snippet
+meta:
+  _edit_last: '1'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>Here are 2 prototypes that you can use to convert a regular ISO-formatted date into a Flash Date object and then, if necessary, to a regular European date format. Both for ActionScript 2.<!--more--> </p>
+<p>Firstly a function to convert a String ISO date to a Date object:</p>
+<pre lang="actionscript">String.prototype.toDate = function():Date {
+	var dArr:Array = this.split("-"),
+		month:Number = (dArr[1].charAt(0) != "0") ? Number(dArr[1])-1 : Number(dArr[1].charAt(1))-1,
+		date:Number = (dArr[2].charAt(0) != "0") ? dArr[2].substr(0,2) : dArr[2].charAt(1);
+	if (dArr[2].length > 4 && dArr[2].indexOf(":") != -1) {
+		var tArr:Array = dArr[2].substr(3).split(":"),
+			flashDate:Date = new Date(dArr[0], month, date, tArr[0], tArr[1], tArr[2]);
+	} else {
+		var flashDate:Date = new Date(dArr[0], month, date);
+	}
+	return flashDate;
+};
+ASSetPropFlags(String.prototype, "toDate", 1);</pre>
+<p>And secondly a function that turns a Flash Date object into a European date format:</p>
+<pre lang="actionscript">Date.prototype.euDate = function():String {
+	var day:String = (this.getDate() > 10) ? String(this.getDate()) : "0" + this.getDate(),
+		month:String = (this.getMonth() < 9) ? "0" + Number(this.getMonth()+1) : String(Number(this.getMonth()+1));
+	return day + "." + month + "." + this.getFullYear();
+};
+ASSetPropFlags(Date.prototype, "euDate", 1);</pre>
+<p>Here's a test case for both to illustrate the use:</p>
+<pre lang="actionscript">var rawDate = '2007-04-17 23:32:12',
+	cDate = rawDate.toDate(),
+	EUD = cDate.euDate();
+
+/*
+    will output:
+        Input date is 2007-04-17 23:32:12
+        Flash Date is Tue Apr 17 23:32:12 GMT+0300 2007
+        EU date is 17.04.2007	
+ */
+trace("Input date is "+rawDate+"\nFlash Date is " + cDate + "\nEU date is " + EUD);</pre>
+<p>Both may become handy for those using Flash remoting. </p>
+<p><a href="http://tekkie.flashbit.net/wp-content/uploads/2008/01/date_protos.zip" title="Date prototypes">Download ActionScript files</a>.</p>

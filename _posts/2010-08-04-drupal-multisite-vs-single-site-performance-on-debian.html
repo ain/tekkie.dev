@@ -1,0 +1,131 @@
+---
+layout: post
+title: Drupal multisite vs single site performance on Debian
+date: 2010-08-04 19:47:21.000000000 +02:00
+type: post
+published: true
+status: publish
+categories:
+- Drupal
+tags:
+- benchmark
+- Debian
+- Drupal
+- drupal6
+- Lenny
+- Linux
+- module
+- multisite
+- open source
+- OSS
+- performance
+- single site
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+  _thumbnail_id: '417'
+author:
+  login: ain
+  email: ain@flashbit.net
+  display_name: Ain Tohvri
+  first_name: Ain
+  last_name: Tohvri
+---
+<p>The following benchmark proves that a traditional single site Drupal setup isn't any faster than its multisite counterpart.</p>
+<p>Tested setups:</p>
+<ol>
+<li><strong>Single site</strong> installation of <strong>Drupal 6.17</strong> from Drupal.org</li>
+<li><strong>Multisite</strong> installation of <strong>Drupal 6.6</strong> from Debian Lenny. Although there's a version difference and Debian's release lags behind by a number of versions, it has the latest security patches applied.</li>
+</ol>
+<p>Benchmark data by ApacheBench as per commands: </p>
+<ol>
+<li><code>ab -n 100 -c 10 http://drupal_single_site_address.tld</code></li>
+<li> <code>ab -n 100 -c 10 http://drupal_multisite_address.tld</code></li>
+</ol>
+<p><!--more--></p>
+<p>[ad#large-rectangle]</p>
+<h3>Clean setup without any custom modules/themes</h3>
+<h4>Multisite</h4>
+<pre class="log">Concurrency Level:      10
+<strong>Time taken for tests:   18.719 seconds</strong>
+Complete requests:      100
+Failed requests:        0
+Write errors:           0
+Total transferred:      630476 bytes
+HTML transferred:       567868 bytes
+<strong>Requests per second:    5.34 [#/sec] (mean)</strong>
+Time per request:       1871.879 [ms] (mean)
+Time per request:       187.188 [ms] (mean, across all concurrent requests)
+Transfer rate:          32.89 [Kbytes/sec] received</pre>
+<h4>Single site</h4>
+<pre class="log">Concurrency Level:      10
+<strong>Time taken for tests:   18.819 seconds</strong>
+Complete requests:      100
+Failed requests:        0
+Write errors:           0
+Total transferred:      613100 bytes
+HTML transferred:       552900 bytes
+<strong>Requests per second:    5.31 [#/sec] (mean)</strong>
+Time per request:       1881.890 [ms] (mean)
+Time per request:       188.189 [ms] (mean, across all concurrent requests)
+Transfer rate:          31.82 [Kbytes/sec] received</pre>
+<h3>Setup with Views, IMCE and jQuery Update enabled</h3>
+<h4>Multisite</h4>
+<pre class="log">Concurrency Level:      10
+<strong>Time taken for tests:   18.185 seconds</strong>
+Complete requests:      100
+Failed requests:        0
+Write errors:           0
+Total transferred:      625200 bytes
+HTML transferred:       565000 bytes
+<strong>Requests per second:    5.50 [#/sec] (mean)</strong>
+Time per request:       1818.453 [ms] (mean)
+Time per request:       181.845 [ms] (mean, across all concurrent requests)
+Transfer rate:          33.58 [Kbytes/sec] received</pre>
+<h4>Single site</h4>
+<pre class="log">Concurrency Level:      10
+<strong>Time taken for tests:   19.715 seconds</strong>
+Complete requests:      100
+Failed requests:        0
+Write errors:           0
+Total transferred:      627644 bytes
+HTML transferred:       566842 bytes
+<strong>Requests per second:    5.07 [#/sec] (mean)</strong>
+Time per request:       1971.458 [ms] (mean)
+Time per request:       197.146 [ms] (mean, across all concurrent requests)
+Transfer rate:          31.09 [Kbytes/sec] received</pre>
+<h3>Setup with modules and a custom theme</h3>
+<h4>Multisite</h4>
+<pre class="log">Concurrency Level:      10
+<strong>Time taken for tests:   21.767 seconds</strong>
+Complete requests:      100
+Failed requests:        0
+Write errors:           0
+Total transferred:      891500 bytes
+HTML transferred:       833500 bytes
+<strong>Requests per second:    4.59 [#/sec] (mean)</strong>
+Time per request:       2176.653 [ms] (mean)
+Time per request:       217.665 [ms] (mean, across all concurrent requests)
+Transfer rate:          40.00 [Kbytes/sec] received</pre>
+<h4>Single site</h4>
+<pre class="log">Concurrency Level:      10
+<strong>Time taken for tests:   22.031 seconds</strong>
+Complete requests:      100
+Failed requests:        0
+Write errors:           0
+Total transferred:      874400 bytes
+HTML transferred:       816400 bytes
+<strong>Requests per second:    4.54 [#/sec] (mean)</strong>
+Time per request:       2203.097 [ms] (mean)
+Time per request:       220.310 [ms] (mean, across all concurrent requests)
+Transfer rate:          38.76 [Kbytes/sec] received</pre>
+<h3>Conclusion</h3>
+<p>Given the above data, it's pretty safe to say that both installations run equally well and the multisite setup isn't any worse at all. It could also be said that a native Debian setup of Drupal (<code>apt-get install drupal6</code>) is optimised enough to perform slightly better.</p>
+<p>Other Drupal-related articles and resources:</p>
+<ul>
+<li><a href="http://tekkie.flashbit.net/drupal/getting-imageapi-and-imagecache-cope-with-drupal-6">Getting ImageAPI and ImageCache cope with Drupal 6</a></li>
+<li><a href="http://tekkie.flashbit.net/research/how-to-run-a-site-with-gzip-compression-and-why-it-matters">How to run a site with gzip compression and why it matters</a></li>
+<li><a href="http://drupal.org/node/138889">Drupal 10 Minute Multisite Install &amp; Configuration</a></li>
+<li><a href="http://drupal.org/node/282862">Drupal Performance Measurement &amp; Benchmarking</a></li>
+<li><a title="How to increase the performance of your Drupal site" href="http://drupal.org/node/2601">Server tuning considerations</a></li>
+</ul>

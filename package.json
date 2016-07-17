@@ -1,0 +1,23 @@
+{
+  "name": "tekkie",
+  "version": "1.0.0",
+  "description": "tekkie.flashbit.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "browser-sync start --proxy 'localhost:4000' --files '_site/**/*'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ain/tekkie.flashbit.net.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ain/tekkie.flashbit.net/issues"
+  },
+  "homepage": "https://github.com/ain/tekkie.flashbit.net#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0"
+  }
+}
