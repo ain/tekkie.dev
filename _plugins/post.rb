@@ -2,6 +2,8 @@ module Jekyll
 
   class Document
 
+    # FIXME: not working with Github Pages.
+    #
     #Updated for Jekyll 3.0.0
 
     # override post method in order to return categories names as slug
