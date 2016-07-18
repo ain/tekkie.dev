@@ -1,8 +1,8 @@
 # Site settings
 title: tekkie
-email: ain@flashbit.net
+#email: ain@flashbit.net
 description: >
-  Tech blog of Ain Tohvri, Sr. Software Engineer at @i_pioneers Hamburg, partner at OÜ Flashbit. Supporter of open standards, Free Software. Involved in various FOSS projects. Core Team member of @assemblejs.
+  Tech blog of Ain Tohvri, Sr. Software Engineer at <a href="http://twitter.com/i_pioneers">@i_pioneers</a> Hamburg, partner at OÜ Flashbit. Supporter of open standards, Free Software. Involved in various FOSS projects.<br>Core Team member of <a href="http://twitter.com/assemblejs">@assemblejs</a>.
 baseurl: ""
 url: "http://tekkie.flashbit.net"
 twitter_username: tekkie
@@ -11,7 +11,8 @@ github_username:  ain
 # Build settings
 markdown: kramdown
 permalink: /:categories/:title
-gems: [jekyll-paginate]
+gems:
+  - jekyll-paginate
 paginate: 10
 exclude:
   - node_modules/
