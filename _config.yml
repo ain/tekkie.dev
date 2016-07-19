@@ -19,3 +19,5 @@ exclude:
   - Gemfile*
   - package.json
   - npm-debug.log
+
+google_analytics: UA-590376-4
