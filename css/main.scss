@@ -21,8 +21,11 @@
     }
 }
 
+@import 'base/typography';
+@import 'components/icon';
 
 // Default Jekyll theme styles
+// TODO: split to structure.
 @import 'base';
 @import 'layout';
 @import 'syntax-highlighting';
