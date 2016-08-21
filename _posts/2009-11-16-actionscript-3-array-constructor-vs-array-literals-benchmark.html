@@ -28,9 +28,9 @@ author:
   display_name: Ain Tohvri
   first_name: Ain
   last_name: Tohvri
+excerpt_separator: <!--more-->
 ---
-<p>By the latest Coding Convention of ActionScript 3, the usage of the Array constructor is only encouraged for size allocation, e.g. <code>var myArr:Array = new Array(2);</code> for an array with 2 elements in it. In all other cases literals should be used, e.g. <code>var myArr:Array = [];</code></p>
-<p><!--more--></p>
+<p>By the latest Coding Convention of ActionScript 3, the usage of the Array constructor is only encouraged for size allocation, e.g. <code>var myArr:Array = new Array(2);</code> for an array with 2 elements in it. In all other cases literals should be used, e.g. <code>var myArr:Array = [];</code></p><!--more-->
 <p>Performance-wise this makes a lot of sense with up to 3 times of the speed difference:</p>
 <p><img class="alignnone size-full wp-image-548" title="new Array vs Array literals benchmark" src="{{ site.baseurl }}/assets/new-Array-vs-Array-literals-benchmark.png" alt="new Array vs Array literals benchmark" width="424" height="358" /></p>
 <p>The above chart displays 3 different tests through 1 000 000 iterations all confirming that Array literals are a lot faster in the circumstances.</p>

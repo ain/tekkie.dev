@@ -12,9 +12,8 @@ excerpt: Tech blog of Ain Tohvri, Sr. Software Engineer at @i_pioneers Hamburg, 
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <div>{{ post.excerpt }}</div>
       </li>
     {% endfor %}
   </ul>

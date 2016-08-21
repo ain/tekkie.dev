@@ -7,4 +7,11 @@
       @extend %clearfix;
     }
   }
+
+  &--w96 {
+    height: auto;
+    max-height: 96px;
+    max-width: 96px;
+    width: auto;
+  }
 }

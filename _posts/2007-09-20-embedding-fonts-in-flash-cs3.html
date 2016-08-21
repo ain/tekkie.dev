@@ -27,10 +27,10 @@ author:
   display_name: Ain Tohvri
   first_name: Ain
   last_name: Tohvri
+excerpt_separator: <!--more-->
 ---
-<p>Font management in Flash has never been worth a wow but in CS3 Adobe has forgotten proper font embedding at all.<!--more--><br />
-[ad#medium-rectangle]<br />
-In previous versions (e.g. CS2) it was possible to create a Font instance in the library. The same procedure is there in CS3:</p>
+<p>Font management in Flash has never been worth a wow but in CS3 Adobe has forgotten proper font embedding at all.</p><!--more-->
+<p>In previous versions (e.g. CS2) it was possible to create a Font instance in the library. The same procedure is there in CS3:</p>
 <p><a title="Font Symbol Properties" rel="lightbox" href="http://tekkie.flashbit.net/wp-content/uploads/2007/10/font_symbol_properties.png"><img src="{{ site.baseurl }}/assets/font_symbol_properties.thumbnail.png" alt="Font Symbol Properties" /></a></p>
 <p>But even though it's there only Basic Latin characters make it through the compilation process and there's no unicode range for the font instance in the resulting SWF file. Yet the trouble goes deeper than that. If you've previously used Font Symbol Name for your TextFormat definitions in ActionScript that is no more the case.</p>
 <p>If the Font instance was exported for ActionScript as Bitmap text, Flash will change the instance name to the font's actual name postfixed with <strong>_8pt_st</strong> if the font size in the Font Symbol Properties dialog was 8pt. If the font was not exported as Bitmap text, font name remains and the instance name given in Font Symbol Properties dialog is actually ignored.</p>

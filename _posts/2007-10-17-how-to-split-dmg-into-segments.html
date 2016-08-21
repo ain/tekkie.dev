@@ -20,10 +20,10 @@ author:
   first_name: Ain
   last_name: Tohvri
 permalink: /mac-os/:title
+excerpt_separator: <!--more-->
 ---
-<p>Uploading a disk image may in some cases be quite troublesome, e.g. uploading to .Mac simply because you can't resume the upload if it fails. A way around would be to upload in segments.<br />
-<!--more--><br />
-[ad#medium-rectangle]There are number of tools that can split your image (DMG, CDR, etc.) into pieces. Some of them work, some don't but the most bulletproof way is to do it in the Terminal (Applications &gt; Utilities &gt; Terminal).</p>
+<p>Uploading a disk image may in some cases be quite troublesome, e.g. uploading to .Mac simply because you can't resume the upload if it fails. A way around would be to upload in segments.</p><!--more-->
+<p>There are number of tools that can split your image (DMG, CDR, etc.) into pieces. Some of them work, some don't but the most bulletproof way is to do it in the Terminal (Applications &gt; Utilities &gt; Terminal).</p>
 <p>There's a tool on a Mac that does pretty much everything concerning the disks. It's called <strong>hdiutil</strong>. It can attach, detach (eject), verify, mount, unmount and segment a volume to name a few. To use this tool you have just got to type in a command. For a start you may want to get a view on hdiutil's features by typing <strong>hdiutil help</strong>. Hit Enter to execute a command.</p>
 <p>To segment an image, let's say DMG you could use a command:</p>
 <p><code>hdiutil segment -o mydvd -segmentSize 100M /Users/[your Mac username]/Desktop/dvdimage.dmg</code></p>

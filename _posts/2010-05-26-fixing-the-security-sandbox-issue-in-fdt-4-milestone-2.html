@@ -36,17 +36,18 @@ author:
   display_name: Ain Tohvri
   first_name: Ain
   last_name: Tohvri
+excerpt: Despite the fact that M2 isn't the final release of FDT 4 and even the feature sets of Pure, Pro and Enterprise versions are yet to be determined, it's a solid Flash development tool already.
 ---
-<p><img class="alignleft size-full wp-image-913" title="FDT pure coding comfort" src="{{ site.baseurl }}/assets/FDT-pure-coding-comfort.png" alt="FDT pure coding comfort" width="217" height="189" />Despite the fact that M2 isn't the final release of FDT 4 and even the feature sets of Pure, Pro and Enterprise versions are yet to be determined, it's a solid Flash development tool already.</p>
-<p>Even so one of the first issues to tackle with on a Mac is the FDT 4 Debugger throwing back Flash sandbox violation.<!--more--></p>
-<p>The sandbox error looks like this:</p>
+<p><img class="teaser-image--left" title="FDT pure coding comfort" src="{{ site.baseurl }}/assets/FDT-pure-coding-comfort.png" alt="FDT pure coding comfort" width="217" height="189" />Despite the fact that M2 isn't the final release of FDT 4 and even the feature sets of Pure, Pro and Enterprise versions are yet to be determined, it's a solid Flash development tool already.</p>
+<p>Even so one of the first issues to tackle with on a Mac is the FDT 4 Debugger throwing back Flash sandbox violation.</p>
+<p>The sandbox error looks like this:</p><br>
 <pre lang="none">Error #2044: Unhandled securityError:. text=Error #2140: Security
 sandbox violation:
 file:////Users/flashtekkie/projects/FDT_workspace/FDT_AS3_project/Main.swf
 cannot load
 file:////Users/flashtekkie/projects/FDT_workspace/FDT_AS3_project/Resource.swf.
 Local-with-filesystem and local-with-networking SWF files cannot load
-each other.</pre>
+each other.</pre><!--more-->
 <p>The trick is that the local path in Flash Player's Security Settings, e.g.<br />
 <code>/Users/flashtekkie/projects/FDT_workspace/FDT_AS3_project/</code>,<br />
 isn't in tune with the External SWF Viewer of FDT and expects the URL instead:<br />

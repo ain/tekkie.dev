@@ -30,8 +30,9 @@ author:
   display_name: Ain Tohvri
   first_name: Ain
   last_name: Tohvri
+excerpt_separator: <!--more-->
 ---
-<p>The following benchmark proves that a traditional single site Drupal setup isn't any faster than its multisite counterpart.</p>
+<p>The following benchmark proves that a traditional single site Drupal setup isn't any faster than its multisite counterpart.</p><!--more-->
 <p>Tested setups:</p>
 <ol>
 <li><strong>Single site</strong> installation of <strong>Drupal 6.17</strong> from Drupal.org</li>
@@ -42,7 +43,6 @@ author:
 <li><code>ab -n 100 -c 10 http://drupal_single_site_address.tld</code></li>
 <li> <code>ab -n 100 -c 10 http://drupal_multisite_address.tld</code></li>
 </ol>
-<p><!--more--></p>
 <p>[ad#large-rectangle]</p>
 <h3>Clean setup without any custom modules/themes</h3>
 <h4>Multisite</h4>
