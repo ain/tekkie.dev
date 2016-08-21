@@ -1,0 +1,1 @@
+﻿/**	Array.inArray() method		Copyright © 2007 Flashbit LLC */Array.prototype.inArray = function(element) {	for (i in this) {		if (this[i] === element) {			return true;		} else if (this[i] instanceof Array) {			return this[i].inArray(element);			}	}	return false;};ASSetPropFlags(Array.prototype, "inArray", 1);

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>Selector API test case for WebKit</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript">
+            <!--
+            function detectLangs() {
+                var divs = document.querySelectorAll(".reddiv, .greendiv, .bluediv");
+                var rd = document.querySelector("#resultContainer");
+                var langs = new Array();
+                var divCount = divs.length;
+                for (var i=0; i < divCount; i++) langs.push(divs[i].innerHTML);
+                rd.innerHTML = "Markup languages are: " + langs.toString();
+                rd.style.display = "block";
+            }
+            function hideResult() {
+                var rd = document.querySelector("#resultContainer");
+                rd.innerHTML = "";
+                rd.style.display = "none;";                
+            }
+            //-->
+        </script>
+        <style type="text/css">
+            .reddiv, .bluediv, .greendiv, #detectColours {color:#fff; float:left; margin-right:10px; padding:10px; font-family:Helvetica,sans-serif;}
+            .reddiv {background-color:red;}
+            .bluediv {background-color:blue;}
+            .greendiv {background-color:green;}
+            #resultContainer {font-family:Helvetica,sans-serif; padding-top:10px; display:none;}
+            #detectBtn {padding-top:10px;}
+        </style>
+    </head>
+    <body>
+        <div class="reddiv">HTML</div>
+        <div class="greendiv">XHTML</div>
+        <div class="bluediv">XML</div>
+        <div style="clear:left;"></div>
+        <div id="resultContainer"></div>
+        <div id="detectBtn"><button onclick="detectLangs()">Detect languages</button> <button onclick="hideResult()">Reset</button></div>
+    </body>
+</html>

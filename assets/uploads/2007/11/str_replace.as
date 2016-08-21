@@ -1,0 +1,1 @@
+﻿/**	String.replace() method		Copyright © 2007 Flashbit LLC */String.prototype.replace = function(searchStr, replaceStr):String {	var arr:Array = this.split(searchStr);	return arr.join(replaceStr);};ASSetPropFlags(String.prototype, "replace", 1);
