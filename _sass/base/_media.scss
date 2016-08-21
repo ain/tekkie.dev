@@ -1,0 +1,12 @@
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+figure {
+  @extend %vertical-rhythm;
+
+  > img {
+    display: block;
+  }
+}

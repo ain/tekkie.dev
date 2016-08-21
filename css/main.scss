@@ -8,24 +8,26 @@
 @import 'settings/colours';
 @import 'settings/breakpoints';
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
+@import 'vendor/normalise';
 
+@import 'generic/media-queries';
+@import 'generic/wrapper';
+@import 'generic/icon';
+
+@import 'tools/clearfix';
+@import 'tools/vertical-rhythm';
+
+@import 'base/body';
 @import 'base/typography';
-@import 'components/icon';
+@import 'base/media';
+@import 'base/list';
+@import 'base/link';
+@import 'base/heading';
+@import 'base/block-element';
 
-// Default Jekyll theme styles
-// TODO: split to structure.
-@import 'base';
-@import 'layout';
-@import 'syntax-highlighting';
+@import 'components/content';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/post';
+
+@import 'vendor/syntax-highlighting';

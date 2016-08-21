@@ -8,3 +8,28 @@ body {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
 }
+
+pre,
+code {
+  font-size: 15px;
+}
+
+blockquote {
+  color: $grey-color;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: -1px;
+}
+
+figcaption {
+  font-size: $small-font-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $base-font-weight;
+}

@@ -1,0 +1,37 @@
+pre,
+code {
+  background-color: #eef;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  @extend %vertical-rhythm;
+  overflow-x: auto;
+  padding: 8px 12px;
+
+  > code {
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+blockquote {
+  @extend %vertical-rhythm;
+
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit / 2;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+p {
+  @extend %vertical-rhythm;
+}
