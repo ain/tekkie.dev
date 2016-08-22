@@ -1,6 +1,7 @@
 ---
 layout: post
 title: You may not need Grunt
+image: grunt-logo.svg
 categories:
 - JavaScript
 - Node
