@@ -8,7 +8,6 @@ categories:
 tags:
 - javascript
 - nodejs
-- node
 - grunt
 - npm
 author:
