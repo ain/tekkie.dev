@@ -5,6 +5,7 @@ description: >
   <span itemscope itemprop="author" itemtype="http://schema.org/Person">Tech blog of <span itemprop="name">Ain Tohvri</span>, <span itmeprop="jobTitle">Sr. Software Engineer</span> at <a href="http://twitter.com/i_pioneers">@<span itemprop="worksFor">i_pioneers</span></a> <span itemprop="workLocation homeLocation">Hamburg</span>, partner at <span itemprop="owns">OÜ Flashbit</span>. Supporter of open standards, Free Software. Involved in various FOSS projects.<br>Core Team member of <a href="http://twitter.com/assemblejs">@<span itemprop="memberOf">assemblejs</a></span>.
 baseurl: ""
 url: "http://tekkie.flashbit.net"
+locale: en_GB
 twitter_username: tekkie
 github_username:  ain
 
