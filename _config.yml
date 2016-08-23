@@ -7,7 +7,8 @@ baseurl: ""
 url: "http://tekkie.flashbit.net"
 locale: en_GB
 twitter_username: tekkie
-github_username:  ain
+github_username: ain
+facebook_username: ain.tohvri
 
 # Build settings
 markdown: kramdown
