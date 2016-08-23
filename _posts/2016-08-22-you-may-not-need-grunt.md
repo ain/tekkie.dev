@@ -13,6 +13,7 @@ tags:
 - npm
 author:
   login: ain
+  name: Ain Tohvri
 excerpt_separator: <!--more-->
 ---
 Grunt is a JavaScript task runner and it's great at what it does. Even so, depending on a project, you can also do without it.<!--more-->
