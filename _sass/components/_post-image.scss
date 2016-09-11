@@ -1,0 +1,10 @@
+.post-image {
+
+  max-width: 600px;
+  border: 1px solid $grey-color-light;
+  margin: 20px 0;
+
+  &--rounded {
+    border-radius: 5px;
+  }
+}
