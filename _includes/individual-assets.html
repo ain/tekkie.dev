@@ -1,0 +1,20 @@
+{% if page.assets.external.css %}
+  {% for url in page.assets.external.css %}
+    <link rel="stylesheet" href="{{ url }}">
+  {% endfor %}
+{% endif %}
+{% if page.assets.external.js %}
+  {% for url in page.assets.external.js %}
+    <script src="{{ url }}" type="text/javascript"></script>
+  {% endfor %}
+{% endif %}
+{% if page.assets.inline.js %}
+  {% for code in page.assets.inline.js %}
+    <script type="text/javascript">{% include {{code}} %}</script>
+  {% endfor %}
+{% endif %}
+{% if page.assets.inline.css %}
+  {% for code in page.assets.inline.css %}
+    <style type="text/css">{% include {{code}} %}</style>
+  {% endfor %}
+{% endif %}
