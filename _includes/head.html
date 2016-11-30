@@ -10,21 +10,6 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  {% if page.assets.js %}
-    {% for url in page.assets.js %}
-      <script src="{{ url }}" type="text/javascript"></script>
-    {% endfor %}
-  {% endif %}
-  {% if page.includes.js %}
-    {% for code in page.includes.js %}
-      <script type="text/javascript">{% include {{code}} %}</script>
-    {% endfor %}
-  {% endif %}
-  {% if page.includes.css %}
-    {% for code in page.includes.css %}
-      <style type="text/css">{% include {{code}} %}</style>
-    {% endfor %}
-  {% endif %}
   {% if jekyll.environment == 'production' %}
   {% include analytics.html %}
   {% endif %}
