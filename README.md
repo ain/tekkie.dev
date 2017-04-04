@@ -18,4 +18,5 @@ Tech blog at http://tekkie.flashbit.net
 
 4. When making a change, site will now automagically recompile and reload
 
-Copyright © 2007-2017 Ain Tohvri.
+- - -
+Copyright © 2007-2017 Ain Tohvri. All rights reserved.
