@@ -2,7 +2,7 @@
 title: tekkie
 #email: ain@flashbit.net
 description: >
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">Tech blog of <span itemprop="name">Ain Tohvri</span>, <span itmeprop="jobTitle">Sr. Software Engineer</span> at <a href="http://twitter.com/i_pioneers">@<span itemprop="worksFor">i_pioneers</span></a> <span itemprop="workLocation homeLocation">Hamburg</span>, partner at <span itemprop="owns">Flashbit OÜ</span>. Supporter of open standards, free and open-source software. Involved in various <abbr title="Free and open-source software">FOSS</abbr> projects. Core Team member of <a href="http://twitter.com/assemblejs">@<span itemprop="memberOf">assemblejs</a></span>.
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">Tech blog of <span itemprop="name">Ain Tohvri</span>, <span itmeprop="jobTitle">Sr. Software Engineer</span> at <a href="http://twitter.com/i_pioneers">@<span itemprop="worksFor">i_pioneers</span></a> <span itemprop="workLocation homeLocation">Hamburg</span>, partner at <span itemprop="owns">Flashbit OÜ</span>. Supporter of open standards, free and open-source software. Involved in various <abbr title="Free and open-source software">FOSS</abbr> projects. Core Team member of <a href="http://twitter.com/assemblejs">@<span itemprop="memberOf">assemblejs</a></span>.<br><br>Cross-browser testing of this site and its selected works is powered by<br><br><a href="https://www.browserstack.com" title="BrowserStack"><img src="/assets/browserstack.svg" height="32px" alt="BrowserStack" id="browserstack"></a>
 baseurl: ""
 url: "http://tekkie.flashbit.net"
 locale: en_GB
