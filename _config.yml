@@ -4,7 +4,7 @@ title: tekkie
 description: >
   Technology blog of <span itemscope itemprop="author" itemtype="http://schema.org/Person"><span itemprop="name" class="emphasised">Ain Tohvri</span>, <span itmeprop="jobTitle">CTO</span> at <span itemprop="worksFor">Savings United<span>, international network of digital coupon marketplaces. Contributor and maintainer of various Free and Open Source Software projects.<br><br>Cross-browser testing of this site and its selected works is powered by<br><br><a href="https://www.browserstack.com" title="BrowserStack"><img src="/assets/browserstack.svg" height="32px" alt="BrowserStack" id="browserstack"></a>
 baseurl: ""
-url: "http://tekkie.flashbit.net"
+url: "https://tekkie.flashbit.net"
 locale: en_GB
 twitter_username: tekkie
 github_username: ain
