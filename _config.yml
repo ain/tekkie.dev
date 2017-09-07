@@ -16,6 +16,7 @@ permalink: /:categories/:title
 gems:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-redirect-from
 paginate: 10
 exclude:
   - node_modules/

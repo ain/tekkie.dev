@@ -123,9 +123,10 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-paginate
+  jekyll-redirect-from
   jekyll-watch
   kramdown
   rouge
 
 BUNDLED WITH
-   1.12.5
+   1.15.3
