@@ -3,7 +3,7 @@ layout: post
 title: FDT celebrates its 10th birthday
 image: fdt-10th-jubilee.png
 categories:
-- Flash
+- flash
 tags:
 - flashdev
 - fdt

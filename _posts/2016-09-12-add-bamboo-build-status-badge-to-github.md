@@ -3,7 +3,7 @@ layout: post
 title: Add Bamboo build status badge to Github
 image: Octocat.png
 categories:
-- DevOps
+- devops
 - howto
 tags:
 - continuosintegration

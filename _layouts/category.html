@@ -1,0 +1,23 @@
+---
+layout: default
+type: archive
+---
+
+<div class="archive-description">
+  <h2 class="archive-title">/{{ page.category }}</h2>
+  {{ content }}
+</div>
+<div class="wrap">
+{% if site.categories[page.category] %}
+  <ul class="post-list">
+    {% for post in site.categories[page.category] %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h3><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h3>
+      </li>
+    {% endfor %}
+{% else %}
+  <p>There are no posts in this category.</p>
+{% endif %}
+  </ul>
+</div>

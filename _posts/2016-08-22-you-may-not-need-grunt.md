@@ -3,8 +3,8 @@ layout: post
 title: You may not need Grunt
 image: grunt-logo.png
 categories:
-- JavaScript
-- Node
+- javascript
+- node
 tags:
 - javascript
 - nodejs
