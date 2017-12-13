@@ -10,6 +10,9 @@
 {% else %}
   <meta property="og:image" content="{{ site.url }}/assets/ain.png">
 {% endif %}
+{% if page.og_image_alt %}
+  <meta property="og:image:alt" content="{{ page.og_image_alt }}">
+{% endif %}
 {% if page.description %}
   <meta property="og:description" content="{{ page.description }}">
 {% else %}

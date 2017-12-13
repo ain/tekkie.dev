@@ -3,6 +3,7 @@ layout: post
 title: How to run AngularJS end-to-end tests on GitLab CI
 image: angularjs-icon.png
 og_image: angularjs-logo--1200x630.png
+og_image_alt: AngularJS
 categories:
   - devops
 tags:
