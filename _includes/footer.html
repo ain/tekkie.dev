@@ -37,6 +37,9 @@
       <div class="footer-col footer-col-3">
         <p>Technology blog of
           <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+            {% if site.github_username %}<meta itemprop="sameAs" content="https://github.com/{{ site.github_username }}">{% endif %}
+            {% if site.twitter_username %}<meta itemprop="sameAs" content="https://twitter.com/{{ site.twitter_username }}">{% endif %}
+            {% if site.linkedin_username %}<meta itemprop="sameAs" content="https://www.linkedin.com/in/{{ site.linkedin_username }}">{% endif %}
             <em class="emphasised" itemprop="name"><span itemprop="givenName">Ain</span> <span itemprop="familyName">Tohvri</span></em>,
             <span itemprop="jobTitle">CTO</span> at <span itemprop="worksFor" itemtype="http://schema.org/Organization">Savings United</span>, international network of digital coupon marketplaces.
             Partner at <span itemprop="affiliation" itemtype="http://schema.org/Organization">Flashbit</span>.
