@@ -2,6 +2,9 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  {% if page.image %}
+    <meta itemprop="image" content="{{ site.url }}/assets/{{ page.image }}">
+  {% endif %}
   <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ page.url | prepend: site.baseurl }}" />
 
   <header class="post-header">
