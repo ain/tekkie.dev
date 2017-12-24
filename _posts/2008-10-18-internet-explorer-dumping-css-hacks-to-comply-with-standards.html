@@ -32,7 +32,7 @@ excerpt_separator: <!--more-->
     min-width:100px;
     max-width:200px;
 }</pre>
-<p>Microsoft's goal with the above expression hack was to emulate CSS 2.1 support as the simplest properties of CSS were missing. For instance <code>max-width</code> and <code>min-width</code> properties are still not available for nearly 25%<sup>(<a href="#msie6-market-share">1</a>)</sup> of users, the percentage representing IE6 market share. Fortunately the situation is different for IE 7 and 8<sup>(<a href="#min-height-test-case">2</a>)</sup>:</p>
+<p>Microsoft's goal with the above expression hack was to emulate CSS 2.1 support as the simplest properties of CSS were missing. For instance <code>max-width</code> and <code>min-width</code> properties are still not available for nearly 25%<sup>(<a href="#msie6-market-share">1</a>)</sup> of users, the percentage representing IE6 market share. Fortunately the situation is different for IE 7 and 8:</p>
 <div id="CSS-2-1-minimum-and-maximum-height-and-width-test-case" style="float: left; margin-right: 10px;"><a title="min-width &amp; max-width in MSIE6" rel="lightbox[]" href="/assets/uploads/2008/10/081017-163426-msie-60-windows-2000-0f64ddef580b9ed8fced77e0900cadbf.png"><img title="min-width in MSIE6" src="{{ site.baseurl }}/assets/081017-163426-msie-60-windows-2000-0f64ddef580b9ed8fced77e0900cadbf-150x150.png" alt="min-width &amp; max-width in MSIE6" width="150" height="150" /></a><br />
 <sup>max-width in MSIE6</sup></div>
 <div style="float: left; margin-right: 10px;"><a title="min-width in MSIE7" rel="lightbox[]" href="/assets/uploads/2008/10/081017-163404-msie-70-windows-xp-0870a0427c100d2f103915c128b113e0.png"><img title="min-width in MSIE7" src="{{ site.baseurl }}/assets/081017-163404-msie-70-windows-xp-0870a0427c100d2f103915c128b113e0-150x150.png" alt="" width="150" height="150" /></a><br />
@@ -41,10 +41,9 @@ excerpt_separator: <!--more-->
 <sup>max-width in MSIE8</sup></div>
 <p style="clear: left; margin-top: 20px;">Any script execution at the Style Sheet stack of the browser is surely a performance issue and more importantly a security threat. No wonder it makes IE the most insecure browser on the market.</p>
 <p>Good news for the developers who have respected W3C standards and not used JavaScript expressions in CSS, is that IE8 will run in Standards mode by default. For those who haven't, Microsoft will provide backward compatibility with Quirks and IE7 Strict modes. Will it cause a whole load of sites to break with the release of IE8? Sure.</p>
-<p>IE team confirmed ending expressions on Thursday.<sup>(<a href="#ending-expressions">3</a>)</sup></p>
+<p>IE team confirmed ending expressions on Thursday.<sup>(<a href="#ending-expressions">2</a>)</sup></p>
 <p>References:<br />
 <a name="msie6-market-share"></a>1 <sup>IE6 usage statistics from <a href="http://marketshare.hitslink.com/report.aspx?qprid=2">Market Share by Network Applications</a></sup><br />
-<a name="min-height-test-case"></a>2 <sup><a href="http://tekkie.flashbit.net/tmp/IE_min-height_CSS_test.html">CSS 2.1 minimum and maximum height and width test case</a></sup><br />
-<a name="ending-expressions"></a>3 <sup><a href="http://blogs.msdn.com/ie/archive/2008/10/16/ending-expressions.aspx">Ending Expressions</a> (IEBlog)</sup></p>
+<a name="ending-expressions"></a>2 <sup><a href="http://blogs.msdn.com/ie/archive/2008/10/16/ending-expressions.aspx">Ending Expressions</a> (IEBlog)</sup></p>
 <p>Related articles:<br />
 - <a href="http://tekkie.flashbit.net/browsers/internet-explorer-8-to-pass-acid2">Internet Explorer 8 to pass Acid2</a></p>
