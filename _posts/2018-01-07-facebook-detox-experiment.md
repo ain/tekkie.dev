@@ -11,6 +11,7 @@ tags:
   - facebook
   - privacy
   - productivity
+  - detox
 author:
   login: ain
   name: Ain Tohvri
@@ -24,9 +25,11 @@ Facebook is toxic. It farms people for data and feeds off reactionary content ig
 
 H&M does fast fashion, McDonald's does fast food and IKEA does fast furniture. __Facebook is about fast friendships__. Unfriending works the same way as does throwing away a tee shirt that only cost 5€ to buy. Quantity over quality.
 
-One of Hollywood's greatest, Denzel Washington, put it nicely, <q class="quote--inlined">We all want to be liked, but now we all want to be liked by 16 million</q>:
+One of Hollywood's greatest, Denzel Washington, put it nicely:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0bj3j8WHh5k?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen class="video--inline-youtube"></iframe>
+> We all want to be liked, but now we all want to be liked by 16 million
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0bj3j8WHh5k?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen class="video--inline-youtube"></iframe>
 
 ### Privacy
 

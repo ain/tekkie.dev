@@ -24,8 +24,10 @@ pre {
 blockquote {
   @extend %vertical-rhythm;
 
-  border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
+  border-left: 5px solid $grey-color-light;
+  padding: $spacing-unit / 3 $spacing-unit / 2;
+
+  background-color: #f4f4f4;
 
   > :last-child {
     margin-bottom: 0;
