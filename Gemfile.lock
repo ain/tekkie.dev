@@ -122,6 +122,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-mentions
   jekyll-paginate
   jekyll-redirect-from
   jekyll-watch

@@ -17,6 +17,7 @@ gems:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-mentions
 paginate: 10
 include:
   - _pages
@@ -30,3 +31,5 @@ exclude:
   - packafe-lock.json
 google_analytics: UA-590376-4
 facebook_app_id: 133041104144029
+jekyll-mentions:
+  base_url: https://twitter.com
