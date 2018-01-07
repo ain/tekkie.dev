@@ -29,7 +29,7 @@ One of Hollywood's greatest, Denzel Washington, put it nicely:
 
 > We all want to be liked, but now we all want to be liked by 16 million
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0bj3j8WHh5k?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen class="video--inline-youtube"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0bj3j8WHh5k?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen class="video--padded"></iframe>
 
 ### Privacy
 
