@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Facebook detox experiment
-image: angularjs-icon.png
-og_image: angularjs-logo--1200x630.png
-og_image_alt: AngularJS
+image: facebook-detox.png
+og_image: facebook-detox--1200x630.png
+og_image_alt: Facebook detox
 categories:
   - privacy
 tags:
@@ -33,15 +33,15 @@ One of Hollywood's greatest, Denzel Washington, put it nicely:
 
 ### Privacy
 
-Facebook's success builds on privacy violations. You're in a private chat on Facebook talking about a football team you've never mentioned before and 2 minutes later you have a fan gear ad of the team in your Newsfeed. Your private data is digested and sold to the highest bidder for advertising purposes.
+Facebook's success builds on privacy violations. You're in a private chat telling your friend about a football team you've never mentioned before and 2 minutes later you have a fan gear ad of the team in your Newsfeed. All your data, however private, is digested for advertising purposes.
 
-3 years ago in 2014 I joined @maxschrems' class act against Facebook exactly because of it.
+3 years ago in 2014 I joined @maxschrems' class action against Facebook<sup>[1](#class-act-against-facebook)</sup> exactly because of it.
 
 ### Negativity
 
-Facebook provides an excellent platform for flat earthers, anti-vaxxers, trumpists. Hate speech and alternative facts distribute without control. The more people like this type of content, the more likely it is to appear on their Newsfeeds. Facebook's algorithm takes care of that. For the advertising revenue.
+Facebook provides an excellent platform for flat earthers, anti-vaxxers, trumpists. Hate speech and alternative facts distribute with little control. The more people like this type of content, the more likely it is to appear on their Newsfeeds. Facebook's algorithm takes care of that for obvious reasons: getting people hooked for higher advertising conversions.
 
-Your _fast friends_ are the likely distributors of such content. Any confrontations will lead to arguments concluding on a negative note.
+_Fast friends_ are the usual suspects of corrupt Newsfeed and whilst confronting them is not mandatory, it's sad to witness. Not merely a presumption, Facebook use has been directly linked to depression<sup>[2](#facebook-linked-to-depression)</sup>.
 
 ## The experiment
 
@@ -50,8 +50,11 @@ Since I removed Facebook from all my mobile devices a year ago already, next ste
 1. Deactivate Facebook for a quarter as of Jan 15th
 2. Monitor
   - overall productivity
-  - spare time for activities like sports, hobbies incl. Open Source Software contributions
+  - spare time for activities like sports, hobbies, contributions to Open Source Software
   - communication with friends
-  - general mood when communicating online
+  - mood
 
-Until further notice: call in person, send a message.
+Addressing all friends until further notice: text or call. Our keystrokes are limited.
+
+<small><a name="class-act-against-facebook">1</a>: [Facebook Class Action](https://www.fbclaim.com/ui/page/updates)</small><br>
+<small><a name="facebook-linked-to-depression">2</a>: [Study Links Heavy Facebook And Social Media Usage To Depression](https://www.forbes.com/sites/amitchowdhry/2016/04/30/study-links-heavy-facebook-and-social-media-usage-to-depression/)</small>
