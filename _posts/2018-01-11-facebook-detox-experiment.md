@@ -35,7 +35,7 @@ One of Hollywood's greatest, Denzel Washington, put it nicely:
 
 Facebook's success builds on privacy violations. You're in a private chat telling your friend about a football team you've never mentioned before and 2 minutes later you have a fan gear ad of the team in your Newsfeed. All your data, however private, is digested for advertising purposes.
 
-3 years ago in 2014 I joined @maxschrems' class action against Facebook<sup>[1](#class-act-against-facebook)</sup> exactly because of it.
+In 2014 I joined @maxschrems' class action against Facebook<sup>[1](#class-act-against-facebook)</sup> exactly because of it. The lawsuit has gone all the way up to Court of Justice of the European Union, awaiting verdict.
 
 ### Negativity
 
