@@ -5,5 +5,6 @@ category: telecom
 permalink: /telecom/
 redirect_from:
 - /tag/elisa
+- /tag/emt
 ---
 Posts about Telecommunications.
