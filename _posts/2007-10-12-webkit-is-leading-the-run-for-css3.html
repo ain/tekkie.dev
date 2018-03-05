@@ -32,13 +32,13 @@ redirect_from:
 <p>For the first time WebKit has introduced the support for web fonts. What it basically does is that it renders the downloaded font instead of the ones you have got on your system. As Cascading Style Sheet's main purpose is to provide lightweight and accessible design for the web industry, it would make a whole lot of sense in CSS3. It would also significantly cut the traffic (some sites use Flash to display headlines with custom fonts) and put the whole web a leap forward in terms of SEO. Imagine how many sites could upgrade their headers that are currently using images mainly because the custom font outline? And even though some of the criticism focuses on the legal issues, such as copyrighted material getting exposed on the internet, it would still be a huge technical improvement.</p>
 <p>On the code level it's all very simple. Let's fire away with a piece of code:</p>
 <pre lang="css">@font-face {
-    font-family:"Aardvark Cafe"; src:url('http://tekkie.flashbit.net/tmp/AARDC___.TTF') format("truetype");
+    font-family:"Aardvark Cafe"; src:url('https://tekkie.flashbit.net/tmp/AARDC___.TTF') format("truetype");
 }
 h1 {
     font-family:"Aardvark Cafe", sans-serif;
 }</pre>
 <p>That kind of CSS would produce a page like this (in the right context of course):</p>
 <p><img src="{{ site.baseurl }}/assets/headline_w_downloaded_font.png" alt="Headline with downloaded font" /></p>
-<p>Please also see the respective <a title="Headline with downloaded font" href="http://tekkie.flashbit.net/tmp/css3_font_sample.html">HTML</a>. It is extremely straightforward and can be implemented in a few seconds.</p>
+<p>Please also see the respective <a title="Headline with downloaded font" href="/tmp/css3_font_sample.html">HTML</a>. It is extremely straightforward and can be implemented in a few seconds.</p>
 <p>CSS3 Web Fonts module is currently in the status of <a href="http://www.w3.org/TR/2002/WD-css3-webfonts-20020802/">Working Draft 2</a> and even though it's a low priority development let's hope it gets finalized and implemented by the leading browser developers. WebKit's team has put up a very good initiative.</p>
 <p>To test out web fonts <a title="Feature Branch of WebKit" href="http://nightly.webkit.org/builds/overview/feature-branch">click here</a> to download WebKit.</p>
