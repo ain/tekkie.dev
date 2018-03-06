@@ -2,6 +2,9 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  {% if page.tags %}
+    <meta itemprop="keywords" content="{{ page.tags | join: ',' }}">
+  {% endif %}
   {% if page.image %}
     <meta itemprop="image" content="{{ site.url }}/assets/{{ page.image }}">
   {% endif %}
