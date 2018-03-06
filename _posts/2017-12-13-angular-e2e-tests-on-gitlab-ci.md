@@ -11,9 +11,7 @@ tags:
   - gitlab
   - tdd
   - angularjs
-  - nodejs
   - devops
-  - javascript
 author:
   login: ain
   name: Ain Tohvri
