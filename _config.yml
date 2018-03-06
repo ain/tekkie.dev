@@ -1,7 +1,7 @@
 # Site settings
 title: tekkie
 #email: ain@flashbit.net
-description: Technology blog of Ain Tohvri, CTO at Savings United, international network of digital coupon marketplaces. Contributor and maintainer of various FOSS projects.
+description: Technology blog by Ain Tohvri, CTO at Savings United, leading voucher code solution for premium publishers. Contributor and maintainer of various FOSS projects.
 baseurl: ""
 url: "https://tekkie.flashbit.net"
 locale: en_GB
