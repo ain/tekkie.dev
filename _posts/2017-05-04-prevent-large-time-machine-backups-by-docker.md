@@ -6,11 +6,10 @@ categories:
   - docker
 tags:
   - docker
-  - macos
-  - developer
   - devops
   - timemachine
-  - backups
+  - time
+  - machine
 author:
   login: ain
   name: Ain Tohvri
