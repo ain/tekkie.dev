@@ -8,10 +8,9 @@ categories:
 tags:
 - karabiner
 - macos
+- mac
 - sierra
-- protip
-- devtools
-- keyboardmaestro
+- alternative
 author:
   login: ain
   name: Ain Tohvri
