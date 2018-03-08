@@ -6,11 +6,9 @@ categories:
 - devops
 - howto
 tags:
-- continuosintegration
-- continuousdelivery
 - bamboo
 - github
-- howto
+- status
 author:
   login: ain
   name: Ain Tohvri
