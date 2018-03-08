@@ -9,8 +9,8 @@ categories:
 tags:
   - opensource
   - gitlab
-  - tdd
-  - angularjs
+  - e2e
+  - angular
   - devops
 author:
   login: ain
