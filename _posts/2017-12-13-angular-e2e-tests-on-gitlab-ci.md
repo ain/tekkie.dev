@@ -11,7 +11,7 @@ tags:
   - gitlab
   - e2e
   - angular
-  - devops
+  - ng
 author:
   login: ain
   name: Ain Tohvri
