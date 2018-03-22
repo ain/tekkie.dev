@@ -4,7 +4,7 @@ type: archive
 ---
 
 <div class="archive-description">
-  <h2 class="archive-title">/{{ page.category }}</h2>
+  <h1 class="archive-title">/{{ page.category }}</h1>
   {{ content }}
 </div>
 <div class="wrap">
@@ -13,7 +13,7 @@ type: archive
     {% for post in site.categories[page.category] %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h3><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h3>
+        <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2>
       </li>
     {% endfor %}
 {% else %}

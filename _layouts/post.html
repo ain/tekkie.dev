@@ -11,7 +11,7 @@ layout: default
   <meta itemprop="mainEntityOfPage" content="{{ site.url }}{{ page.url | prepend: site.baseurl }}">
 
   <header class="post-header">
-    <h2 class="post-title" itemprop="name headline">{{ page.title }}</h2>
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ page.date | date: "%b %-d, %Y" }}</time>
       {% if page.author %}
