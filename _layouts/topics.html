@@ -1,0 +1,20 @@
+---
+layout: default
+type: archive
+---
+
+<div class="archive-description">
+  <h1 class="archive-title">{{ page.title }}</h1>
+  {{ content }}
+</div>
+<div class="wrap">
+  <ul class="post-list">
+    {% assign topics = site.categories %}
+    {% for topic in topics %}
+      <li>
+        <span class="post-meta">{{ topic[1].size }} post{% if topic[1].size != 1 %}s{% endif %}</span>
+        <h2><a class="post-link" href="/{{ topic[0] }}/">/{{ topic[0] }}</a></h2>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
