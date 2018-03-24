@@ -7,5 +7,7 @@ redirect_from:
 - /mac-os/%3Ca%20href=
 - /mac-os
 - /mac-
+- /tag/hdiutil
+- /tag/dmg
 ---
 Posts about Apple macOS.
