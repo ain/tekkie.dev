@@ -43,7 +43,7 @@ Cloudflare is great. Its free option can be used with GitHub Pages for TLS termi
 
 #### Cloudflare Workers
 
-Cloudflare Workers is a relatively new feature that allows running code at the edge. It's running V8 for JavaScript instead of the standard VCL. Anyone with some basic JavaScript knowledge can create a custom response condition.
+Cloudflare Workers[^3] is a relatively new feature that allows running code at the edge. It's running V8 for JavaScript instead of the standard VCL. Anyone with some basic JavaScript knowledge can create a custom response condition.
 
 #### JavaScript for 410 response
 
@@ -67,6 +67,7 @@ async function fetchAndLog(request) {
 
 [^1]: [Default Jekyll plugins on GitHub Pages](https://help.github.com/articles/configuring-jekyll-plugins/#default-plugins)
 [^2]: [jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from) - Seamlessly specify multiple redirections URLs for your pages and posts
+[^3]: [Cloudflare Workers](https://www.cloudflare.com/products/cloudflare-workers/) - Run code at the edge, deliver powerful web extensibility
 
 *[TLS]: Transport Layer Security, a cryptographic protocol for secure Internet communication
 *[VCL]: Varnish Configuration Language, a domain-specific language used for configuring the Varnish
