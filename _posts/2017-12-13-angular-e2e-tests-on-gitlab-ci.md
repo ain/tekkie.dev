@@ -7,11 +7,15 @@ og_image_alt: AngularJS
 categories:
   - devops
 tags:
+  - gitlab ci angular
+  - gitlab ci protractor
+  - angular ci
+  - ng e2e
+  - headless chrome
+hashtags:
   - opensource
   - gitlab
-  - e2e
   - angular
-  - ng
 author:
   login: ain
   name: Ain Tohvri
