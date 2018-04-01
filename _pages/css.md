@@ -6,4 +6,7 @@ permalink: /css/
 redirect_from:
 - /tag/css3
 ---
-Posts about Cascading Style Sheets programming.
+Posts about CSS, SASS and styling in general.
+
+*[CSS]: Cascading Style Sheets
+*[SASS]: Syntatically Awesome Style Sheets
