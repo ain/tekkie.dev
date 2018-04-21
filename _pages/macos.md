@@ -9,5 +9,6 @@ redirect_from:
 - /mac-
 - /tag/hdiutil
 - /tag/dmg
+- /category/mac-os
 ---
 Posts about Apple macOS.
