@@ -7,7 +7,6 @@ url: "https://tekkie.flashbit.net"
 locale: en_GB
 twitter_username: tekkie
 github_username: ain
-facebook_username: ain.tohvri
 linkedin_username: aintohvri
 user_image: /assets/ain.png
 
@@ -30,6 +29,5 @@ exclude:
   - CNAME
   - README.md
   - packafe-lock.json
-facebook_app_id: 133041104144029
 jekyll-mentions:
   base_url: https://twitter.com
