@@ -1,1 +1,1 @@
-{% assign categories = page.categories %}{% for category in categories %}<span class="entry-categories"><a href="/{{ category | downcase }}/" rel="category">/<span itemprop="articleSection">{{ category | downcase }}</span></a></span>{% unless forloop.last %}{% endunless %}{% endfor %}
+{% assign categories = page.categories %}{% for category in categories %}<span class="entry-categories"><a href="/{{ category | downcase }}/" rel="category">/{{ category | downcase }}</a></span>{% unless forloop.last %}{% endunless %}{% endfor %}

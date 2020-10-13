@@ -1,34 +1,19 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  {% if page.tags %}
-    <meta itemprop="keywords" content="{{ page.tags | join: ',' }}">
-  {% endif %}
-  {% if page.image %}
-    <meta itemprop="image" content="{{ site.url }}/assets/{{ page.image }}">
-  {% endif %}
-  <meta itemprop="mainEntityOfPage" content="{{ site.url }}{{ page.url | prepend: site.baseurl }}">
-
+<article class="post">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ page.date | date: "%b %-d, %Y" }}</time>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
       {% if page.author %}
-        •
-        <span itemprop="author publisher" itemscope itemtype="http://schema.org/Person">
-          {% if page.author.first_name %}<meta itemprop="givenName" content="{{ page.author.first_name }}">{% endif %}
-          {% if page.author.last_name %}<meta itemprop="familyName" content="{{ page.author.last_name }}">{% endif %}
-          <meta itemprop="name" content="{{ page.author.name }}">
-          <link itemprop="image" href="{{ page.author.image | default: site.user_image }}">
-          <a itemprop="url" href="https://twitter.com/tekkie">@tekkie</a>
-        </span>
+        • <a itemprop="url" href="https://twitter.com/tekkie">@tekkie</a>
       {% endif %}
       in {% include categories.html %}
     </p>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content">
     {{ content }}
   </div>
 
