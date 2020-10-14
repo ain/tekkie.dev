@@ -28,6 +28,6 @@ exclude:
   - npm-debug.log
   - CNAME
   - README.md
-  - packafe-lock.json
+  - package-lock.json
 jekyll-mentions:
   base_url: https://twitter.com
