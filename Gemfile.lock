@@ -236,6 +236,7 @@ DEPENDENCIES
   jekyll-mentions
   jekyll-paginate
   jekyll-redirect-from
+  jekyll-seo-tag
   jekyll-watch
   kramdown
   rouge

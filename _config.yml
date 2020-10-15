@@ -18,6 +18,7 @@ gems:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jekyll-mentions
+  - jekyll-seo-tag
 paginate: 10
 include:
   - _pages
