@@ -15,7 +15,9 @@ tags:
 author:
   login: ain
   name: Ain Tohvri
+  twitter: tekkie
 excerpt_separator: <!--more-->
+last_modified_at: 2020-10-17 01:19:00 +01:00
 ---
 Facebook is toxic. It farms people for data and feeds off reactionary content igniting polarised discussions. It delivers very little value for the time spent.<!--more-->
 
@@ -29,7 +31,7 @@ One of Hollywood's greatest, Denzel Washington, put it nicely:
 
 > We all want to be liked, but now we all want to be liked by 16 million
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0bj3j8WHh5k?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen class="video--padded"></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0bj3j8WHh5k?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen class="video--padded"></iframe>
 
 ### Privacy
 
