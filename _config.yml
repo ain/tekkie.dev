@@ -23,8 +23,6 @@ paginate: 10
 include:
   - _pages
 exclude:
-  - node_modules/
-  - Gemfile*
   - package.json
   - npm-debug.log
   - CNAME
