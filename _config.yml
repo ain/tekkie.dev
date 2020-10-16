@@ -30,3 +30,6 @@ exclude:
   - package-lock.json
 jekyll-mentions:
   base_url: https://twitter.com
+twitter:
+  username: tekkie
+  card: summary
