@@ -18,34 +18,35 @@ author:
   login: ain
   name: Ain Tohvri
 excerpt_separator: <!--more-->
+last_modified_at: 2020-10-16 23:17:00 +01:00
 ---
 Jekyll is great at speed, which is why it's used for GitHub Pages, but it's not as flexible to maintain.<!--more-->
 
-### Hacked Wordpress
+## Hacked Wordpress
 
 Some years ago this very blog got hacked. It was on Wordpress. Code was injected to all PHP and HTML headers, hundreds of spam posts were created. These posts made it to sitemap and got indexed on Google. The blog was dead. Epic failure.
 
-### Introducing DevOps
+## Introducing DevOps
 
 After some try 'n cry development the issue got fixed by a migration from Wordpress to Jekyll. The blog entered DevOps era with automatic publishing on GitHub Pages.
 
 The remaining issue was the indexed spam content on Google.
 
-### Configuring Jekyll
+## Configuring Jekyll
 
 GitHub Pages ships with a sensible set of Jekyll plugins[^1]. One such example is `jekyll-redirect-from`[^2], that can be used to resolve Google's 404 Crawl Errors by redirecting content.
 
 Even so, forwarding 404s raised by missing spam content does not make sense. `410 Gone` would be a more appropriate response, but there's no obvious way in Jekyll.
 
-### Enter Cloudflare
+## Enter Cloudflare
 
 Cloudflare is great. Its free option can be used with GitHub Pages for TLS termination, caching, page rules. The latter can do redirects, but not `410`.
 
-#### Cloudflare Workers
+### Cloudflare Workers
 
 Cloudflare Workers[^3] is a relatively new feature that allows running code at the edge. It's running V8 for JavaScript instead of the standard VCL. Anyone with some basic JavaScript knowledge can create a custom response condition.
 
-#### JavaScript for 410 response
+### JavaScript for 410 response
 
 Since all the spam URLs had a common pattern, e.g. `/eoti4/<dashed keywords>` or `/nhuenh/<dashed keywords>`, it took just 17 lines of JavaScript on Cloudflare Workers Editor to respond with 410 on all the spammy endpoints:
 
