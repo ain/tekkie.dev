@@ -24,6 +24,7 @@ redirect_from:
 - /flash/as/fixing-the-security-sandbox-issue-in-fdt-4-milestone-2
 - /flash/configuring-eclipse-to-compile-flash-with-cmd-enter
 - /flash/logwatcher-as-a-cross-platform-flash-debugger-in-eclipse
+- /flash/as/enable-quick-look-of-actionscript-and-flex-files-on-snow-leopard
 ---
 FDT, the Flexible Development Toolkit for cross-device developers, is celebrating its 10th birthday.<!--more-->
 

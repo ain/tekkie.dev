@@ -13,7 +13,9 @@ tags:
 author:
   login: ain
   name: Ain Tohvri
+  twitter: tekkie
 excerpt_separator: <!--more-->
+last_modified_at: 2020-10-17 00:18:00 +01:00
 ---
 JIRA is one of the best Agile issue tracking tools out there, but choosing the right Docker image to run it is tricky.<!--more-->
 

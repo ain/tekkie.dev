@@ -19,7 +19,9 @@ hashtags:
 author:
   login: ain
   name: Ain Tohvri
+  twitter: tekkie
 excerpt_separator: <!--more-->
+last_modified_at: 2020-10-17 00:19:10 +01:00
 ---
 AngularJS-based applications are meant to be developed in test-driven manner, but how to run e2e tests in browser on GitLab CI?<!--more-->
 

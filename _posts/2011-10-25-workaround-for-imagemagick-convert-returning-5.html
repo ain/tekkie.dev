@@ -11,16 +11,16 @@ tags:
 - ImageMagick
 - PHP
 - workaround
-meta:
-  _edit_last: '1'
 author:
   login: ain
   email: ain@flashbit.net
   display_name: Ain Tohvri
   first_name: Ain
   last_name: Tohvri
+  twitter: tekkie
 permalink: /developer-tools/:title
 excerpt_separator: <!--more-->
+last_modified_at: 2020-10-17 00:25:00 +01:00
 ---
 <p>If you've installed ImageMagick from MacPorts, e.g. for a 32-bit Mac for which there are no prebuilt binaries, you could have seen ImageMagick not working with PHP exec() on localhost even though it works from  the command line.</p><!--more-->
 <p>A successful <code>exec("convert...")</code> call  should always return 0. If not, there's an error. Whenever the result is unexpected, it's a good idea to add a flag of <code>-debug 'All'</code> to the ImageMagick command, e.g. 

@@ -12,7 +12,9 @@ tags:
 author:
   login: ain
   name: Ain Tohvri
+  twitter: tekkie
 excerpt_separator: <!--more-->
+last_modified_at: 2020-10-17 00:22:30 +01:00
 ---
 Finally there's a Bamboo plugin that resolves one of the integration problems between Bamboo and Github.<!--more-->
 

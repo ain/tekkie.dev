@@ -16,7 +16,9 @@ tags:
 author:
   login: ain
   name: Ain Tohvri
+  twitter: tekkie
 excerpt_separator: <!--more-->
+last_modified_at: 2020-10-17 00:21:20 +01:00
 ---
 tmux and Vim make a great development platform with a little help and fine-tuning, e.g. for copying out of Vim.<!--more-->
 

@@ -3,8 +3,6 @@ layout: post
 title: Making sense of Flash compile-time and run-time errors
 date: 2010-01-29 12:02:47.000000000 +01:00
 type: post
-published: true
-status: publish
 categories:
 - flash
 tags:
@@ -13,15 +11,13 @@ tags:
 - debug
 - errorhandling
 - FlashDev
-meta:
-  _edit_last: '1'
 author:
-  login: ain
-  email: ain@flashbit.net
   display_name: Ain Tohvri
   first_name: Ain
   last_name: Tohvri
+  twitter: tekkie
 excerpt: Every new version of ActionScript has had its impact on the compiler and error handling. Since ActionScript 1, that had loose typing and was suited well for small-scale scripting projects, things have changed considerably.
+last_modified_at: 2020-10-17 02:12:00 +01:00
 ---
 <p><img class="teaser-image--left" title="ActionScript" src="{{ site.baseurl }}/assets/64px-ActionScript_icon.png" alt="ActionScript" width="64" height="64" />Every new version of ActionScript has had its impact on the compiler and error handling. Since ActionScript 1, that had loose typing and was suited well for small-scale scripting projects, things have changed considerably.</p><!--more-->
 <p>With ActionScript 2 Flash community first saw the compile-time type checking and class-based syntax which basically allowed Object-oriented programming approaches. Despite the class-based inheritance that took AS2 closer to Java for instance, compiling still took it to AS1 bytecode over legacy matters. So basically the class-based inheritance that allowed the <abbr title="Object-oriented programming">OOP</abbr> approach was a layer on top of the existing prototype-centric AS1.</p>
@@ -104,9 +100,7 @@ excerpt: Every new version of ActionScript has had its impact on the compiler an
 	at flash.events::EventDispatcher/dispatchEventFunction()
 	at flash.events::EventDispatcher/dispatchEvent()
 	at flash.utils::Timer/tick()</pre>
-<p>In addition to the above there are loads of tools out there, e.g. <a title="De MonsterDebugger is an open source debugger for Adobe Flash, Flex and AIR." href="http://www.monsterdebugger.com/">MonsterDebugger</a>. Check out Lee Brimelow's <a title="Learn how to debug your Flash movies at runtime with this great debugging tool." href="http://www.gotoandlearn.com/play?id=109">Debugging with MonsterDebugger</a> video tutorial for more.</p>
 <p>Related references:</p>
 <ul>
-<li>Flash 10 <a href="http://help.adobe.com/en_US/AS3LCR/Flash_10.0/compilerErrors.html">compiler errors</a>, <a href="http://help.adobe.com/en_US/AS3LCR/Flash_10.0/runtimeErrors.html">run-time errors</a> and <a href="http://help.adobe.com/en_US/AS3LCR/Flash_10.0/compilerErrors.html">compiler warnings</a></li>
-<li><a title="The Flex compiler, which is often referred to as mxmlc, is a collection of subcompilers, used to create a SWF." href="http://opensource.adobe.com/wiki/display/flexsdk/Flex+3+Compiler+Design">Flex 3 Compiler Design</a></li>
+<li><a href="https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/index.html">ActionScript 3 documentation</a>
 </ul>
