@@ -16,9 +16,13 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-17 01:58:30 +01:00
+last_modified_at: 2020-10-17 02:03:30 +01:00
 redirect_from:
 - /flash/axdt-open-source-cross-platform-alternative-for-flash-development
+- /flash/get-a-taste-of-professional-flash-development-with-fdt-4-trial
+- /flash/how-to-fix-fdt-or-any-other-eclipse-based-ide-after-mac-os-x-10-6-3-upgrade
+- /flash/as/fixing-the-security-sandbox-issue-in-fdt-4-milestone-2
+- /flash/configuring-eclipse-to-compile-flash-with-cmd-enter
 ---
 FDT, the Flexible Development Toolkit for cross-device developers, is celebrating its 10th birthday.<!--more-->
 
