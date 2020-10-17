@@ -14,7 +14,11 @@ tags:
 author:
   login: ain
   name: Ain Tohvri
+  twitter: tekkie
 excerpt_separator: <!--more-->
+last_modified_at: 2020-10-17 01:58:30 +01:00
+redirect_from:
+- /flash/axdt-open-source-cross-platform-alternative-for-flash-development
 ---
 FDT, the Flexible Development Toolkit for cross-device developers, is celebrating its 10th birthday.<!--more-->
 
@@ -22,4 +26,4 @@ Started in 2006 by Powerflasher, an award-winning German agency, FDT has deliver
 
 Today FDT finds its main audience amongst developers who are targeting iOS and Android platforms using Adobe AIR. The obvious benefit being the use of single codebase across platforms.
 
-As a celebratory offer, __8CC-DGH-BQ5__ coupon code (valid till 31.12.2016) gives you __20% discount__ on 12 and 24 month subscriptions. You can sign up at [fdt.powerflasher.com](http://fdt.powerflasher.com/buy-download/new-upgrade/).
+[Get FDT from here](https://fdt.powerflasher.com).
