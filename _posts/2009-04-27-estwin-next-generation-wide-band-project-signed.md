@@ -16,7 +16,7 @@ author:
   last_name: Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 14:01:00 +01:00
+last_modified_at: 2020-10-18 22:16:00 +01:00
 ---
 On Friday Estonian minister of Economic Affairs and Communications and Estonian Association of Information Technology and Telecommunications (ITL) signed EstWin, a development project that makes 100 Mbps wide-band internet accessible to every citizen of the country by 2015.<!--more-->
 
@@ -32,7 +32,7 @@ EstWin is the biggest ever project signed in between public and private sector o
 
 EstWin alternatives have also been initiated in Australia, Finland, Germany, Lithuania, Singapore and Sweden.
 
-### Related posts
+### Related resources
 
 - [ITL](https://www.itl.ee/en/)
 - [Linxtelecom Estonia reports 52% increase in sales](/telecom/linxtelecom-estonia-reports-52-percents-increase-in-sales)
