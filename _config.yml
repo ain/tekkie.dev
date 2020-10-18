@@ -33,3 +33,9 @@ jekyll-mentions:
 twitter:
   username: tekkie
   card: summary
+social:
+  name: Ain Tohvri
+  links:
+    - https://twitter.com/tekkie
+    - https://www.linkedin.com/in/aintohvri
+    - https://github.com/ain
