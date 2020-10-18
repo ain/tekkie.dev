@@ -1,7 +1,7 @@
 ---
 layout: post
 title: macOS pasteboard fix for Vim on tmux
-image: tmux-icon.png
+image: /assets/tmux-icon.png
 categories:
 - macos
 - howto
@@ -18,7 +18,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-17 00:21:20 +01:00
+last_modified_at: 2020-10-18 21:19:00 +01:00
 ---
 tmux and Vim make a great development platform with a little help and fine-tuning, e.g. for copying out of Vim.<!--more-->
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FDT celebrates its 10th birthday
-image: fdt-10th-jubilee.png
+image: /assets/fdt-10th-jubilee.png
 categories:
 - flash
 tags:
@@ -16,7 +16,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-17 02:03:30 +01:00
+last_modified_at: 2020-10-18 21:18:00 +01:00
 redirect_from:
 - /flash/axdt-open-source-cross-platform-alternative-for-flash-development
 - /flash/get-a-taste-of-professional-flash-development-with-fdt-4-trial

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Bamboo build status badge to Github
-image: Octocat.png
+image: /assets/Octocat.png
 categories:
 - devops
 - howto
@@ -14,7 +14,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-17 00:22:30 +01:00
+last_modified_at: 2020-10-18 21:20:00 +01:00
 ---
 Finally there's a Bamboo plugin that resolves one of the integration problems between Bamboo and Github.<!--more-->
 

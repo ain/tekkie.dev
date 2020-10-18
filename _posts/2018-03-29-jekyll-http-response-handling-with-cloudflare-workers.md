@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Jekyll HTTP response handling with Cloudflare Workers
-image: cloudflare-fast-and-safe-icon.png
-og_image: cloudflare--1200x630.png
+image: /assets/cloudflare-fast-and-safe-icon.png
+og_image: /assets/cloudflare--1200x630.png
 og_image_alt: Cloudflare
 categories:
   - devops

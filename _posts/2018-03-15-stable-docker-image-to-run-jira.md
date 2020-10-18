@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Stable Docker image to run JIRA
-image: jira-icon.png
-og_image: jira--1200x630.png
+image: /assets/jira-icon.png
+og_image: /assets/jira--1200x630.png
 og_image_alt: JIRA
 categories:
   - devops
@@ -15,7 +15,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-17 00:18:00 +01:00
+last_modified_at: 2020-10-18 21:14:00 +01:00
 ---
 JIRA is one of the best Agile issue tracking tools out there, but choosing the right Docker image to run it is tricky.<!--more-->
 

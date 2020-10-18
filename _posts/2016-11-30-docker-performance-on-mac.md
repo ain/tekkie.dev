@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Docker performance on Mac
-image: docker-performance-on-mac.png
+image: /assets/docker-performance-on-mac.png
 categories:
   - devops
 tags:
@@ -19,7 +19,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-17 00:21:00 +01:00
+last_modified_at: 2020-10-18 21:18:00 +01:00
 assets:
   external:
     js:

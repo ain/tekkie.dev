@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Prevent large Time Machine backups by Docker
-image: docker-logo.png
+image: /assets/docker-logo.png
 categories:
   - docker
 tags:
@@ -15,7 +15,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-17 00:20:30 +01:00
+last_modified_at: 2020-10-18 21:17:00 +01:00
 ---
 If Time Machine regularly does its automated backups, transferring 10+ GB of hidden Docker data over WiFi each time, it will hurt productivity.<!--more-->
 

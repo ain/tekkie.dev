@@ -1,8 +1,8 @@
 ---
 layout: post
 title: How to run AngularJS end-to-end tests on GitLab CI
-image: angularjs-icon.png
-og_image: angularjs-logo--1200x630.png
+image: /assets/angularjs-icon.png
+og_image: /assets/angularjs-logo--1200x630.png
 og_image_alt: AngularJS
 categories:
   - devops
@@ -21,7 +21,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-17 00:19:10 +01:00
+last_modified_at: 2020-10-18 21:16:10 +01:00
 ---
 AngularJS-based applications are meant to be developed in test-driven manner, but how to run e2e tests in browser on GitLab CI?<!--more-->
 

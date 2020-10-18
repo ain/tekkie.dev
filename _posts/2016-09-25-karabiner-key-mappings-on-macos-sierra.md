@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Karabiner key mappings on macOS Sierra
-image: keyboard-maestro-icon.png
+image: /assets/keyboard-maestro-icon.png
 categories:
 - macos
 - howto
@@ -16,7 +16,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-17 00:22:00 +01:00
+last_modified_at: 2020-10-18 21:19:00 +01:00
 ---
 Apple's macOS Sierra broke Karabiner key mappings for programmers. Here's how to work around.<!--more-->
 

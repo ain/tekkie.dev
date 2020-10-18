@@ -2,8 +2,8 @@
 layout: post
 title: First major CDN launches its data centre in Estonia
 date: 2018-03-29 23:03:07.000000000 +02:00
-image: cloudflare-tallinn-icon.png
-og_image: cloudflare--1200x630.png
+image: /assets/cloudflare-tallinn-icon.png
+og_image: /assets/cloudflare--1200x630.png
 og_image_alt: Cloudflare
 categories:
   - industry

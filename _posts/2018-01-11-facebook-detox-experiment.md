@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Facebook detox experiment
-image: facebook-detox.png
-og_image: facebook-detox--1200x630.png
+image: /assets/facebook-detox.png
+og_image: /assets/facebook-detox--1200x630.png
 og_image_alt: Facebook detox
 categories:
   - privacy
@@ -17,7 +17,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-17 01:19:00 +01:00
+last_modified_at: 2020-10-18 21:15:00 +01:00
 ---
 Facebook is toxic. It farms people for data and feeds off reactionary content igniting polarised discussions. It delivers very little value for the time spent.<!--more-->
 
