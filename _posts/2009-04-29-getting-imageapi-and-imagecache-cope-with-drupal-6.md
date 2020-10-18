@@ -23,12 +23,16 @@ excerpt: Setting up a gallery in Drupal may easily turn into a lot of hassle. Wh
 ---
 <img class="teaser-image--left" title="Drupal" src="{{ site.baseurl }}/assets/imagecache_sample.png" alt="Drupal" width="74" height="84">Setting up a gallery in Drupal may easily turn into a lot of hassle. While Drupal is one of the most flexible Content Management Systems out there, it's also one of the most complex on top of million modules for pretty much everything including the functionality for the simple gallery.<!--more-->
 
+## Themed gallery in Drupal
+
 There are several combinations of modules to get a themed gallery going in Drupal 6. One such way is by using following:
 
 - [CCK](https://drupal.org/project/cck) with [FileField](https://drupal.org/project/filefield) for creating a custom content types such as Image
 - [ImageAPI](https://drupal.org/project/imageapi) with GD2 or [ImageMagick](https://imagemagick.org "ImageMagick® is a software suite to create, edit, and compose bitmap images") for raw work on images
 - [ImageCache](https://drupal.org/project/imagecache "ImageCache allows you to setup presets for image processing") for processing preferences
 - [Thickbox](https://drupal.org/project/thickbox "ThickBox is a webpage UI dialog widget written in JavaScript on top of the jQuery library")/Lightbox for nice inline JavaScript preview
+
+## Problems with ImageAPI and ImageCache
 
 The above set provides a rather flexible platform but since all modules are at different development stages, they might not work together. In the circumstances, with `ImageAPI 6.x-1.6` and `ImageCache 6.x-2.0-beta9` it's likely to throw an error:
 
@@ -40,6 +44,8 @@ on line 126.
 ```
 
 Same happens to the alternative ImageMagick processing.
+
+## Workaround for ImaegAPI and ImageCache
 
 Fortunately the workaround is rather trivial:
 
