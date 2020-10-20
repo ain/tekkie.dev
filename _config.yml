@@ -23,11 +23,8 @@ paginate: 10
 include:
   - _pages
 exclude:
-  - package.json
-  - npm-debug.log
   - CNAME
   - README.md
-  - package-lock.json
 jekyll-mentions:
   base_url: https://twitter.com
 twitter:
