@@ -1,7 +1,7 @@
 {
   "name": "tekkie",
   "version": "1.0.0",
-  "description": "tekkie.flashbit.net",
+  "description": "tekkie.dev",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ain/tekkie.flashbit.net.git"
+    "url": "git+https://github.com/ain/tekkie.dev.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ain/tekkie.flashbit.net/issues"
+    "url": "https://github.com/ain/tekkie.dev/issues"
   },
-  "homepage": "https://github.com/ain/tekkie.flashbit.net#readme",
+  "homepage": "https://github.com/ain/tekkie.dev#readme",
   "devDependencies": {
     "browser-sync": "^2.13.0"
   }
