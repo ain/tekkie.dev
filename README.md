@@ -1,6 +1,6 @@
-# tekkie.flashbit.net
+# tekkie.dev
 
-Tech blog at https://tekkie.flashbit.net
+Tech blog at https://tekkie.dev
 
 ## Usage
 
