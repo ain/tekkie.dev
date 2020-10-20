@@ -4,19 +4,15 @@ Tech blog at https://tekkie.dev
 
 ## Usage
 
-1. Install all dependencies
+1. Install dependencies
 
-        $ bundle && npm i
+        $ bundle
 
 2. Run Jekyll server
 
-        $ jekyll s
+        $ bundle exec jekyll s
 
-3. Run BrowserSync
-
-        $ npm start
-
-4. When making a change, site will now automagically recompile and reload
+3. When making a change, site will now automagically recompile and reload
 
 ## Sponsors
 
