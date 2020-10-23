@@ -63,7 +63,7 @@ jobs:
 
 Many developers use pre-built CircleCI Docker images[^3] (e.g. `circleci/ruby`) to leverage CircleCI's caching. Pulls are therefore much faster.
 
-Nevertheless, CircleCI also uses Docker Hub so it's important to note that __all CircleCI images count towards Docker Hub's pull rate limit__.
+It's relevant to keep in mind that __all CircleCI images count towards Docker Hub's pull rate limit__ as well.
 
 ### Docker auth on GitHub Actions
 
