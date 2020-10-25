@@ -18,7 +18,7 @@ Tech blog at https://tekkie.dev
 
 Cross-browser testing is powered by
 
-<a href="https://www.browserstack.com" title="BrowserStack"><img src="https://rawgithub.com/ain/tekkie.dev/gh-pages/assets/browserstack.svg" height="32px" alt="BrowserStack"></a>
+<a href="https://www.browserstack.com" title="BrowserStack"><img src="https://tekkie.dev/assets/browserstack.svg" height="32px" alt="BrowserStack"></a>
 
 - - -
 Copyright © 2007-2020 Ain Tohvri. All rights reserved.
