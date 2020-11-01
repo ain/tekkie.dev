@@ -20,7 +20,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-23 16:06:00 +01:00
+last_modified_at: 2020-11-01 12:04:00 +01:00
 ---
 Docker will start rate-limiting image pulls from Docker Hub on November 1st, potentially halting a fair number of CI/CD pipelines.<!--more-->
 
