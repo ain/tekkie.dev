@@ -78,6 +78,11 @@ steps:
       password: {% raw %}${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}{% endraw %}
 ```
 
+### Caching Docker images on GitLab CI
+
+GitLab team advises developers to start the registry mirror[^4] that would avoid reaching pull rate limits. Mirror would cache the pulls and not turn to Docker Hub when the cache is there.
+
 [^1]: [Scaling Docker to Serve Millions More Developers: Network Egress](https://www.docker.com/blog/scaling-docker-to-serve-millions-more-developers-network-egress/)
 [^2]: [Using Docker Authenticated Pulls](https://circleci.com/docs/2.0/private-images/)
 [^3]: [Pre-Built CircleCI Docker Images](https://circleci.com/docs/2.0/circleci-images/)
+[^4]: [Caching Docker images to reduce the number of calls to DockerHub from your CI/CD infrastructure](https://about.gitlab.com/blog/2020/10/30/mitigating-the-impact-of-docker-hub-pull-requests-limits/#start-the-registry-mirror)
