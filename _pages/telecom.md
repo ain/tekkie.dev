@@ -8,7 +8,7 @@ redirect_from:
   - /tag/emt
   - /category/telecom
   - /telecom/free-m-internet-for-the-summer
-last_modified_at: 2020-11-06 2:08:00 +01:00
+last_modified_at: 2020-11-05 2:29:00 +01:00
 author:
   name: Ain Tohvri
 ---
