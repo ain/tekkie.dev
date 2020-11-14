@@ -21,7 +21,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 21:16:10 +01:00
+last_modified_at: 2020-11-14 15:03:10 +01:00
 ---
 AngularJS-based applications are meant to be developed in test-driven manner, but how to run e2e tests in browser on GitLab CI?<!--more-->
 
@@ -29,12 +29,12 @@ End-to-end tests for AngularJS run TypeScript specs on Protractor in real browse
 
 ## The problem
 
-How to launch an actual browser on CI with just command line at our disposal?
+How to launch an actual browser on Continuous Integration platform with just command line at our disposal? There is no obvious out-of-the-box solution for CI/CD pipelines.
 
 ## The plan
 
 - Run Xvfb (X virtual framebuffer)
-- Launch all AngularJS tests on Xvfb display with headless Chrome
+- Launch all AngularJS tests on Xvfb display with headless Chrome (Selenium testing)
 
 ## The solution
 
