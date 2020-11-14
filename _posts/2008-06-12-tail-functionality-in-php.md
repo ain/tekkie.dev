@@ -1,6 +1,7 @@
 ---
 layout: post
 title: tail functionality in PHP
+image: /assets/php-med-trans.png
 date: 2008-06-12 02:48:38.000000000 +02:00
 type: post
 categories:
@@ -21,7 +22,7 @@ author:
   last_name: Tohvri
   twitter: tekkie
 excerpt: PHP code snippet that makes it easier to display most recent entries in a heavy text file, e.g. Apache log.
-last_modified_at: 2020-10-20 22:47:00 +01:00
+last_modified_at: 2020-11-14 13:45:00 +01:00
 ---
 <img class="teaser-image--left" title="PHP: Hypertext Preprocessor" src="{{ site.baseurl }}/assets/php-med-trans.png" alt="PHP: Hypertext Preprocessor" width="95" height="51" /> This little PHP code snippet could come in handy for those in a need to display most recent entries in a considerably heavy text file, e.g. Apache log.<!--more-->
 
