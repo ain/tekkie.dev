@@ -15,16 +15,16 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 21:14:00 +01:00
+last_modified_at: 2020-11-16 22:55:00 +01:00
 ---
 JIRA is one of the best Agile issue tracking tools out there, but choosing the right Docker image to run it is tricky.<!--more-->
 
-Docker Hub lists more than 1 000 images for JIRA. Fortunately only a few have considerable number of stars which allows cutting it down to 2:
+Docker Hub lists more than 1 000 JIRA Docker images. Fortunately only a few have considerable number of stars helping to narrow it down to two:
 
 1. [cptactionhank/atlassian-jira-software](https://hub.docker.com/r/cptactionhank/atlassian-jira-software/)
 2. [blacklabelops/jira](https://hub.docker.com/r/blacklabelops/jira/)
 
-When running JIRA behind HAProxy that terminates SSL, e.g. @LetsEncrypt, `cptactionhank/atlassian-jira-software` turned out to be painful. JIRA does a lot of AJAX action, considerable number of XHR requests broke over SSL termination, rendering this image unusable.
+When running JIRA behind HAProxy that terminates SSL, e.g. @LetsEncrypt, `cptactionhank/atlassian-jira-software` turned out to be painful. Since JIRA does a lot of AJAX, considerable number of XHR requests broke over SSL termination rendering this Atlassian JIRA Docker image unusable.
 
 In comparison, `blacklabelops/jira` ran out of the box with the following Docker Compose configuration:
 
@@ -69,3 +69,4 @@ services:
     restart: always
     command: mysqld --character-set-server=utf8 --collation-server=utf8_bin
 ```
+
