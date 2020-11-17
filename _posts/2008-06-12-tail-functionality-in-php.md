@@ -22,7 +22,7 @@ author:
   last_name: Tohvri
   twitter: tekkie
 excerpt: PHP code snippet that makes it easier to display most recent entries in a heavy text file, e.g. Apache log.
-last_modified_at: 2020-11-14 13:45:00 +01:00
+last_modified_at: 2020-11-17 20:40:00 +01:00
 ---
 <img class="teaser-image--left" title="PHP: Hypertext Preprocessor" src="{{ site.baseurl }}/assets/php-med-trans.png" alt="PHP: Hypertext Preprocessor" width="95" height="51" /> This little PHP code snippet could come in handy for those in a need to display most recent entries in a considerably heavy text file, e.g. Apache log.<!--more-->
 
@@ -38,7 +38,7 @@ for the last 10 lines of Apache error log. On the remote server this kind of too
 
 ## tail in PHP
 
-The above reasoning is exactly why this code is a handy tool:
+The above reasoning is exactly why this tail PHP code is a handy tool:
 <script src="https://gist.github.com/1894692.js?file=log.php"></script>
 
 [Download tail in php](https://gist.github.com/ain/1894692/archive/00b11f87fc36510b4f1c1bad28ad92ae45f54704.zip)
