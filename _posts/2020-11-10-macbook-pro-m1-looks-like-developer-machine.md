@@ -6,11 +6,11 @@ categories:
   - apple
   - macbook
 tags:
-  - apple
   - macbook
+  - docker
   - developer
   - touchbar
-  - ux
+  - apple
 author:
   name: Ain Tohvri
   twitter: tekkie
@@ -19,11 +19,23 @@ last_modified_at: 2020-11-14 14:08:00 +01:00
 ---
 Apple's new MacBook Pro delivers more than the new M1 chip. Something good is back for the developers.<!--more-->
 
+## MacBook Pro's keyboard
+
 Having tested the first MacBook Pro with Touch Bar back in 2017, it felt like [MacBook was dropping developers](/apple/macbook/macbook-is-dropping-developers). Some essential ergonomics got disrupted esp. for the Vim-based devs.
 
 Today, not only has Apple made a prominent switch to their own M1 chips and tripled the performance[^1][^2] by doing so, they've also brought back the `Esc` key. Did Apple's designers listen to the critique? Perhaps.
 
 <img src="/assets/macbook-pro-m1-escape-key.jpg" alt="New MacBook Pro M1 with Esc key" width="375" height="207">
 
+## Docker Desktop
+
+Following the M1 chip launch, Docker announced that they're not quite there yet to support Docker Desktop on macOS Big Sur:
+
+> Although Apple has released Rosetta 2 to help move applications over to the new M1 chips, this does not get us all the way with Docker Desktop. Under the hood of Docker Desktop, we run a virtual machine, to achieve this on Apple’s new hardware we need to move onto Apple’s new hypervisor framework.[^3]
+
+As it stands Apple Silicon support is in active progress[^4]. Whether or not the new version also improves [Docker performance on macOS](/devops/docker-performance-on-mac) remains to be seen.
+
 [^1]:[MacBook Pro M1](https://www.apple.com/macbook-pro-13/)
 [^2]:[Apple Silicon M1 Chip in MacBook Air Outperforms High-End 16-Inch MacBook Pro](https://www.macrumors.com/2020/11/11/m1-macbook-air-first-benchmark/)
+[^3]:[Apple Silicon M1 Chips and Docker](https://www.docker.com/blog/apple-silicon-m1-chips-and-docker/)
+[^4]:[Docker fails to launch on Apple Silicon](https://github.com/docker/for-mac/issues/4733)
