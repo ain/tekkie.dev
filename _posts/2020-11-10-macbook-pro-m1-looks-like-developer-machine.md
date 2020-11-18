@@ -6,7 +6,7 @@ categories:
   - apple
   - macbook
 tags:
-  - macbook
+  - macbookpro
   - docker
   - developer
   - touchbar
