@@ -29,11 +29,19 @@ Today, not only has Apple made a prominent switch to their own M1 chips and trip
 
 ## Docker Desktop
 
+### Docker and Apple Silicon
+
 Following the M1 chip launch, Docker announced that they're not quite there yet to support Docker Desktop on macOS Big Sur:
 
 > Although Apple has released Rosetta 2 to help move applications over to the new M1 chips, this does not get us all the way with Docker Desktop. Under the hood of Docker Desktop, we run a virtual machine, to achieve this on Apple’s new hardware we need to move onto Apple’s new hypervisor framework.[^3]
 
 As it stands Apple Silicon support is in active progress[^4]. Whether or not the new version also improves [Docker performance on macOS](/devops/docker-performance-on-mac) remains to be seen.
+
+### Docker Desktop, Big Sur and Intel
+
+Docker Desktop runs fine on old Intel-based MacBook Pros with macOS Big Sur. There's no noticeable performance drop.
+
+Important to add that version `2.4.2.0` from Docker's edge channel features `gRPC FUSE` for file sharing and is considerably faster than the legacy `osxfs`, also on Big Sur.
 
 [^1]:[MacBook Pro M1](https://www.apple.com/macbook-pro-13/)
 [^2]:[Apple Silicon M1 Chip in MacBook Air Outperforms High-End 16-Inch MacBook Pro](https://www.macrumors.com/2020/11/11/m1-macbook-air-first-benchmark/)
