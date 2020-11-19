@@ -19,7 +19,7 @@ last_modified_at: 2020-11-19 22:21:00 +01:00
 ---
 [obfuscatr](https://obfuscatr.flashbit.net) is the email address obfuscator. Its purpose is to obfuscate the email address in a way it couldn't be reached by the bots crawling the web for emails.<!--more-->
 
-> **DISCLAIMER**: obfuscatr has been discontinued. Support for widgets was removed in macOS Catalina.[^1]
+> **DISCLAIMER**: Apple discontinued Dashboard in macOS Catalina. obfuscatr widget can not be installed on newer macOS versions.[^1]
 
 By the latest studies over 97% of the spam is sent to addresses that have been posted on public websites. Such addresses are naked.
 
