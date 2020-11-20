@@ -43,6 +43,10 @@ Docker Desktop runs fine on old Intel-based MacBook Pros with macOS Big Sur. The
 
 Important to add that version `2.4.2.0` from Docker's edge channel features `gRPC FUSE` for file sharing and is considerably faster than the legacy `osxfs`, also on Big Sur.
 
+## MacBook Pro M1 for developers
+
+Lack of Docker Desktop support will not see too many MacBook Pro M1 based developers anytime soon, but it could serve as a very performant platform for a developer who does not need the mesh of microservices set up locally.
+
 [^1]:[MacBook Pro M1](https://www.apple.com/macbook-pro-13/)
 [^2]:[Apple Silicon M1 Chip in MacBook Air Outperforms High-End 16-Inch MacBook Pro](https://www.macrumors.com/2020/11/11/m1-macbook-air-first-benchmark/)
 [^3]:[Apple Silicon M1 Chips and Docker](https://www.docker.com/blog/apple-silicon-m1-chips-and-docker/)
