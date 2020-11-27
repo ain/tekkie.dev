@@ -37,6 +37,10 @@ Following the M1 chip launch, Docker announced that they're not quite there yet 
 
 As it stands Apple Silicon support is in active progress[^4]. Whether or not the new version also improves [Docker performance on macOS](/devops/docker-performance-on-mac) remains to be seen.
 
+First sightings of Docker Desktop on Apple Silicon have also been made:
+
+<blockquote class="twitter-tweet" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">Full productivity restored on Apple Silicon <a href="https://t.co/eHltmYz4eF">pic.twitter.com/eHltmYz4eF</a></p>&mdash; Dave Scott (@mugofsoup) <a href="https://twitter.com/mugofsoup/status/1332382741892124675?ref_src=twsrc%5Etfw">November 27, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ### Docker Desktop, Big Sur and Intel
 
 Docker Desktop runs fine on old Intel-based MacBook Pros with macOS Big Sur. There's no noticeable performance drop.
