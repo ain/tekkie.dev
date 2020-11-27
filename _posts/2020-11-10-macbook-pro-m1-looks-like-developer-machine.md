@@ -35,11 +35,11 @@ Following the M1 chip launch, Docker announced that they're not quite there yet 
 
 > Although Apple has released Rosetta 2 to help move applications over to the new M1 chips, this does not get us all the way with Docker Desktop. Under the hood of Docker Desktop, we run a virtual machine, to achieve this on Apple’s new hardware we need to move onto Apple’s new hypervisor framework.[^3]
 
-As it stands Apple Silicon support is in active progress[^4]. Whether or not the new version also improves [Docker performance on macOS](/devops/docker-performance-on-mac) remains to be seen.
-
-First sightings of Docker Desktop on Apple Silicon have also been made:
+As it stands Apple Silicon support is in active progress[^4] and first sightings of Docker Desktop on Apple Silicon have also been made:
 
 <blockquote class="twitter-tweet" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">Full productivity restored on Apple Silicon <a href="https://t.co/eHltmYz4eF">pic.twitter.com/eHltmYz4eF</a></p>&mdash; Dave Scott (@mugofsoup) <a href="https://twitter.com/mugofsoup/status/1332382741892124675?ref_src=twsrc%5Etfw">November 27, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Whether or not the new version also improves [Docker performance on macOS](/devops/docker-performance-on-mac) remains to be seen.
 
 ### Docker Desktop, Big Sur and Intel
 
