@@ -8,7 +8,8 @@ locale: en_GB
 twitter_username: tekkie
 github_username: ain
 linkedin_username: aintohvri
-user_image: /assets/ain.png
+user_image: /assets/ain.jpg
+logo: /assets/ain.jpg
 
 # Build settings
 markdown: kramdown
