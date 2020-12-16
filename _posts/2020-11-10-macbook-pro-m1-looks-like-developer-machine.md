@@ -15,7 +15,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-11-28 00:15:00 +01:00
+last_modified_at: 2020-12-16 23:06:00 +01:00
 ---
 Apple's new MacBook Pro delivers more than the new M1 chip. Something good is back for the developers.<!--more-->
 
@@ -31,11 +31,9 @@ Today, not only has Apple made a prominent switch to their own M1 chips and trip
 
 ### Docker and Apple Silicon
 
-Following the M1 chip launch, Docker announced that they're not quite there yet to support Docker Desktop on macOS Big Sur:
+Following the M1 chip launch, Docker wasn't there to support Docker Desktop on macOS Big Sur yet[^3].
 
-> Although Apple has released Rosetta 2 to help move applications over to the new M1 chips, this does not get us all the way with Docker Desktop. Under the hood of Docker Desktop, we run a virtual machine, to achieve this on Apple’s new hardware we need to move onto Apple’s new hypervisor framework.[^3]
-
-As it stands Apple Silicon support is in active progress[^4] and first sightings of Docker Desktop on Apple Silicon have also been made:
+Since then Tech Preview of Docker Desktop for M1 has been released[^4] and first sightings on Apple Silicon have also been made:
 
 <blockquote class="twitter-tweet" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">Full productivity restored on Apple Silicon <a href="https://t.co/eHltmYz4eF">pic.twitter.com/eHltmYz4eF</a></p>&mdash; Dave Scott (@mugofsoup) <a href="https://twitter.com/mugofsoup/status/1332382741892124675?ref_src=twsrc%5Etfw">November 27, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -54,4 +52,4 @@ Lack of Docker Desktop support will not see too many MacBook Pro M1 based develo
 [^1]:[MacBook Pro M1](https://www.apple.com/macbook-pro-13/)
 [^2]:[Apple Silicon M1 Chip in MacBook Air Outperforms High-End 16-Inch MacBook Pro](https://www.macrumors.com/2020/11/11/m1-macbook-air-first-benchmark/)
 [^3]:[Apple Silicon M1 Chips and Docker](https://www.docker.com/blog/apple-silicon-m1-chips-and-docker/)
-[^4]:[Docker fails to launch on Apple Silicon](https://github.com/docker/for-mac/issues/4733)
+[^4]:[Download and Try the Tech Preview of Docker Desktop for M1](https://www.docker.com/blog/download-and-try-the-tech-preview-of-docker-desktop-for-m1/)
