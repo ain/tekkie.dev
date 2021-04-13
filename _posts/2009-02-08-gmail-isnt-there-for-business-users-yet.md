@@ -16,7 +16,7 @@ author:
   twitter: tekkie
 permalink: /web-20/:title
 excerpt: Gmail, world's leading free webmail by Google is the best product of the kind on the market today, but when it comes to corporate requirements, it fails in some aspects.
-last_modified_at: 2020-10-18 14:12:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 <img class="teaser-image--left" title="Gmail" src="{{ site.baseurl }}/assets/gmail-icon50.gif" alt="Gmail" width="129" height="94" />Gmail, world's leading free webmail by Google is undisputedly the best product of the kind on the market today, yet again, once it comes to corporate requirements, it fails in a number of aspects.
 

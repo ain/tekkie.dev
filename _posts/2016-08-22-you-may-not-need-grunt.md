@@ -15,7 +15,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 21:20:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 Grunt is a JavaScript task runner and it's great at what it does. Even so, depending on a project, you can also do without it.<!--more-->
 

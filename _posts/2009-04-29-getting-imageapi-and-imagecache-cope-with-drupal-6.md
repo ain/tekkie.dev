@@ -18,7 +18,7 @@ author:
   first_name: Ain
   last_name: Tohvri
   twitter: tekkie
-last_modified_at: 2020-10-18 13:26:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 excerpt: Setting up a gallery in Drupal may easily turn into a lot of hassle. While Drupal is one of the most flexible Content Management Systems out there, it's also one of the most complex.
 ---
 <img class="teaser-image--left" title="Drupal" src="{{ site.baseurl }}/assets/imagecache_sample.png" alt="Drupal" width="74" height="84">Setting up a gallery in Drupal may easily turn into a lot of hassle. While Drupal is one of the most flexible Content Management Systems out there, it's also one of the most complex on top of million modules for pretty much everything including the functionality for the simple gallery.<!--more-->

@@ -17,7 +17,7 @@ author:
   last_name: Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 15:10:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 Despite all that criticism and scepticism on Safari, it has finally achieved 5% threshold.<!--more-->
 

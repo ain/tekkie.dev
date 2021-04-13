@@ -16,7 +16,7 @@ author:
   last_name: Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 22:16:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 On Friday Estonian minister of Economic Affairs and Communications and Estonian Association of Information Technology and Telecommunications (ITL) signed EstWin, a development project that makes 100 Mbps wide-band internet accessible to every citizen of the country by 2015.<!--more-->
 

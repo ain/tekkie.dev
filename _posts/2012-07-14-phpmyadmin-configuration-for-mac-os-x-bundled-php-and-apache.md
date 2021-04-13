@@ -15,7 +15,7 @@ author:
   last_name: Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-12-19 23:24:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 If you're not into using XAMPP/MAMP for your local development sandbox and you'd like to go with the stack that comes preinstalled on a Mac, you could have trouble configuring phpMyAdmin.<!--more-->
 

@@ -21,7 +21,7 @@ author:
 excerpt_separator: <!--more-->
 redirect_from:
 - /flash/as/actionscript-3-array
-last_modified_at: 2020-10-18 12:36:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 By the latest Coding Convention of ActionScript 3, the usage of the Array constructor is only encouraged for size allocation, e.g. `var myArr:Array = new Array(2);` for an array with 2 elements in it. In all other cases literals should be used, e.g. `var myArr:Array = [];`<!--more-->
 

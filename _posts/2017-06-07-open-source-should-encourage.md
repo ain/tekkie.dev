@@ -13,7 +13,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-25 00:09:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 As a maintainer, __you can not afford to lose contributors__, esp. if your day job is not <abbr title="Free and Open Source Software">FOSS</abbr> and you're not Linus Torvalds.<!--more-->
 

@@ -19,7 +19,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-16 23:17:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 Jekyll is great at speed, which is why it's used for GitHub Pages, but it's not as flexible to maintain.<!--more-->
 

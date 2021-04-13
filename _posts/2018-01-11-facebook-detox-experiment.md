@@ -17,7 +17,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 21:15:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 Facebook is toxic. It farms people for data and feeds off reactionary content igniting polarised discussions. It delivers very little value for the time spent.<!--more-->
 

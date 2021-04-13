@@ -14,7 +14,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 21:20:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 Finally there's a Bamboo plugin that resolves one of the integration problems between Bamboo and Github.<!--more-->
 

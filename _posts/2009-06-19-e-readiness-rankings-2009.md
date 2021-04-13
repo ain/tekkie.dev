@@ -15,7 +15,7 @@ author:
   last_name: Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 12:48:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 Economist Intelligence Unit has once again concluded with the E-readiness rankings of 2009 to measure the quality of a country’s <abbr title="Information and Computing Technology">ICT</abbr> infrastructure and the ability of its consumers, businesses and governments to use <abbr title="Information and Computing Technology">ICT</abbr> to their benefit.<!--more-->
 

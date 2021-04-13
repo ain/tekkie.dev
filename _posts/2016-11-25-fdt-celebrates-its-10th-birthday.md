@@ -16,7 +16,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 21:18:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 redirect_from:
 - /flash/axdt-open-source-cross-platform-alternative-for-flash-development
 - /flash/get-a-taste-of-professional-flash-development-with-fdt-4-trial

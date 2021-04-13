@@ -17,7 +17,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 21:17:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 It's no news pro developers use MacBooks for years now, but the way Apple is approaching innovation may bring a change.<!--more-->
 

@@ -17,7 +17,7 @@ permalink: /mac-os/:title
 excerpt_separator: <!--more-->
 redirect_from:
   - /tag/obfuscatr
-last_modified_at: 2020-11-19 23:50:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 A new version of [obfuscatr](https://obfuscatr.flashbit.net) email obfuscation widget introduces support for `+` addresses, e.g. `john+newsletters@company.com`.<!--more-->
 

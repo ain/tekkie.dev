@@ -16,7 +16,7 @@ author:
   first_name: Ain
   last_name: Tohvri
   twitter: tekkie
-last_modified_at: 2020-10-18 13:11:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 excerpt_separator: <!--more-->
 ---
 Somewhat an interesting discussion took off on Twitter between me (@tekkie) and Jason Young of award-winning @virion_ca about the _IE6 Update technique_. While the goal of such a technique looks decent, it's mainly of benefit to developers.<!--more-->

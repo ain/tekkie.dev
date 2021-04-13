@@ -21,7 +21,7 @@ author:
   twitter: tekkie
 permalink: /web-20/:title
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 14:52:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 Web 2.0 hype has only seen a few who have gone further from listing applications with a shiny balloon logotype.<!--more-->
 

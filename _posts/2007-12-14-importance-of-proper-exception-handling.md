@@ -20,7 +20,7 @@ author:
   last_name: Tohvri
   twitter: tekkie
 excerpt: Too many developers cut on error handling by providing a very raw framework that is incapable of handling exceptions.
-last_modified_at: 2020-10-18 12:21:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 Too many developers cut on error handling by providing a very raw framework that is incapable of handling exceptions. It looks like it's saving a day but in a long run it's probably going to cost badly.
 

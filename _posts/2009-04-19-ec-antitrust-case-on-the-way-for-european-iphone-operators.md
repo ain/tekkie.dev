@@ -16,7 +16,7 @@ author:
   first_name: Ain
   last_name: Tohvri
   twitter: tekkie
-last_modified_at: 2020-10-18 14:09:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 excerpt: Shortly after Skype's iPhone App launch, which allows people to make P2P free calls to their contacts on Skype, Deutsche Telecom AG announced they will prevent its customers from using Skype on Apple Inc.'s iPhone as in violation to iPhone subscription contracts.
 ---
 <img class="teaser-image--left" title="Skype in European Union" src="{{ site.baseurl }}/assets/skype-and-european-union-300x292.png" alt="Skype in European Union" width="119" height="116" />On Friday, on the meeting of <abbr title="European People's Party (Christian Democrats) and European Democrats">EPP-ED</abbr> Group of European Parliament in Tallinn, Estonian Minister of Economic Affairs and Communication, Mr Juhan Parts, condemned telecom companies preventing the open use of Skype in their networks.

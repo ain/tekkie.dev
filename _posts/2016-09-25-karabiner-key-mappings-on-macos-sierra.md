@@ -16,7 +16,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 21:19:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 Apple's macOS Sierra broke Karabiner key mappings for programmers. Here's how to work around.<!--more-->
 

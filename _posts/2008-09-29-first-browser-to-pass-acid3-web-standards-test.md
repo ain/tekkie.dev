@@ -17,7 +17,7 @@ author:
 excerpt_separator: <!--more-->
 redirect_from:
 - /tag/acid3
-last_modified_at: 2020-10-20 23:10:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 On Friday WebKit team announced their open source browser engine entirely passes Acid3 test by Web Standards Project.
 

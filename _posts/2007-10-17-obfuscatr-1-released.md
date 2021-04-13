@@ -15,7 +15,7 @@ author:
   last_name: Tohvri
 permalink: /mac-os/:title
 excerpt_separator: <!--more-->
-last_modified_at: 2020-11-19 22:21:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 [obfuscatr](https://obfuscatr.flashbit.net) is the email address obfuscator. Its purpose is to obfuscate the email address in a way it couldn't be reached by the bots crawling the web for emails.<!--more-->
 

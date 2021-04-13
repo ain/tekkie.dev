@@ -18,7 +18,7 @@ author:
   last_name: Tohvri
   twitter: tekkie
 excerpt: As of this week Elisa has the largest 3.5G coverage in Estonia as a result of the 3.5G availability in one of the largest counties in the country.
-last_modified_at: 2020-10-18 22:14:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 image: /assets/elisa-logo.png
 ---
 <img class="teaser-image--left" title="elisa" src="{{ site.baseurl }}/assets/elisa-logo.png" alt="elisa" width="107" height="69" />As of this week, [Elisa](https://www.elisa.ee) has the largest 3.5G coverage in Estonia. This comes as a result of the 3.5G availability for all of Tartumaa, one of the largest counties in the country.

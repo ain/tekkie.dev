@@ -17,7 +17,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 21:15:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 If the credit card used to subscribe to BrowserStack's Live plan expired, the chances are you'd face $99 monthly to prolong. There are 4 simple steps to get back on the $29 plan.<!--more-->
 

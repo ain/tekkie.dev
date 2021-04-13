@@ -15,7 +15,7 @@ author:
   twitter: tekkie
 excerpt_separator: <!-- more -->
 permalink: /mac-os/:title
-last_modified_at: 2020-12-19 23:28:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 On Linux console it's easy to get free memory with `free -m`. On Mac the utility is not directly available. The alternative is to fetch it from `vm_stat`.<!-- more -->
 

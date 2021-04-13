@@ -22,7 +22,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-17 00:17:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 Big news from Cloudflare: it is expanding its CDN network to Baltics.<!--more-->
 

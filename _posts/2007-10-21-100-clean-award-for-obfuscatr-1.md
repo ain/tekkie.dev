@@ -15,7 +15,7 @@ author:
   last_name: Tohvri
 permalink: /mac-os/:title
 excerpt_separator: <!--more-->
-last_modified_at: 2020-11-19 22:43:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 ---
 [obfuscatr 1](https://obfuscatr.flashbit.net), the obfuscation tool introduced few days ago, has been awarded by Softpedia.<!--more-->
 

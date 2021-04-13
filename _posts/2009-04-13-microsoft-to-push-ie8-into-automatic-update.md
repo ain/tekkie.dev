@@ -17,7 +17,7 @@ author:
   first_name: Ain
   last_name: Tohvri
   twitter: tekkie
-last_modified_at: 2020-10-18 14:16:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 excerpt: On April 10th Microsoft Program Management announced Internet Explorer 8 distribution in Automatic Update of Windows.
 ---
 <img class="teaser-image--left" title="Internet Explorer 8" src="{{ site.baseurl }}/assets/ie8_logo.jpg" alt="Internet Explorer 8" width="204" height="79" />On April 10th Microsoft Program Management announced Internet Explorer 8 distribution in Automatic Update of Windows. The update will be optional on the opt-in basis with the options to Ask Me Later, Install and Don't Install.<!--more-->

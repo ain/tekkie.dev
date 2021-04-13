@@ -15,7 +15,7 @@ author:
   first_name: Ain
   last_name: Tohvri
   twitter: tekkie
-last_modified_at: 2020-11-15 23:58:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 permalink: /mac-os/:title
 excerpt: Sometimes you need to share sensitive data securely. One possibility would be to use password protected packing like ZIP or RAR, but DMG may be slightly more convenient on Mac.
 ---

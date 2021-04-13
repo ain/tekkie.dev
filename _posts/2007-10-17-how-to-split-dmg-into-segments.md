@@ -16,7 +16,7 @@ author:
   twitter: tekkie
 permalink: /mac-os/:title
 excerpt_separator: <!--more-->
-last_modified_at: 2020-10-18 22:52:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 image: /assets/disk-utility-icon-150x140.png
 ---
 Uploading a disk image may in some cases be quite troublesome, e.g. uploading to .Mac simply because you can't resume the upload if it fails. A way around would be to upload in segments.<!--more-->

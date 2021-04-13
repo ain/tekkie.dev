@@ -16,7 +16,7 @@ author:
   last_name: Tohvri
   twitter: tekkie
 permalink: /mac-os/:title
-last_modified_at: 2020-11-19 23:38:00 +01:00
+last_modified_at: 2021-04-13 23:26:00 +01:00
 excerpt: Readers of Macworld Italy have the latest release of obfuscatr on the bonus CD bundled with the March issue.
 ---
 <img src="/assets/icon.png" class="teaser-image--left" alt="obfuscatr icon"> Readers of Macworld Italy have the latest release of obfuscatr on the bonus CD bundled with the March issue. [obfuscatr](https://obfuscatr.flashbit.net) is the email obfuscation widget for Mac OS X Dashboard. It is also available for use online.
