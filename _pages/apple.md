@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Apple
+title: Posts about Apple products from macOS to MacBooks
 category: apple
 permalink: /apple/
 ---
