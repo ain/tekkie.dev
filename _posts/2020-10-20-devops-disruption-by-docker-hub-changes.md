@@ -20,7 +20,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2021-04-13 23:26:00 +01:00
+last_modified_at: 2021-04-14 23:02:00 +01:00
 ---
 Docker will start rate-limiting image pulls from Docker Hub on November 1st, potentially halting a fair number of CI/CD pipelines.<!--more-->
 
@@ -63,7 +63,7 @@ jobs:
 
 Many developers use pre-built CircleCI Docker images[^3] (e.g. `circleci/ruby`) to leverage CircleCI's caching. Pulls are therefore much faster.
 
-It's relevant to keep in mind that __all CircleCI images count towards Docker Hub's pull rate limit__ as well.
+It's relevant to keep in mind that __all CircleCI images count towards pull rate limit__ as well.
 
 ### Docker auth on GitHub Actions
 
