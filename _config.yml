@@ -8,6 +8,7 @@ locale: en_GB
 twitter_username: tekkie
 github_username: ain
 linkedin_username: aintohvri
+mastodon_username: tekkie
 user_image: /assets/ain.jpg
 logo: /assets/ain.jpg
 
@@ -38,3 +39,4 @@ social:
     - https://twitter.com/tekkie
     - https://www.linkedin.com/in/aintohvri
     - https://github.com/ain
+    - https://msdtn.social/@tekkie
