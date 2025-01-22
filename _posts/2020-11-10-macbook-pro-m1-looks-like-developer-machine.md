@@ -45,6 +45,6 @@ Since the performance bottleneck for Docker on macOS is the file system, it is i
 
 With Docker Desktop supporting MacBook Pro M1, it surely serves as a very performant platform for developers who need the mesh of microservices set up locally.
 
-[^1]:[MacBook Pro M1](https://www.apple.com/macbook-pro-13/)
-[^2]:[Apple Silicon M1 Chip in MacBook Air Outperforms High-End 16-Inch MacBook Pro](https://www.macrumors.com/2020/11/11/m1-macbook-air-first-benchmark/)
-[^3]:[Released: Docker Desktop for Mac [Apple Silicon]](https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/)
+[^1]:[MacBook Pro M1](https://www.apple.com/macbook-pro/){:rel="nofollow external"}
+[^2]:[Apple Silicon M1 Chip in MacBook Air Outperforms High-End 16-Inch MacBook Pro](https://www.macrumors.com/2020/11/11/m1-macbook-air-first-benchmark/){:rel="nofollow external"}
+[^3]:[Released: Docker Desktop for Mac [Apple Silicon]](https://www.docker.com/blog/released-docker-desktop-for-mac-apple-silicon/){:rel="nofollow external"}
