@@ -20,7 +20,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2021-04-14 23:02:00 +01:00
+last_modified_at: 2025-01-22 23:54:00 +01:00
 ---
 Docker will start rate-limiting image pulls from Docker Hub on November 1st, potentially halting a fair number of CI/CD pipelines.<!--more-->
 
@@ -82,7 +82,7 @@ steps:
 
 GitLab team advises developers to start the registry mirror[^4] that would avoid reaching pull rate limits. Mirror would cache the pulls and not turn to Docker Hub when the cache is there.
 
-[^1]: [Scaling Docker to Serve Millions More Developers: Network Egress](https://www.docker.com/blog/scaling-docker-to-serve-millions-more-developers-network-egress/)
-[^2]: [Using Docker Authenticated Pulls](https://circleci.com/docs/2.0/private-images/)
-[^3]: [Pre-Built CircleCI Docker Images](https://circleci.com/docs/2.0/circleci-images/)
-[^4]: [Caching Docker images to reduce the number of calls to DockerHub from your CI/CD infrastructure](https://about.gitlab.com/blog/2020/10/30/mitigating-the-impact-of-docker-hub-pull-requests-limits/#start-the-registry-mirror)
+[^1]: [Scaling Docker to Serve Millions More Developers: Network Egress](https://www.docker.com/blog/scaling-docker-to-serve-millions-more-developers-network-egress/){:rel="nofollow external"}
+[^2]: [Using Docker Authenticated Pulls](https://circleci.com/docs/2.0/private-images/){:rel="nofollow external"}
+[^3]: [Pre-Built CircleCI Docker Images](https://circleci.com/docs/2.0/circleci-images/){:rel="nofollow external"}
+[^4]: [Caching Docker images to reduce the number of calls to DockerHub from your CI/CD infrastructure](https://about.gitlab.com/blog/2020/10/30/mitigating-the-impact-of-docker-hub-pull-requests-limits/#start-the-registry-mirror){:rel="nofollow external"}
