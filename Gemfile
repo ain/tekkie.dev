@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 group :jekyll_plugins do
-  gem 'github-pages'
+  gem 'github-pages', '~> 232'
   gem 'jekyll-paginate'
   gem 'jekyll-redirect-from'
   gem 'jekyll-mentions'
