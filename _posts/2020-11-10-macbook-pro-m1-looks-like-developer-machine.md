@@ -15,7 +15,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2021-04-16 22:08:00 +01:00
+last_modified_at: 2025-01-22 23:41:00 +01:00
 ---
 Apple's new MacBook Pro delivers more than the new M1 chip. Something good is back for the developers.<!--more-->
 
