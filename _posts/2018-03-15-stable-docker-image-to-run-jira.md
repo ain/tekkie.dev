@@ -15,7 +15,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2025-01-22 22:21:00 +01:00
+last_modified_at: 2025-01-22 23:46:00 +01:00
 ---
 JIRA is one of the best Agile issue tracking tools out there, but choosing the right Docker image to run it is tricky.<!--more-->
 
@@ -29,7 +29,6 @@ When running JIRA behind HAProxy that terminates SSL, e.g. @LetsEncrypt, `cptact
 In comparison, `blacklabelops/jira` ran out of the box with the following Docker Compose configuration:
 
 ```yaml
-version: '2'
 services:
   web:
     image: 'blacklabelops/jira:7.5.0'
@@ -69,4 +68,3 @@ services:
     restart: always
     command: mysqld --character-set-server=utf8 --collation-server=utf8_bin
 ```
-
