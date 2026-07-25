@@ -22,27 +22,71 @@ layout: default
 </div>
 
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
+{% assign penultimate = paginator.total_pages | minus: 1 %}
+{% assign win_start = paginator.page | minus: 3 %}
+{% assign win_end = paginator.page | plus: 3 %}
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="/">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
+{% comment %} Near either end the window slides rather than shrinks, so the same number of
+links shows on every page. Absorbing the first or last page widens it to eight, which with
+the page at the far end still totals nine. {% endcomment %}
+{% if win_start < 2 %}
+  {% assign win_start = 1 %}
+  {% assign win_end = 8 %}
+{% endif %}
+{% if win_end > penultimate %}
+  {% assign win_end = paginator.total_pages %}
+  {% assign win_start = paginator.total_pages | minus: 7 %}
+{% endif %}
+{% if win_start < 1 %}{% assign win_start = 1 %}{% endif %}
+{% if win_end > paginator.total_pages %}{% assign win_end = paginator.total_pages %}{% endif %}
 
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}/">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
-  {% endif %}
-</div>
+{% assign win_lo = paginator.page | minus: 1 %}
+{% assign win_hi = paginator.page | plus: 1 %}
+<nav class="pagination" aria-label="Pagination">
+  <ul class="pagination__list">
+    <li class="pagination__item">
+      {% if paginator.previous_page %}
+        <a class="pagination__link pagination__link--step" rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&lsaquo; Prev</a>
+      {% else %}
+        <span class="pagination__link pagination__link--step" aria-disabled="true">&lsaquo; Prev</span>
+      {% endif %}
+    </li>
+
+    {% for page in (1..paginator.total_pages) %}
+      {% comment %} Always show the first and last page, plus a window of three either side of the current one. {% endcomment %}
+      {% assign show = false %}
+      {% if page == 1 %}{% assign show = true %}{% endif %}
+      {% if page == paginator.total_pages %}{% assign show = true %}{% endif %}
+      {% if page >= win_start and page <= win_end %}{% assign show = true %}{% endif %}
+
+      {% comment %} On palm everything past one page either side collapses, but only on a side
+      whose gap an ellipsis already marks, so hiding can never leave a silent jump. {% endcomment %}
+      {% assign far = '' %}
+      {% if win_start > 2 and page >= win_start and page < win_lo %}{% assign far = ' pagination__item--far' %}{% endif %}
+      {% if win_end < penultimate and page <= win_end and page > win_hi %}{% assign far = ' pagination__item--far' %}{% endif %}
+
+      {% if show %}
+        <li class="pagination__item{{ far }}">
+          {% if page == paginator.page %}
+            <span class="pagination__link pagination__link--current" aria-current="page">{{ page }}</span>
+          {% elsif page == 1 %}
+            <a class="pagination__link" href="/">{{ page }}</a>
+          {% else %}
+            <a class="pagination__link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a>
+          {% endif %}
+        </li>
+      {% elsif page == 2 or page == penultimate %}
+        <li class="pagination__item pagination__ellipsis" aria-hidden="true">&hellip;</li>
+      {% endif %}
+    {% endfor %}
+
+    <li class="pagination__item">
+      {% if paginator.next_page %}
+        <a class="pagination__link pagination__link--step" rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}/">Next &rsaquo;</a>
+      {% else %}
+        <span class="pagination__link pagination__link--step" aria-disabled="true">Next &rsaquo;</span>
+      {% endif %}
+    </li>
+  </ul>
+</nav>
 {% endif %}
