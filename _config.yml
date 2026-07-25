@@ -11,6 +11,10 @@ linkedin_username: aintohvri
 mastodon_username: tekkie
 user_image: /assets/ain.jpg
 logo: /assets/ain.jpg
+job_title: CTO
+employer:
+  name: Samwise
+  url: https://samwise-media.com
 
 # Build settings
 markdown: kramdown
