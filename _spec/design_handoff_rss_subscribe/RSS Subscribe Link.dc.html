@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<style>
+  body { margin:0; background:#f2f2f0; font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:#15498c; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+</style>
+</helmet>
+
+<section style="padding:56px 48px 96px; display:flex; flex-direction:column; gap:32px">
+  <div style="display:flex; flex-direction:column; gap:8px; max-width:900px">
+    <div style="font:500 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing:.14em; text-transform:uppercase; color:#757575">Turn 1 &middot; three treatments for “subscribe via RSS”</div>
+    <div style="font:400 22px/1.35 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111; text-wrap:pretty">Same palette, same type, same layout, pagination untouched. Each option changes only what sits in the RSS link’s own slot.</div>
+  </div>
+
+  <div style="display:flex; flex-wrap:wrap; gap:28px; align-items:flex-start">
+
+    <div id="1a" style="display:flex; flex-direction:column; gap:14px; width:760px">
+      <div style="display:flex; align-items:baseline; gap:12px">
+        <span style="font:600 12px/1 ui-monospace, Menlo, monospace; color:#fdfdfd; background:#111; padding:6px 8px; border-radius:3px">1a</span>
+        <span style="font:500 17px/1.3 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111">Borrow the pagination’s shape</span>
+      </div>
+      <div style="font:400 14px/1.55 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#757575; text-wrap:pretty">The link reads as body text today, so the eye skips it. Wrapping it in the exact hairline box already used by Prev / Next gives it a button affordance without inventing a new visual language — and the RSS glyph is recognised faster than the word.</div>
+
+      <div style="background:#fdfdfd; border:1px solid #e8e8e8; padding:40px 36px 32px">
+        <div style="font:400 14px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#757575">Mar 29, 2018</div>
+        <div style="font:400 30px/1.2 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; margin-top:12px">Jekyll HTTP response handling with Cloudflare Workers</div>
+        <div style="font:400 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111; margin-top:14px; text-wrap:pretty">Jekyll is great at speed, which is why it’s used for GitHub Pages, but it’s not as flexible to maintain.</div>
+
+        <div style="margin-top:34px; display:flex">
+          <a href="#1a" style="display:inline-flex; align-items:center; gap:9px; border:1px solid #e8e8e8; padding:9px 15px; color:#15498c; font:400 16px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; text-decoration:none" style-hover="border-color:#15498c">
+            <sc-if value="{{ showIcon }}" hint-placeholder-val="{{ true }}">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:block"><circle cx="5" cy="19" r="3"></circle><path d="M2 9.5a1.9 1.9 0 0 1 0-3.8A16.3 16.3 0 0 1 18.3 22a1.9 1.9 0 0 1-3.8 0A12.5 12.5 0 0 0 2 9.5Z"></path><path d="M2 2.6A1.9 1.9 0 0 1 2 0a24 24 0 0 1 24 24 1.9 1.9 0 0 1-3.8 0A20.2 20.2 0 0 0 2 2.6Z"></path></svg>
+            </sc-if>
+            Subscribe via RSS
+          </a>
+        </div>
+
+        <div style="margin-top:26px; display:flex; align-items:stretch; gap:0">
+          <span style="border:1px solid #e8e8e8; padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#a8a8a8">‹ Prev</span>
+          <span style="padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; border-bottom:2px solid #15498c; margin-left:10px">1</span>
+          <sc-for list="{{ pages }}" as="p" hint-placeholder-count="7">
+            <span style="padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111">{{ p }}</span>
+          </sc-for>
+          <span style="border:1px solid #e8e8e8; padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111; margin-left:10px">Next ›</span>
+        </div>
+      </div>
+
+      <div style="font:400 13px/1.6 ui-monospace, Menlo, monospace; color:#757575">Footprint +18px tall &middot; no colour, font, layout or pagination change</div>
+    </div>
+
+    <div id="1b" style="display:flex; flex-direction:column; gap:14px; width:760px">
+      <div style="display:flex; align-items:baseline; gap:12px">
+        <span style="font:600 12px/1 ui-monospace, Menlo, monospace; color:#fdfdfd; background:#111; padding:6px 8px; border-radius:3px">1b</span>
+        <span style="font:500 17px/1.3 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111">Say what the reader gets</span>
+      </div>
+      <div style="font:400 14px/1.55 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#757575; text-wrap:pretty">“RSS” is a protocol name, not a benefit. Promote the link to the size of a post title and add one muted line in the existing date/meta style. Nothing new is drawn — it reuses two type styles already on the page and reads as a natural end-of-list sign-off.</div>
+
+      <div style="background:#fdfdfd; border:1px solid #e8e8e8; padding:40px 36px 32px">
+        <div style="font:400 14px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#757575">Mar 29, 2018</div>
+        <div style="font:400 30px/1.2 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; margin-top:12px">Jekyll HTTP response handling with Cloudflare Workers</div>
+        <div style="font:400 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111; margin-top:14px; text-wrap:pretty">Jekyll is great at speed, which is why it’s used for GitHub Pages, but it’s not as flexible to maintain.</div>
+
+        <div style="margin-top:34px; border-top:1px solid #e8e8e8; padding-top:22px; display:flex; flex-direction:column; gap:6px">
+          <a href="#1b" style="font:400 24px/1.25 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; text-decoration:none" style-hover="text-decoration:underline">Subscribe via RSS</a>
+          <div style="font:400 14px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#757575">Every new post in your reader, the minute it ships. No email, no tracking, no account.</div>
+        </div>
+
+        <div style="margin-top:26px; display:flex; align-items:stretch; gap:0">
+          <span style="border:1px solid #e8e8e8; padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#a8a8a8">‹ Prev</span>
+          <span style="padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; border-bottom:2px solid #15498c; margin-left:10px">1</span>
+          <sc-for list="{{ pages }}" as="p" hint-placeholder-count="7">
+            <span style="padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111">{{ p }}</span>
+          </sc-for>
+          <span style="border:1px solid #e8e8e8; padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111; margin-left:10px">Next ›</span>
+        </div>
+      </div>
+
+      <div style="font:400 13px/1.6 ui-monospace, Menlo, monospace; color:#757575">Footprint +44px tall &middot; one hairline rule reused from the footer divider</div>
+    </div>
+
+    <div id="1c" style="display:flex; flex-direction:column; gap:14px; width:760px">
+      <div style="display:flex; align-items:baseline; gap:12px">
+        <span style="font:600 12px/1 ui-monospace, Menlo, monospace; color:#fdfdfd; background:#111; padding:6px 8px; border-radius:3px">1c</span>
+        <span style="font:500 17px/1.3 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111">Fix what happens after the click</span>
+      </div>
+      <div style="font:400 14px/1.55 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#757575; text-wrap:pretty">Today the link dumps raw XML — the people who do click mostly bounce. Rest state is pixel-identical to the current page; clicking expands an inline panel with a copyable feed URL and one-tap hand-off to a reader. Zero cost to anyone who never clicks.</div>
+
+      <div style="background:#fdfdfd; border:1px solid #e8e8e8; padding:40px 36px 32px">
+        <div style="font:400 14px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#757575">Mar 29, 2018</div>
+        <div style="font:400 30px/1.2 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; margin-top:12px">Jekyll HTTP response handling with Cloudflare Workers</div>
+        <div style="font:400 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111; margin-top:14px; text-wrap:pretty">Jekyll is great at speed, which is why it’s used for GitHub Pages, but it’s not as flexible to maintain.</div>
+
+        <div style="margin-top:34px; display:flex; flex-direction:column; gap:0; align-items:flex-start">
+          <a href="#1c" onClick="{{ togglePanel }}" style="font:400 16px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; text-decoration:none" style-hover="text-decoration:underline">subscribe via RSS</a>
+
+          <sc-if value="{{ panelOpen }}" hint-placeholder-val="{{ true }}">
+            <div style="margin-top:18px; align-self:stretch; box-sizing:border-box; border:1px solid #e8e8e8; padding:20px 22px; display:flex; flex-direction:column; gap:16px">
+              <div style="display:flex; align-items:stretch; gap:0; flex-wrap:wrap">
+                <code style="flex:1; min-width:0; box-sizing:border-box; border:1px solid #e8e8e8; border-right:0; padding:11px 13px; font:400 14px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; color:#111; overflow:hidden; text-overflow:ellipsis; white-space:nowrap">{{ feedUrl }}</code>
+                <button onClick="{{ copyFeed }}" style="border:1px solid #e8e8e8; background:transparent; padding:11px 16px; font:400 14px/1.2 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; cursor:pointer" style-hover="border-color:#15498c">{{ copyLabel }}</button>
+              </div>
+              <div style="display:flex; flex-wrap:wrap; gap:10px">
+                <sc-for list="{{ readers }}" as="r" hint-placeholder-count="3">
+                  <a href="{{ r.href }}" style="border:1px solid #e8e8e8; padding:8px 13px; font:400 14px/1.2 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; text-decoration:none" style-hover="border-color:#15498c">{{ r.name }}</a>
+                </sc-for>
+              </div>
+              <div style="font:400 14px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#757575; text-wrap:pretty">No reader yet? An RSS app collects new posts from every site you follow in one list — no inbox, no algorithm.</div>
+            </div>
+          </sc-if>
+        </div>
+
+        <div style="margin-top:26px; display:flex; align-items:stretch; gap:0">
+          <span style="border:1px solid #e8e8e8; padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#a8a8a8">‹ Prev</span>
+          <span style="padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; border-bottom:2px solid #15498c; margin-left:10px">1</span>
+          <sc-for list="{{ pages }}" as="p" hint-placeholder-count="7">
+            <span style="padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111">{{ p }}</span>
+          </sc-for>
+          <span style="border:1px solid #e8e8e8; padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111; margin-left:10px">Next ›</span>
+        </div>
+      </div>
+
+      <div style="font:400 13px/1.6 ui-monospace, Menlo, monospace; color:#757575">Click the link in the mock &middot; rest footprint 0px &middot; pagination shifts only while open</div>
+    </div>
+
+    <sc-if value="{{ showNotes }}" hint-placeholder-val="{{ true }}">
+      <div style="width:760px; display:flex; flex-direction:column; gap:14px">
+        <div style="display:flex; align-items:baseline; gap:12px">
+          <span style="font:600 12px/1 ui-monospace, Menlo, monospace; color:#757575; border:1px solid #e8e8e8; padding:5px 8px; border-radius:3px">ref</span>
+          <span style="font:500 17px/1.3 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111">Today</span>
+        </div>
+        <div style="font:400 14px/1.55 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#757575; text-wrap:pretty">The link carries the same weight, size and colour as an inline body link and sits in dead space between the last excerpt and the pager — no shape, no icon, no reason to click.</div>
+        <div style="background:#fdfdfd; border:1px solid #e8e8e8; padding:40px 36px 32px">
+          <div style="font:400 14px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#757575">Mar 29, 2018</div>
+          <div style="font:400 30px/1.2 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; margin-top:12px">Jekyll HTTP response handling with Cloudflare Workers</div>
+          <div style="font:400 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111; margin-top:14px; text-wrap:pretty">Jekyll is great at speed, which is why it’s used for GitHub Pages, but it’s not as flexible to maintain.</div>
+          <div style="margin-top:34px"><a href="#ref" style="font:400 16px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; text-decoration:none">subscribe via RSS</a></div>
+          <div style="margin-top:26px; display:flex; align-items:stretch; gap:0">
+            <span style="border:1px solid #e8e8e8; padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#a8a8a8">‹ Prev</span>
+            <span style="padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#15498c; border-bottom:2px solid #15498c; margin-left:10px">1</span>
+            <sc-for list="{{ pages }}" as="p" hint-placeholder-count="7">
+              <span style="padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111">{{ p }}</span>
+            </sc-for>
+            <span style="border:1px solid #e8e8e8; padding:10px 14px; font:400 15px/1 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#111; margin-left:10px">Next ›</span>
+          </div>
+        </div>
+      </div>
+    </sc-if>
+
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;feedUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://tekkie.dev/feed.xml&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showIcon&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Options&quot;},&quot;showNotes&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Options&quot;}}">
+class Component extends DCLogic {
+  state = { panelOpen: false, copied: false };
+
+  renderVals() {
+    const feedUrl = this.props.feedUrl ?? "https://tekkie.dev/feed.xml";
+    return {
+      pages: [2, 3, 4, 5, 6, 7, 8, "…", 25],
+      feedUrl,
+      showIcon: this.props.showIcon ?? true,
+      showNotes: this.props.showNotes ?? true,
+      panelOpen: this.state.panelOpen,
+      copyLabel: this.state.copied ? "Copied" : "Copy",
+      readers: [
+        { name: "Feedly", href: "https://feedly.com/i/subscription/feed/" + encodeURIComponent(feedUrl) },
+        { name: "Inoreader", href: "https://www.inoreader.com/?add_feed=" + encodeURIComponent(feedUrl) },
+        { name: "NetNewsWire", href: "feed:" + feedUrl }
+      ],
+      togglePanel: (e) => { e.preventDefault(); this.setState(s => ({ panelOpen: !s.panelOpen })); },
+      copyFeed: () => {
+        if (navigator.clipboard) navigator.clipboard.writeText(feedUrl).catch(() => {});
+        this.setState({ copied: true });
+        clearTimeout(this._t);
+        this._t = setTimeout(() => this.setState({ copied: false }), 1600);
+      }
+    };
+  }
+
+  componentWillUnmount() { clearTimeout(this._t); }
+}
+</script>
+</body>
+</html>

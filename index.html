@@ -1,5 +1,9 @@
 ---
 layout: default
+assets:
+  inline:
+    js:
+      - rss-subscribe.js
 ---
 
 <div class="home">
@@ -17,7 +21,7 @@ layout: default
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">subscribe via RSS</a></p>
+  {% include rss-subscribe.html %}
 
 </div>
 

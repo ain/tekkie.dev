@@ -1,0 +1,115 @@
+// Replaces the margin the <p> this wrapper supersedes used to get from
+// %vertical-rhythm, so the rest state stays where it was.
+.rss-subscribe {
+  margin-bottom: $spacing-unit / 2;
+}
+
+.rss-subscribe__panel {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+  border: 1px solid $grey-color-light;
+  padding: 20px 22px;
+
+  // display: flex above would otherwise beat the user agent's [hidden] rule.
+  &[hidden] {
+    display: none;
+  }
+
+  > * {
+    margin-bottom: 0;
+  }
+
+  > * + * {
+    margin-top: 16px;
+  }
+}
+
+// Wraps at narrow widths, dropping the copy button below the URL field.
+.rss-subscribe__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Overrides the global code styling from base/_block-element.scss, which would
+// otherwise apply a tinted fill, rounded corners and its own padding.
+.rss-subscribe__url {
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  background: none;
+  border: 1px solid $grey-color-light;
+  border-right: 0;
+  border-radius: 0;
+  padding: 11px 13px;
+  color: $text-color;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rss-subscribe__copy,
+.rss-subscribe__reader {
+  border: 1px solid $grey-color-light;
+  border-radius: 0;
+  background-color: transparent;
+  color: $brand-color;
+  font-family: $base-font-family;
+  font-size: 14px;
+  line-height: 1.2;
+
+  &:hover {
+    border-color: $brand-color;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $brand-color;
+    outline-offset: 2px;
+  }
+}
+
+.rss-subscribe__copy {
+  padding: 11px 16px;
+  cursor: pointer;
+}
+
+.rss-subscribe__readers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.rss-subscribe__reader {
+  padding: 8px 13px;
+  text-decoration: none;
+
+  &:visited {
+    color: $brand-color;
+  }
+
+  &:hover {
+    color: $brand-color;
+    text-decoration: none;
+  }
+}
+
+.rss-subscribe__hint {
+  color: $grey-color;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+// Announces the copy result; the visual label change alone is not conveyed.
+.rss-subscribe__status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

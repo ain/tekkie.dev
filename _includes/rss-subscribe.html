@@ -1,0 +1,20 @@
+{% assign feed_url = "/feed.xml" | absolute_url %}
+<div class="rss-subscribe">
+  <a class="rss-subscribe__trigger" href="{{ "/feed.xml" | prepend: site.baseurl }}" aria-expanded="false" aria-controls="rss-subscribe-panel">subscribe via RSS</a>
+
+  <div class="rss-subscribe__panel" id="rss-subscribe-panel" data-feed-url="{{ feed_url }}" hidden>
+    <div class="rss-subscribe__row">
+      <code class="rss-subscribe__url">{{ feed_url }}</code>
+      <button class="rss-subscribe__copy" type="button">Copy</button>
+      <span class="rss-subscribe__status" role="status" aria-live="polite"></span>
+    </div>
+
+    <div class="rss-subscribe__readers">
+      <a class="rss-subscribe__reader" href="https://feedly.com/i/subscription/feed/{{ feed_url | cgi_escape }}">Feedly</a>
+      <a class="rss-subscribe__reader" href="https://www.inoreader.com/?add_feed={{ feed_url | cgi_escape }}">Inoreader</a>
+      <a class="rss-subscribe__reader" href="feed:{{ feed_url }}">NetNewsWire</a>
+    </div>
+
+    <p class="rss-subscribe__hint">No reader yet? An RSS app collects new posts from every site you follow in one list &mdash; no inbox, no algorithm.</p>
+  </div>
+</div>
