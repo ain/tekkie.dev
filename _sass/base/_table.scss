@@ -1,0 +1,51 @@
+// Markdown tables arrive without classes, so the element carries the styling.
+// Collapsed borders keep the rule between two adjacent cells a single line
+// rather than two abutting ones.
+table {
+  @extend %vertical-rhythm;
+
+  border-collapse: collapse;
+  width: 100%;
+}
+
+// Horizontal rules alone are enough structure at this width; vertical borders
+// would box in a two-column table that reads perfectly well without them.
+// Left alignment is the default because prose tables here hold text, not
+// figures that would want their digits lined up on the right.
+th,
+td {
+  border-bottom: 1px solid $grey-color-light;
+  padding: $spacing-unit / 4 $spacing-unit / 3;
+  text-align: left;
+  vertical-align: top;
+}
+
+// The header earns a heavier rule beneath it so the body reads as one block
+// hanging off it, matching how the pagination marks its current page.
+th {
+  border-bottom-color: $grey-color;
+  font-weight: 600;
+}
+
+// The first cell of each row is the label, so it stays flush with the text
+// column and takes no more width than its content needs.
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+// Narrow screens: cells here hold prose and wrap happily, so let them. The
+// overflow box is a backstop for a table that genuinely cannot fit — a wide
+// one, or a cell holding an unbreakable URL — so it scrolls itself instead of
+// forcing the whole page sideways.
+@include media-query($on-palm) {
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
