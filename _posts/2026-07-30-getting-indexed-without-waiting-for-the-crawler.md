@@ -15,7 +15,6 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2026-07-30 19:44:00 +02:00
 ---
 Publishing is only half of the job. A post that nobody can find might as well not exist, and for a static site the gap between deploying a page and a search engine noticing it is entirely out of your hands. Both Google and Bing offer APIs to close that gap by pushing URLs at them directly — and both are fiddly enough that hardly anyone bothers. [indeks](https://crates.io/crates/indeks){:rel="nofollow external"} is a small Rust CLI that does the bothering for you.
 <!--more-->
