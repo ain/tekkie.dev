@@ -27,6 +27,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-last-modified-at
+# TODO: remove last_modified_at in YFM on each individual update
 last-modified-at:
   date-format: '%b %-d, %Y'
 paginate: 5
