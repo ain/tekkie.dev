@@ -8,6 +8,7 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from'
   gem 'jekyll-mentions'
   gem 'jekyll-seo-tag'
+  gem 'jekyll-last-modified-at', '~> 1.3'
 end
 
 gem 'jekyll-watch'
