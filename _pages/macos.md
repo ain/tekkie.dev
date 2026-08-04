@@ -10,6 +10,7 @@ redirect_from:
 - /tag/hdiutil
 - /tag/dmg
 - /category/mac-os
+- /mac-os/leopard-outsells-vista-in-japan
 excerpt: Posts about Apple macOS, from disk images and the command line to keyboard remapping and everyday desktop quirks.
 ---
 > macOS is the operating system that powers [Apple](/apple)'s Mac computers, including the [MacBook](/macbook) line. Built on the Unix-based Darwin foundation, it pairs a proprietary desktop environment with a POSIX command line underneath.
