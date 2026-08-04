@@ -33,9 +33,19 @@ last-modified-at:
 paginate: 5
 include:
   - _pages
+# NB: this replaces Jekyll's default exclude list rather than adding to it, so
+# the defaults have to be repeated here. Without vendor/, CI builds scan the
+# gems installed into ./vendor/bundle and fail on Jekyll's own site template.
 exclude:
   - CNAME
   - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 jekyll-mentions:
   base_url: https://twitter.com
 twitter:
