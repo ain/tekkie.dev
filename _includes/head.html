@@ -25,4 +25,9 @@
   }
   </script>
   {% endif %}
+{% if paginator %}
+  {% if paginator.page > 1 %}
+    <meta name="robots" content="noindex, follow">
+  {% endif %}
+{% endif %}
 </head>
