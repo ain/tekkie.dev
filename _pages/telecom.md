@@ -12,6 +12,7 @@ redirect_from:
   - /tag/linxtelecom
   - /telecom/linxtelecom-estonia-reports-52-percents-increase-in-sales
   - /telecom/elisa-moves-to-the-lead-in-the-run-for-35g-coverage
+  - /telecom/first-commercial-umts900-network-in-the-world
 author:
   name: Ain Tohvri
 ---
