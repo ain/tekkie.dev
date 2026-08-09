@@ -4,7 +4,7 @@ title: Posts about Apple products from macOS to MacBooks
 category: apple
 permalink: /apple/
 redirect_from:
-- /itunes-baltic
+- /apple/itunes-baltic
 excerpt: Posts about Apple, from the Mac as a developer machine to the software and hardware decisions behind it.
 ---
 > Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops and sells consumer electronics, computer software and online services. Its product lines include the Mac, the [MacBook](/macbook), the [iPhone](/iphone) and the [macOS](/macos) operating system that ties the desktop side of them together.
