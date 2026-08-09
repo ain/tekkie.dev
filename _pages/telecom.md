@@ -9,7 +9,8 @@ redirect_from:
   - /category/telecom
   - /telecom/free-m-internet-for-the-summer
   - /telecom/estonia-and-lithuania-report-high-broadband-sales-for-teliasonera
-last_modified_at: 2020-11-05 2:29:00 +01:00
+  - /tag/linxtelecom
+  - /telecom/linxtelecom-estonia-reports-52-percents-increase-in-sales
 author:
   name: Ain Tohvri
 ---
