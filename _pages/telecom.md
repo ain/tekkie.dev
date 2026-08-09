@@ -11,6 +11,7 @@ redirect_from:
   - /telecom/estonia-and-lithuania-report-high-broadband-sales-for-teliasonera
   - /tag/linxtelecom
   - /telecom/linxtelecom-estonia-reports-52-percents-increase-in-sales
+  - /telecom/elisa-moves-to-the-lead-in-the-run-for-35g-coverage
 author:
   name: Ain Tohvri
 ---
