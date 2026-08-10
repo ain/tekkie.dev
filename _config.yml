@@ -19,6 +19,18 @@ employer:
 # Build settings
 markdown: kramdown
 permalink: /:categories/:title
+# The github-pages gem used to force this; without it Sass output is expanded.
+sass:
+  style: compressed
+  sourcemap: never
+# The remaining settings in this block were also supplied by the github-pages
+# gem and are kept to preserve its behaviour. Jekyll's own default for `future`
+# is false, which would silently drop a post dated ahead of the build; gist
+# noscript fallbacks are off because generating them fetches each gist from
+# github.com at build time.
+future: true
+gist:
+  noscript: false
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
