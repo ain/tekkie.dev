@@ -6,11 +6,11 @@ Tech blog at https://tekkie.dev
 
 1. Install dependencies
 
-        $ bundle
+        bundle
 
 2. Run Jekyll server
 
-        $ bundle exec jekyll s
+        bundle exec jekyll s
 
 3. When making a change, site will now automagically recompile and reload
 
