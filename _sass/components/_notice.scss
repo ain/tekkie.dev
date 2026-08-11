@@ -1,0 +1,20 @@
+.notice {
+  @extend %vertical-rhythm;
+
+  background-color: mix($brand-color, #fff, 10%);
+  border-left: 5px solid $brand-color;
+  padding: $spacing-unit / 2;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.notice-label {
+  color: $brand-color;
+  font-size: $small-font-size;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: $spacing-unit / 6;
+}

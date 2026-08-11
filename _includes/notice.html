@@ -1,0 +1,7 @@
+{% assign notice_date = page.notice_date | default: site.time %}
+<aside class="notice" role="note">
+  <p class="notice-label">Update:
+    <time datetime="{{ notice_date | date_to_xmlschema }}">{{ notice_date | date: "%b %-d, %Y" }}</time>
+  </p>
+  <p>{{ page.notice_text | markdownify }}</p>
+</aside>

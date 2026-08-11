@@ -13,6 +13,8 @@ layout: default
     </p>
   </header>
 
+  {% if page.notice_text %}{% include notice.html %}{% endif %}
+
   <div class="post-content">
     {{ content }}
   </div>
