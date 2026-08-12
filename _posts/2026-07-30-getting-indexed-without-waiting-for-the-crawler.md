@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Getting indexed without waiting for the crawler
+image: /assets/indeks-square-light-320.png
 categories:
   - rust
 tags:
@@ -32,7 +33,15 @@ The active route is to tell the engine yourself. Two protocols cover most of the
 
 ## What indeks does
 
-`indeks` is a single command that takes URLs, sitemaps, or both, and submits them to one of those two engines. It is written in Rust, needs 1.88 or newer, and builds the usual way:
+`indeks` is a single command that takes URLs, sitemaps, or both, and submits them to one of those two engines.
+
+Installation became easier as of version `v0.1.1` that shipped the installer:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ain/indeks/main/install.sh | sh
+```
+
+For developers that have Rust installed, using `cargo` directly is of course the easiest:
 
 ```bash
 cargo build --release
