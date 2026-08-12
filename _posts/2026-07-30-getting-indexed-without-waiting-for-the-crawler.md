@@ -47,7 +47,7 @@ For developers that have Rust installed, using `cargo` directly is of course the
 cargo build --release
 ```
 
-The binary lands in `target/release/indeks`. The shape of an invocation is:
+The shape of an invocation is:
 
 ```text
 indeks <google|bing> [--url <URL>]... [--sitemap <SITEMAP>]... --credentials <TOKEN_OR_PATH> [--dry-run] [--verbose]
