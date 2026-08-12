@@ -25,9 +25,13 @@
   }
   </script>
   {% endif %}
-{% if paginator %}
-  {% if paginator.page > 1 %}
-    <meta name="robots" content="noindex, follow">
-  {% endif %}
-{% endif %}
+  {% comment %}
+    Pagination pages are thin duplicates of the post list; archived posts are
+    ones we want out of search. Unrelated reasons, same directive, so collect
+    them into one flag rather than a compound condition.
+  {% endcomment %}
+  {% assign noindex = false %}
+  {% if paginator.page > 1 %}{% assign noindex = true %}{% endif %}
+  {% if page.archived %}{% assign noindex = true %}{% endif %}
+  {% if noindex %}<meta name="robots" content="noindex, follow">{% endif %}
 </head>
