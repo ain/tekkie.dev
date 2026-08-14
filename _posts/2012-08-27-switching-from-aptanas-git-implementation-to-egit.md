@@ -26,6 +26,6 @@ notice_text: Aptana Studio has been effectively unmaintained since 2018. If you 
 ---
 <img class="teaser-image--left" title="Aptana" src="{{ site.baseurl }}/assets/Aptana.png" alt="Aptana" width="104" height="104">By default Aptana is configured to work with its own Git implementation meaning that whenever you add a Git repository and import it to the workspace, the default Aptana Git functionality is available in the project. The problem is, it doesn't always deliver, e.g. for GitHub, nor is it visually as complete and readable.
 
-The alternative is the more comprehensive eGit plugin for Eclipse. To switch over to eGit, just tick off __Preferences > Team > Git > Automatically attach our git support to projects added that have git repositories__.
+The alternative is the more comprehensive eGit plugin for Eclipse. To switch over to eGit, just untick __Preferences > Team > Git > Automatically attach our git support to projects added that have git repositories__.
 
 This feature landed in Aptana Studio 3 in 2011.
