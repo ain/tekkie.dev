@@ -138,4 +138,4 @@ Given the above data, it's pretty safe to say that both installations run equall
 
 - [Getting ImageAPI and ImageCache cope with Drupal 6](/drupal/getting-imageapi-and-imagecache-cope-with-drupal-6)
 - [How to run a site with gzip compression and why it matters](/research/how-to-run-a-site-with-gzip-compression-and-why-it-matters)
-- [How to increase the performance of your Drupal site](http://drupal.org/node/2601">Server tuning considerations){:rel="nofollow external"}
+- [Server tuning considerations](http://drupal.org/node/2601){:rel="nofollow external"}
