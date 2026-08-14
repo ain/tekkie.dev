@@ -22,7 +22,7 @@ permalink: /developer-tools/eclipse/aptana/:title
 excerpt: By default Aptana is configured to work with its own Git implementation meaning that whenever you add a Git repository and import it to the workspace, the default Aptana Git functionality is available in the project. The problem is, it doesn't always deliver, e.g. for GitHub, nor is it visually as complete and readable.
 last_modified_at: 2026-08-14 20:13:00 +01:00
 notice_date: 2026-08-14
-notice_text: Aptana Studio has been effectively unmaintained since 2018. If you landed here because Aptana's Git support is misbehaving, an honest answer in 2026 would be to try [Claude Code](https://claude.ai/referral/_TgNbve-4Q){:rel="external nofollow"}.
+notice_text: Aptana Studio has been effectively unmaintained since 2018. If you landed here because Aptana's Git support is misbehaving (Aptana CRC Git errors), an honest answer in 2026 would be to try [Claude Code](https://claude.ai/referral/_TgNbve-4Q){:rel="external nofollow"}.
 ---
 <img class="teaser-image--left" title="Aptana" src="{{ site.baseurl }}/assets/Aptana.png" alt="Aptana" width="104" height="104">By default Aptana is configured to work with its own Git implementation meaning that whenever you add a Git repository and import it to the workspace, the default Aptana Git functionality is available in the project. The problem is, it doesn't always deliver, e.g. for GitHub, nor is it visually as complete and readable.
 
