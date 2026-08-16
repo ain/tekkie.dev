@@ -32,7 +32,7 @@ What makes Fastly great is its flexibility powered by the possibility to use cus
 
 It has a comprehensive set of features one of which is dedicated to linting Fastly VCL.
 
-## Linting with Falco GitHub Action
+## Linting VCL with Falco GitHub Action
 
 In order to automate the linting of Fastly VCL, I've built the [Falco GitHub Action](https://github.com/ain/falco-github-action){:rel="nofollow external"}.
 
@@ -53,4 +53,5 @@ ATTN: you can also lint ACL files! Linting has a lot of value against a missing 
 *[CDNs]: Content Delivery Networks
 *[CI/CD]: Continuous Integration/Continous Deployment
 *[ACL]: Access Control List
+*[VCL]: Varnish Configuration Language
 *[CIDR]: Classless Inter-Domain Routing
