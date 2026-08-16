@@ -14,7 +14,7 @@ author:
 permalink: /rich-internet-applications/first-impressions-of-microsoft-silverlight-and-how-to-get-rid-of-it
 excerpt_separator: <!--more-->
 last_modified_at: 2026-08-17 01:33:00 +01:00
-notice_text: "See [Silverlight removal steps for macOS](#how-to-uninstall-silverlight-on-mac) for macOS"
+notice_text: "See [Silverlight removal steps for macOS](#how-to-uninstall-silverlight-on-mac)."
 notice_date: 2026-08-17
 ---
 Those who remember Adobe Flash Platform would know that it allowed running complex applications inside the browser, across platforms. Silverlight was Microsoft's answer for a competitive RIA platform.<!--more-->
