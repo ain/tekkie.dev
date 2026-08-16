@@ -9,17 +9,19 @@ tags:
 - E-readiness
 - E-stonia
 - Economist
+- eGov
 author:
-  display_name: Ain Tohvri
-  first_name: Ain
-  last_name: Tohvri
+  name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2021-04-13 23:26:00 +01:00
+last_modified_at: 2021-08-16 21:18:00 +01:00
+notice_text: EIU stopped publishing e-readiness rankings in 2010. The last ranking that measured countries' digital development was published by The Economist as Digital Economy Rankings in 2010.
+notice_date: 2026-08-16
+archive: true
 ---
-Economist Intelligence Unit has once again concluded with the E-readiness rankings of 2009 to measure the quality of a country’s <abbr title="Information and Computing Technology">ICT</abbr> infrastructure and the ability of its consumers, businesses and governments to use <abbr title="Information and Computing Technology">ICT</abbr> to their benefit.<!--more-->
+Economist Intelligence Unit has once again concluded with the E-readiness rankings of 2009 to measure the quality of a country’s ICT infrastructure and the ability of its consumers, businesses and governments to use ICT to their benefit.<!--more-->
 
-Compared to E-readiness rankings of 2007 two years ago, it hasn't really changed much and Nordic countries are still the top dogs (risers in bold):
+Compared to e-readiness rankings of 2007 two years ago, it hasn't really changed much and Nordic countries are still at the top (gains in bold):
 
 1. Denmark
 2. Sweden
@@ -52,8 +54,7 @@ Compared to E-readiness rankings of 2007 two years ago, it hasn't really change
 29. Slovenia
 30. Chile
 
-All in all it seems that European Union thrives on its <abbr title="Information and Computing Technology">ICT</abbr> rather nicely. Whether or not to believe the stats, is another matter.
+All in all it seems that European Union thrives on its ICT rather nicely. Whether or not the stats represent the entirety of the development, remains a debate.
 
-Used resources:
-
-- [The 2007 e-readiness rankings](http://graphics.eiu.com/files/ad_pdfs/2007Ereadiness_Ranking_WP.pdf) (PDF)
+*[EIU]: Economist Intelligence Unit
+*[ICT]: Information and Computing Technology
