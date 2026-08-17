@@ -17,7 +17,7 @@ author:
   name: Ain Tohvri
   twitter: tekkie
 excerpt_separator: <!--more-->
-last_modified_at: 2021-04-13 23:26:00 +01:00
+last_modified_at: 2026-08-17 22:54:00 +01:00
 ---
 Facebook is toxic. It farms people for data and feeds off reactionary content igniting polarised discussions. It delivers very little value for the time spent.<!--more-->
 
@@ -31,19 +31,19 @@ One of Hollywood's greatest, Denzel Washington, put it nicely:
 
 > We all want to be liked, but now we all want to be liked by 16 million
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0bj3j8WHh5k?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen class="video--padded"></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0bj3j8WHh5k?rel=0" title="Denzel Washington on Social Media" allow="encrypted-media" allowfullscreen class="video video--padded"></iframe>
 
 ### Privacy
 
 Facebook's success builds on privacy violations. You're in a private chat telling your friend about a football team you've never mentioned before and 2 minutes later you have a fan gear ad of the team in your Newsfeed. All your data, however private, is digested for advertising purposes.
 
-In 2014 I joined @maxschrems' class action against Facebook<sup>[1](#class-act-against-facebook)</sup> exactly because of it. The lawsuit has gone all the way up to Court of Justice of the European Union, awaiting verdict.
+In 2014 I joined @maxschrems' class action against Facebook exactly because of it. The lawsuit has gone all the way up to Court of Justice of the European Union, awaiting verdict.
 
 ### Negativity
 
 Facebook provides an excellent platform for flat earthers, anti-vaxxers, trumpists. Hate speech and alternative facts distribute with little control. The more people like this type of content, the more likely it is to appear on their Newsfeeds. Facebook's algorithm takes care of that for obvious reasons: getting people hooked for higher advertising conversions.
 
-_Fast friends_ are the usual suspects of corrupt Newsfeed and whilst confronting them is not mandatory, it's sad to witness. Not merely a presumption, Facebook use has been directly linked to depression<sup>[2](#facebook-linked-to-depression)</sup>.
+_Fast friends_ are the usual suspects of corrupt Newsfeed and whilst confronting them is not mandatory, it's sad to witness. Not merely a presumption, Facebook use has been directly linked to depressioni.[^1]
 
 ## The experiment
 
@@ -58,5 +58,4 @@ Since I removed Facebook from all my mobile devices a year ago already, next ste
 
 Addressing all friends until further notice: text or call. Our keystrokes are limited.
 
-<small><a name="class-act-against-facebook">1</a>: [Facebook Class Action](https://www.fbclaim.com/ui/page/updates)</small><br>
-<small><a name="facebook-linked-to-depression">2</a>: [Study Links Heavy Facebook And Social Media Usage To Depression](https://www.forbes.com/sites/amitchowdhry/2016/04/30/study-links-heavy-facebook-and-social-media-usage-to-depression/)</small>
+[^1]: [Study Links Heavy Facebook And Social Media Usage To Depression](https://www.forbes.com/sites/amitchowdhry/2016/04/30/study-links-heavy-facebook-and-social-media-usage-to-depression/){:rel="nofollow external"}
