@@ -4,6 +4,8 @@ title: Artwork
 category: artwork
 permalink: /artwork/
 excerpt: Posts about artwork on the web, from a fully content managed multilingual Flash site to 3D motion graphics built for a music video.
+redirect_from:
+- /3d/
 ---
 > Artwork on the web is the visual craft that ships alongside the code: illustration, typography, motion and 3D, produced to be viewed in a browser rather than printed. In the [Flash](/flash) era it was authored and delivered in the same file as the application logic, which put designers and developers in one timeline.
 
