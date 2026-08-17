@@ -1,4 +1,14 @@
+// Embeds ship with the fixed width/height YouTube's snippet suggests, which
+// overflows the column on a phone. Capping the width and deriving the height
+// from the ratio lets them scale down without letterboxing.
 .video {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  // Replaces the frameborder attribute, which browsers still honour but HTML5
+  // dropped; without either, the user agent draws an inset border.
+  border: 0;
+
   &--padded {
     padding-bottom: 15px;
   }
