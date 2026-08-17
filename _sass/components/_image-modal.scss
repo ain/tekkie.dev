@@ -1,0 +1,57 @@
+// The modal is built by _includes/image-modal.js, so no markup in the posts or
+// the layouts refers to these classes.
+.image-modal {
+  position: relative;
+  padding: 0;
+  border: 1px solid $grey-color-light;
+  background-color: $background-color;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, .8);
+  }
+}
+
+// A <dialog> shrink-wraps its contents, so capping the image is what keeps the
+// modal inside the viewport.
+.image-modal__image {
+  display: block;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+// White on brand blue: the cross sits over the image itself, and screenshots
+// underneath it run from white chrome to dark terminals.
+.image-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: $brand-color;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($brand-color, 8%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: -6px;
+  }
+}
+
+.image-modal__cross {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
